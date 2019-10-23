@@ -12,8 +12,8 @@ import './App.css';
 function App() {
   return (
     <>
-      <Navbar />
       <Router>
+        <Navbar />
         <Switch>
           <Route exact path='/' component={Homepage} />
           <Route exact path='/quiz' component={Quiz} />

@@ -2,8 +2,13 @@ import React from 'react';
 
 
 const Homepage = () =>{
-   return (
+   return ( 
+      <>
       <p>This is HOME</p>
+      <Btn 
+      destination= {`./quiz`}
+      text = {`Start`} /> 
+      </>
    )
 }
 

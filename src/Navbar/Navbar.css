@@ -1,0 +1,20 @@
+nav {
+    background: var(--general--color);
+    opacity: 0.96;
+    z-index: 99;
+    font-family: var(--title-font);
+    margin: 10px; 
+  }
+  
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 3px 0 13px 7px var(--general--color);
+  }
+
+  .nav-item {
+    padding: 0 2em;
+    list-style: none;
+    text-align: center; } 

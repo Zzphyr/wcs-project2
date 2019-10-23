@@ -3,7 +3,7 @@ import React from 'react';
 
 const Quiz = () =>{
    return (
-      <p>This is Quiz</p>
+      <p>This is the Quizpage </p>
    )
 }
 

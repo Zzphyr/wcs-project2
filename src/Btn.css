@@ -1,0 +1,11 @@
+/* Hex Colors 
+green   - #48914C
+yellow  - #f5b233
+orange - #EA4F33
+brown  - #673c11
+pink     - #e8467e
+blue     - #2679C1
+*/
+
+button.btn.default{ background-color: #48914C; color: #f5b233; font-weight: bold; font-size: 27px; border-radius: 15px; width: 20%; border:2px solid #673c11; transition: all 0.8s ease;}
+button.btn.default:hover { background-color:#f5b233; color:#48914C;border: 2px solid #EA4F33;transition: all 0.8s ease; cursor:pointer; }

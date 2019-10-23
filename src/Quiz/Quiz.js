@@ -1,5 +1,5 @@
 import React from 'react';
-import Btn from './Btn';
+import Btn from '../Btn';
 
 
 const Quiz = () =>{
@@ -7,8 +7,8 @@ const Quiz = () =>{
       <>
       <p>This is the Quizpage </p>
       <Btn 
-      destination= {`./results`}
-      text = {`Submit`} /> 
+         destination= {`./result`}
+         text = {`Submit`} /> 
       </>
    )
 }

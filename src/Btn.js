@@ -8,7 +8,6 @@ const Btn = ({destination, text}) =>{
   return (
       <Link to={`${destination}`}> <button className="btn default">{text}</button> 
   </Link>
-
     )
   };
  

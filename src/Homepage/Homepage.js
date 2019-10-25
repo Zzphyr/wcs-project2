@@ -1,12 +1,12 @@
 
-import React from 'react';
+
 import HomeTitle from './HomeTitle';
 import Modal from 'react-modal';
 import './HomePage.css';
 import React, { Component } from 'react';
 
 
-class Homepage extends React.Component {
+class Homepage extends Component {
   constructor(){
    super();
    this.state = {

@@ -6,8 +6,10 @@ import './Btn.css'
 const Btn = ({destination, text}) =>{
  console.log(destination);
   return (
+    <div className ="BtnContainer"> 
       <Link to={`${destination}`}> <button className="btn default">{text}</button> 
   </Link>
+  </div>
     )
   };
  

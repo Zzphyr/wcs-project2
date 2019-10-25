@@ -1,0 +1,45 @@
+.HelpBtn {
+    border-radius:10px ;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.Close {
+    border-radius:10px ;
+    background:#EA4F33;
+    align-self: center;
+    border-color: #2679C1;
+    position: relative;
+}
+.ModalStyle {
+    height: 10rem; 
+    text-align: center;
+    align-items: center;
+    background: rgba(72, 145, 76, 0.98);
+    position: relative;
+    border-radius: 10px;
+}
+
+.ReactModalPortal {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 80%;
+    
+}
+.ReactModal__Overlay.ReactModal__Overlay--after-open[style] {
+    position: absolute !important;
+    margin: auto !important;
+    top:0px !important;
+    left:0px !important;
+    width: 100%;
+    justify-content: center;
+}
+
+span {
+    display: block;
+    flex-wrap: wrap;
+    position: relative;
+    width: 90%
+}

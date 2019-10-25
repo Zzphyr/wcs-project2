@@ -1,7 +1,9 @@
+
 import React from 'react';
 import HomeTitle from './HomeTitle';
 import Modal from 'react-modal';
 import './HomePage.css';
+import React, { Component } from 'react';
 
 
 class Homepage extends React.Component {
@@ -21,6 +23,13 @@ class Homepage extends React.Component {
 
  closeModal = () => {
    this.setState({modalIsOpen: false});}
+ 
+ handleChoices() {
+      // let cat = this.dropdownCat.value;
+      // let dif = this.dropdownDif.value;
+      this.props.getQuiz(); 
+      // later use cat and dif arguments
+   };
  render() {
       return ( 
        <>
@@ -36,13 +45,15 @@ class Homepage extends React.Component {
           <span>This is a Trivia Game where you are able to elect your own Category and Difficulty Level.</span>
           <button onClick={this.closeModal} className="Close">Close</button>
         </Modal>
-        </div>
+        </div>  
       </div>
+        <p>This is HOME</p>
+         <button onClick={() => this.handleChoices()}>Start Quiz </button>
+         <button onClick={() => this.props.history.push('/quiz')}>Hi there</button>
       </>
     );
   }
 }
-
 
 
 export default Homepage;

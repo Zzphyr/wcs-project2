@@ -1,16 +1,35 @@
-import React from 'react';
-import Btn from '../Btn';
+import React, { Component } from 'react';
 
-const Homepage = () =>{
-   return ( 
-      <>
+
+class Homepage extends Component {
+   constructor(props) {
+      super(props);
+      
+      this.state = {
+
+      }
+      }
+   
+handleChoices() {
+      // let cat = this.dropdownCat.value;
+      // let dif = this.dropdownDif.value;
+      this.props.getQuiz(); 
+      // later use cat and dif arguments
+   };
+
+   render() {
+
+      return ( 
+         <>
          <p>This is HOME</p>
-         <Btn 
-            destination= {`./quiz`}
-            text = {`Start`} /> 
+         <button onClick={() => this.handleChoices()}>Start Quiz </button>
+         <button onClick={() => this.props.history.push('/quiz')}>Hi there</button>
+
       </>
    )
+}
 }
 
 
 export default Homepage;
+

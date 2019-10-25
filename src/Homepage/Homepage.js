@@ -1,9 +1,8 @@
-
-
 import HomeTitle from './HomeTitle';
 import Modal from 'react-modal';
 import './HomePage.css';
 import React, { Component } from 'react';
+import Difficulty from './ChooseSettingsDropdown';
 
 
 class Homepage extends Component {
@@ -34,6 +33,7 @@ class Homepage extends Component {
       return ( 
        <>
          <HomeTitle /> 
+        <Difficulty />
          <div>
         <button onClick={this.openModal} className="HelpBtn">?</button>
         <div className='Modal_Container'>

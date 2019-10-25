@@ -1,4 +1,5 @@
 
 .chooseSettingsWrapp { width: 100%; display: inline-block; margin: 5% auto; text-align: center; }
 
- select { /*-webkit-appearance: none; -moz-appearance: none; appearance: none;*/ box-shadow: none !important; display: inline-block; margin: 10px 10%; padding: 1%; min-width: 290px; /*border: 2px solid #2679C1; font-weight: bold; color: #2679C1; background-color: #EA4F33 ;*/ transition: all 0.8s ease; border-radius: 15px; font-size: 23px; } 
+ 
+select { /*-webkit-appearance: none; -moz-appearance: none; appearance: none;*/ box-shadow: none !important; display: inline-block; margin: 10px 10%; padding: 1%; min-width: 290px; /*border: 2px solid #2679C1; font-weight: bold; color: #2679C1; background-color: #EA4F33 ;*/ transition: all 0.8s ease; border-radius: 15px; font-size: 23px; } 

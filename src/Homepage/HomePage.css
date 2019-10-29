@@ -1,9 +1,40 @@
+
 .HelpBtn {
     border-radius:10px ;
     background: lightblue;
     display: flex;
     justify-content: center;
     align-content: center;
+    width: 2%; 
+    height: 60%;
+}
+.StartBtn{
+    background-color: rgb(105, 206, 110); 
+    color: #0eddf8; 
+    font-weight: bold;
+    font-size: 27px;
+    border-radius: 15px; 
+    border:2px solid #a5201c; 
+    transition: all 0.8s ease;
+    width: 100%; 
+}
+button.StartBtn:hover { background-color:#f5b233;
+    color:#48914C;
+    border: 2px solid #EA4F33;
+    transition: all 0.8s ease;
+     cursor:pointer; }
+
+.btns_container {
+    display: flex;
+    justify-content: center;
+    width: 100%; 
+    margin-top: 20px; 
+}
+.start_container {
+    margin-top: 10px; 
+    display: flex;
+    justify-content: center;
+    width: 15%;
 }
 .Close {
     border-radius:10px ;
@@ -13,33 +44,31 @@
     position: relative;
 }
 .ModalStyle {
-    height: 10rem; 
-    text-align: center;
+    display: flex;
+    justify-content:center;
     align-items: center;
-    background: rgba(72, 145, 76, 0.98);
-    position: relative;
+    height: 100%;
+    background-color: rgba(0,0,0,0.75);
+}
+.Modal_Container {
+    height: 40%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(140, 220, 226, 0.98);
     border-radius: 10px;
 }
 
-.ReactModalPortal {
-    display: flex;
-    justify-content: center;
+
+p {
     position: relative;
-    width: 80%;
-    
-}
-.ReactModal__Overlay.ReactModal__Overlay--after-open[style] {
-    position: absolute !important;
-    margin: auto !important;
-    top:0px !important;
-    left:0px !important;
-    width: 100%;
-    justify-content: center;
+    padding: 20px;
+    padding-top: 5px;  
 }
 
-span {
-    display: block;
-    flex-wrap: wrap;
-    position: relative;
-    width: 90%
+.Modal_Container h2 {
+    color: black; 
+    padding-top: 10px;
+    padding: 0px; 
 }

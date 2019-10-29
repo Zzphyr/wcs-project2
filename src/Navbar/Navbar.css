@@ -1,8 +1,9 @@
-nav {
-    margin: 10px; 
+nav { 
+    background-color:rgba(0,0,0,0.3);
+    
   }
   
-.navbar {
+.navbar {  
     width: 100%;
     overflow: hidden;
   }

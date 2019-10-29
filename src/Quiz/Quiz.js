@@ -3,9 +3,6 @@ import Btn from '../Btn';
 
 
 const Quiz = ({ quizInfo }) =>{
-
-   
-
    return (
       <>
       <p>This is the Quizpage </p>

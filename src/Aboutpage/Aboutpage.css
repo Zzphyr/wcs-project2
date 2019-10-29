@@ -1,0 +1,9 @@
+.stockPhotos {
+    width: 30vw;
+    overflow: hidden;
+}
+
+figure {
+    display:inline-block;
+    
+}

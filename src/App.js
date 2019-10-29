@@ -8,6 +8,7 @@ import Quiz from "./Quiz/Quiz";
 import Result from "./Result/Result";
 import Aboutpage from "./Aboutpage/Aboutpage";
 
+
 import './App.css';
 
 
@@ -22,7 +23,7 @@ class App extends Component {
 
     // TODO: catch errors
     getQuiz = () => {
-      fetch('https://opentdb.com/api.php?amount=10&difficulty=medium')
+      fetch('https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple')
         .then(response => response.json())
         .then(data => {
           this.setState(

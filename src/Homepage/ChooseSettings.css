@@ -1,0 +1,17 @@
+
+.chooseSettingsWrap { 
+    width: 100%; 
+    display: inline-block;
+    margin: 5% auto; 
+    text-align: center; 
+}
+
+ 
+.settingsOptionsDrop { 
+    margin: 10px 10%; 
+    padding: 1%; 
+    width: 290px; 
+    transition: all 0.8s ease; 
+    border-radius: 15px; 
+    font-size: 23px; 
+} 

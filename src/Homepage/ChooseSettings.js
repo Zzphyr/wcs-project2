@@ -1,53 +1,11 @@
 import React from 'react';
-import './ChooseSettingsDropdown.css';
+import './ChooseSettings.css';
 
 const difficulty = [
-    {
-        category: "General Knowledge",
-        type: "boolean",
-        difficulty: "any difficulty",
-        question: "Pluto is a planet.",
-        correct_answer: "False",
-        incorrect_answers: [
-        "True"
-        ]
-        },
-    
-    {
-        category: "Entertainment: Music",
-        type: "boolean",
-        difficulty: "easy",
-        question: "The music group Daft Punk got their name from a negative review they recieved.",
-        correct_answer: "True",
-        incorrect_answers: [
-        "False"
-        ]
-     },
-     {
-        category: "Geography",
-        type: "multiple",
-        difficulty: "medium",
-        question: "The land of Gotland is located in which European country?",
-        correct_answer: "Sweden",
-        incorrect_answers: [
-        "Denmark",
-        "Norway",
-        "Germany"
-        ]
-     },
-        {
-        category: "Entertainment: Music",
-        type: "multiple",
-        difficulty: "hard",
-        question: "Brian May was the guitarist for which band?",
-        correct_answer: "Queen",
-        incorrect_answers: [
-        "Pink Floyd",
-        "Rolling Stones",
-        "The Doors"
-        ]
-    }
-
+    {difficulty: "Any Difficulty" }, 
+    {difficulty: "Easy"},
+    {difficulty: "Medium"},
+    { difficulty: "Hard"}
 ]
     const categories =  [{
         id: 9,
@@ -148,21 +106,20 @@ const difficulty = [
     ]
 
 
-const Difficulty = () => (
-    <div className="chooseSettingsWrapp">
-        <select>
+const ChooseSettings = () => (
+    <div className="chooseSettingsWrap">
+        <select className="settingsOptionsDrop">
             {difficulty.map(diff => (
             
-                    <option key={diff.question} >{diff.difficulty}</option>
+                    <option key={diff.difficulty} >{diff.difficulty}</option>
             ))}
 
         </select>
-        <select>
+        <select className="settingsOptionsDrop">
             {categories.map(cat => (
             
                     <option key={cat.id} >{cat.name}</option>
             ))}
-
         </select>
     </div>
 
@@ -170,5 +127,5 @@ const Difficulty = () => (
 
 
 
-export default Difficulty;
+export default ChooseSettings;
 

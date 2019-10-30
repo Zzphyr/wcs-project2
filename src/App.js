@@ -12,18 +12,38 @@ import Aboutpage from "./Aboutpage/Aboutpage";
 import './App.css';
 
 
+const difficulty = [
+  {difficulty: "" }, 
+  {difficulty: "easy"},
+  {difficulty: "medium"},
+  {difficulty: "hard"},
+]
+
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       quizInfo: {},
+      chosenCat: {},
+      chosenDif: difficulty[0].difficulty,
+      isLoading: false,
+    }}
+
+  // Trial for fetching dropdowns 
+    getCategory = () => {
+      fetch('https://opentdb.com/api_category.php')
+        .then (res => res.json())
+        .then (results => {
+          this.setState({ chooseCat : results.results,}
+          )
+        })
     }
 
-  }
-
+   
     // TODO: catch errors
+    
     getQuiz = () => {
-      fetch('https://opentdb.com/api.php?amount=10&difficulty=medium&type=multiple')
+      fetch(`https://opentdb.com/api.php?amount=10&difficulty=${this.state.chosenDif}&type=multiple`)
         .then(response => response.json())
         .then(data => {
           this.setState(
@@ -48,8 +68,14 @@ class App extends Component {
     })
   } */
 
+
+  handleDifficulty = (clickedDif) => {
+    this.setState({
+        chosenDif: clickedDif
+      });
+    }
+
   render () {
-    
     return (
       <>
       <Navbar />
@@ -61,6 +87,9 @@ class App extends Component {
                   // do we even need quizInfo here? maybe for Quiz only?
                   quizInfo={this.state.quizInfo} 
                   getQuiz={this.getQuiz}
+                  selectDif={this.handleDifficulty}
+                  chosenDif={this.state.chosenDif}
+                  difficulties={difficulty}
                 />
               )} 
             />

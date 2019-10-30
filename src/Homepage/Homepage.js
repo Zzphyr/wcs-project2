@@ -9,7 +9,7 @@ class Homepage extends Component {
   constructor(){
    super();
    this.state = {
-     modalIsOpen: false
+     modalIsOpen: false,
    }
    };
 
@@ -31,10 +31,16 @@ class Homepage extends Component {
       // later use cat and dif arguments
    };
    
+  
  render() {
       return ( 
        <>
-       <ChooseSettings />
+       <ChooseSettings 
+          selectDif={this.props.selectDif} 
+          chosenDif={this.props.chosenDif}
+          difficulties={this.props.difficulties}
+        />
+        
         <HomeTitle /> 
         <div className="btns_container">
           <div className="start_container">

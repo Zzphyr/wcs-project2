@@ -36,6 +36,8 @@ class Homepage extends Component {
           selectDif={this.props.selectDif} 
           chosenDif={this.props.chosenDif}
           difficulties={this.props.difficulties}
+          chosenCat={this.props.chosenCat}
+          selectCat={this.props.selectCat}
         />
         
         <HomeTitle /> 

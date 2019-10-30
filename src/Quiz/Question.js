@@ -19,11 +19,11 @@ const Question = ({ userAnswer, updateUserAnswer, numQ, question, correct, incor
       updateUserAnswer(numQ, ans)
    }
    
-
       return (
          <div>           
                <legend>{numQ} - {question}</legend>
                {answerList.map((ans, i)=>{
+                  // if () return null;
                   return (
                      <div key={numQ*10+i} >
                         <input 

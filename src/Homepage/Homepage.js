@@ -9,7 +9,7 @@ class Homepage extends Component {
   constructor(props){
    super(props);
    this.state = {
-     modalIsOpen: false
+     modalIsOpen: false,
    }
    };
 
@@ -28,10 +28,16 @@ class Homepage extends Component {
       this.props.getQuiz(); 
    };
    
+  
  render() {
       return ( 
        <>
-        <ChooseSettings />
+       <ChooseSettings 
+          selectDif={this.props.selectDif} 
+          chosenDif={this.props.chosenDif}
+          difficulties={this.props.difficulties}
+        />
+        
         <HomeTitle /> 
         <div className="btns_container">
           <div className="start_container">

@@ -48,7 +48,7 @@ class App extends Component {
         .then(data => {
           this.setState(
             // push runs immediately without waiting for request
-            // results in oage change without receiving json
+            // results in page change without receiving json
             // here, they are functions instead of objects
             // thus we get extra functionality including "waiting"
             (state) => ({
@@ -60,13 +60,6 @@ class App extends Component {
         })
       }
 
-  /* Weird setup for the dropdown from Home   
-  handleSettings = (changeCategory, changeDifficulty) => {
-    this.setState({ 
-      category: changeCategory, 
-      difficulty: changeDifficulty,
-    })
-  } */
 
 
   handleDifficulty = (clickedDif) => {
@@ -102,7 +95,14 @@ class App extends Component {
                 />
               )}
             />
-            <Route path='/result' component={Result} />
+            <Route 
+            path='/result' 
+            render = {() => (
+              <Result 
+                quizInfo={this.state.quizInfo}
+              />
+            )}
+          />  
             <Route path='/about' component={Aboutpage} />
           </Switch>      
       </>

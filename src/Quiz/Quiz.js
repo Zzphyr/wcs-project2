@@ -11,13 +11,38 @@ const Quiz = ({ quizInfo }) =>{
       arr.push(quizInfo[key]);
     });
 
+   // add "user_info" to quizInfo so we can save user answer
+   const addNewStateEntry = () => {
+      quizInfo.forEach((q)=>{
+         q['user_answer'] = '';
+      })
+   }
+
+   const updateUserAnswer = (numQ, value) => {
+      quizInfo[numQ-1]['user_answer']=value
+   }
+   
+
+   
    return (
       <>
-      <p>This is the Quizpage </p>
-      {arr.map((q,i)=> {
-        return <Question numQ={i+1} question={q.question} correct={q.correct_answer} incorrect={q.incorrect_answers} />;
-    }
-    )}
+      
+         {addNewStateEntry()}
+      {arr.map((q,i) => {
+         return (
+            <div key={i+1} >
+               <Question 
+                  userAnswer={q.userAnswer}
+                  updateUserAnswer={updateUserAnswer}
+                  numQ={i+1} 
+                  question={q.question} 
+                  correct={q.correct_answer} 
+                  incorrect={q.incorrect_answers} 
+                  />
+            </div>
+         )
+      })}
+
       <Btn 
          destination= {`./result`}
          text = {`Submit`} /> 

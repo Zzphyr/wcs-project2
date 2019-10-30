@@ -28,7 +28,7 @@ class App extends Component {
         .then(data => {
           this.setState(
             // push runs immediately without waiting for request
-            // results in oage change without receiving json
+            // results in page change without receiving json
             // here, they are functions instead of objects
             // thus we get extra functionality including "waiting"
             (state) => ({
@@ -40,42 +40,41 @@ class App extends Component {
         })
       }
 
-  /* Weird setup for the dropdown from Home   
-  handleSettings = (changeCategory, changeDifficulty) => {
-    this.setState({ 
-      category: changeCategory, 
-      difficulty: changeDifficulty,
-    })
-  } */
 
   render () {
-    
+    console.log('quizInfo in app', this.state.quizInfo) 
     return (
       <>
       <Navbar />
-          <Switch>
-            <Route 
-              exact path='/' 
-              render={()=> (
-                <Homepage 
-                  // do we even need quizInfo here? maybe for Quiz only?
-                  quizInfo={this.state.quizInfo} 
-                  getQuiz={this.getQuiz}
-                />
-              )} 
-            />
-            
-            <Route 
-              exact path='/quiz' 
-              render = {() => (
-                <Quiz
-                  quizInfo={this.state.quizInfo}
-                />
-              )}
-            />
-            <Route path='/result' component={Result} />
-            <Route path='/about' component={Aboutpage} />
-          </Switch>      
+        <Switch>
+          <Route 
+            exact path='/' 
+            render={()=> (
+              <Homepage 
+                // do we even need quizInfo here? maybe for Quiz only?
+                quizInfo={this.state.quizInfo} 
+                getQuiz={this.getQuiz}
+              />
+            )} 
+          />
+          <Route 
+            exact path='/quiz' 
+            render = {() => (
+              <Quiz
+                quizInfo={this.state.quizInfo}
+              />
+            )}
+          />
+          <Route 
+            path='/result' 
+            render = {() => (
+              <Result 
+                quizInfo={this.state.quizInfo}
+              />
+            )}
+          />  
+          <Route path='/about' component={Aboutpage} />
+        </Switch>      
       </>
     );
   }

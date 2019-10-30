@@ -6,8 +6,8 @@ import ChooseSettings from './ChooseSettings';
 
 
 class Homepage extends Component {
-  constructor(){
-   super();
+  constructor(props){
+   super(props);
    this.state = {
      modalIsOpen: false
    }
@@ -25,23 +25,26 @@ class Homepage extends Component {
    this.setState({modalIsOpen: false});}
  
  handleChoices() {
-      // let cat = this.dropdownCat.value;
-      // let dif = this.dropdownDif.value;
       this.props.getQuiz(); 
-      // later use cat and dif arguments
    };
    
  render() {
       return ( 
        <>
-       <ChooseSettings />
+        <ChooseSettings />
         <HomeTitle /> 
         <div className="btns_container">
           <div className="start_container">
-         <button onClick={() => this.handleChoices()} className="StartBtn">Start</button>
-         </div>
+            <button 
+              onClick={() => this.handleChoices()} 
+              className="StartBtn"
+              >Start
+            </button>
+          </div>
+
           <button onClick={this.openModal} className="HelpBtn">?</button>
-            <Modal className="ModalStyle"
+            <Modal 
+              className="ModalStyle"
               isOpen={this.state.modalIsOpen}
               onAfterOpen={this.afterOpenModal}
               onRequestClose={this.closeModal}

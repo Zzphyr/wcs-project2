@@ -24,47 +24,59 @@ class App extends Component {
     super(props);
     this.state = {
       quizInfo: {},
-      chosenCat: {},
+      chosenCat: { id:0, name:"Any Category" },
       chosenDif: difficulty[0].difficulty,
-      isLoading: false,
+      categories:[],
     }}
-
-  // Trial for fetching dropdowns 
-    getCategory = () => {
-      fetch('https://opentdb.com/api_category.php')
-        .then (res => res.json())
-        .then (results => {
-          this.setState({ chooseCat : results.results,}
-          )
-        })
-    }
-
    
     // TODO: catch errors
-    
-    getQuiz = () => {
-      fetch(`https://opentdb.com/api.php?amount=10&difficulty=${this.state.chosenDif}&type=multiple`)
-      .then(response => response.json())
+  getQuiz = () => {
+    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${this.state.chosenDif}&type=multiple`)
+     .then(response => response.json())
       .then(data => {
         this.setState(
-          // push runs immediately without waiting for request
-          // results in page change without receiving json
-          // here, they are functions instead of objects
-          // thus we get extra functionality including "waiting"
+            // push runs immediately without waiting for request
+            // results in page change without receiving json
+            // here, they are functions instead of objects
+            // thus we get extra functionality including "waiting"
           (state) => ({
-            ...state,
-            quizInfo : data["results"],
-          }), 
-          () => this.props.history.push('/quiz') 
+             ...state,
+             quizInfo : data["results"],
+            }), 
+          () => this.props.history.push('/quiz')
         )
       })
-    }
+  }
 
-  handleDifficulty = (clickedDif) => {
+  componentDidMount() {
+    this.getCategories()
+  }
+
+      // Trial for fetching dropdowns 
+  getCategories = () => {
+    fetch('https://opentdb.com/api_category.php')
+      .then (response => response.json())
+      .then (results => {
+        this.setState( (state) => ({ 
+          ...state,
+          categories: [{ id:0, name:"Any Category" }, ...results.trivia_categories],
+         })
+        )})
+  }
+handleCategory = (clickedCat) => {
+  console.log('clicked', clickedCat)
     this.setState({
-        chosenDif: clickedDif
+       chosenCat: clickedCat
       });
-    }
+  }
+
+handleDifficulty = (clickedDif) => {
+    this.setState({
+       chosenDif: clickedDif
+      });
+  }
+
+  
 
   render () {
     return (
@@ -81,6 +93,9 @@ class App extends Component {
                   selectDif={this.handleDifficulty}
                   chosenDif={this.state.chosenDif}
                   difficulties={difficulty}
+                  chosenCat={this.state.chosenCat}
+                  selectCat={this.handleCategory}
+                  categories={this.state.categories}
                 />
               )} 
             />

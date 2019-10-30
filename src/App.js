@@ -24,13 +24,14 @@ class App extends Component {
     super(props);
     this.state = {
       quizInfo: {},
-      chosenCat: [],
+      chosenCat: { id:0, name:"Any Category" },
       chosenDif: difficulty[0].difficulty,
+      categories:[],
     }}
    
     // TODO: catch errors
   getQuiz = () => {
-    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}difficulty=${this.state.chosenDif}&type=multiple`)
+    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${this.state.chosenDif}&type=multiple`)
      .then(response => response.json())
       .then(data => {
         this.setState(
@@ -48,21 +49,22 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getCategory()
+    this.getCategories()
   }
 
       // Trial for fetching dropdowns 
-  getCategory = () => {
+  getCategories = () => {
     fetch('https://opentdb.com/api_category.php')
       .then (response => response.json())
       .then (results => {
         this.setState( (state) => ({ 
           ...state,
-          chosenCat: [{id:0, name:"Any Category"},...state.results.trivia_categories]
+          categories: [{ id:0, name:"Any Category" }, ...results.trivia_categories],
          })
         )})
   }
 handleCategory = (clickedCat) => {
+  console.log('clicked', clickedCat)
     this.setState({
        chosenCat: clickedCat
       });
@@ -93,6 +95,7 @@ handleCategory = (clickedCat) => {
                   difficulties={difficulty}
                   chosenCat={this.state.chosenCat}
                   selectCat={this.handleCategory}
+                  categories={this.state.categories}
                 />
               )} 
             />

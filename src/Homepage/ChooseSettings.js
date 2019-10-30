@@ -13,12 +13,12 @@ const ChooseSettings = (props) =>  {
             ))}
 
         </select>
-         <select className="settingsOptionsDrop">
+{/*          <select className="settingsOptionsDrop">
             {categories.map(cat => (
             
                     <option key={cat.id} >{cat.name}</option>
             ))}
-        </select> 
+        </select>  */}
     </div> 
     )}
 

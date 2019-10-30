@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Question = ({ userAnswer, updateUserAnswer, numQ, question, correct, incorrect }) => {
+const Question = ({ updateUserAnswer, numQ, question, correct, incorrect }) => {
    
    let answerList = [];
    answerList.push(...incorrect, correct);
@@ -23,7 +23,7 @@ const Question = ({ userAnswer, updateUserAnswer, numQ, question, correct, incor
          <div>           
                <legend>{numQ} - {question}</legend>
                {answerList.map((ans, i)=>{
-                  // if () return null;
+                  // if (numQ!==(i+1)) return null;
                   return (
                      <div key={numQ*10+i} >
                         <input 

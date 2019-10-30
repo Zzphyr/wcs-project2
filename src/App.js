@@ -44,23 +44,21 @@ class App extends Component {
     
     getQuiz = () => {
       fetch(`https://opentdb.com/api.php?amount=10&difficulty=${this.state.chosenDif}&type=multiple`)
-        .then(response => response.json())
-        .then(data => {
-          this.setState(
-            // push runs immediately without waiting for request
-            // results in page change without receiving json
-            // here, they are functions instead of objects
-            // thus we get extra functionality including "waiting"
-            (state) => ({
-              ...state,
-              quizInfo : data["results"],
-            }), 
-            () => this.props.history.push('/quiz')
-          )
-        })
-      }
-
-
+      .then(response => response.json())
+      .then(data => {
+        this.setState(
+          // push runs immediately without waiting for request
+          // results in page change without receiving json
+          // here, they are functions instead of objects
+          // thus we get extra functionality including "waiting"
+          (state) => ({
+            ...state,
+            quizInfo : data["results"],
+          }), 
+          () => this.props.history.push('/quiz') 
+        )
+      })
+    }
 
   handleDifficulty = (clickedDif) => {
     this.setState({

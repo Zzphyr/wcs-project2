@@ -30,7 +30,7 @@ class App extends Component {
    
     // TODO: catch errors
   getQuiz = () => {
-    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id === 'General Kn'}difficulty=${this.state.chosenDif}&type=multiple`)
+    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}difficulty=${this.state.chosenDif}&type=multiple`)
      .then(response => response.json())
       .then(data => {
         this.setState(
@@ -56,9 +56,11 @@ class App extends Component {
     fetch('https://opentdb.com/api_category.php')
       .then (response => response.json())
       .then (results => {
-        this.setState({ 
-          chosenCat: results.trivia_categories})
-        })
+        this.setState( (state) => ({ 
+          ...state,
+          chosenCat: [{id:0, name:"Any Category"},...state.results.trivia_categories]
+         })
+        )})
   }
 handleCategory = (clickedCat) => {
     this.setState({

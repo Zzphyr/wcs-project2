@@ -38,6 +38,7 @@ class Homepage extends Component {
           difficulties={this.props.difficulties}
           chosenCat={this.props.chosenCat}
           selectCat={this.props.selectCat}
+          categories={this.props.categories}
         />
         
         <HomeTitle /> 

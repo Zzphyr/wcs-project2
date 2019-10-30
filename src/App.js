@@ -24,49 +24,55 @@ class App extends Component {
     super(props);
     this.state = {
       quizInfo: {},
-      chosenCat: {},
+      chosenCat: [],
       chosenDif: difficulty[0].difficulty,
-      isLoading: false,
     }}
-
-  // Trial for fetching dropdowns 
-    getCategory = () => {
-      fetch('https://opentdb.com/api_category.php')
-        .then (res => res.json())
-        .then (results => {
-          this.setState({ chooseCat : results.results,}
-          )
-        })
-    }
-
    
     // TODO: catch errors
-    
-    getQuiz = () => {
-      fetch(`https://opentdb.com/api.php?amount=10&difficulty=${this.state.chosenDif}&type=multiple`)
-        .then(response => response.json())
-        .then(data => {
-          this.setState(
+  getQuiz = () => {
+    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id === 'General Kn'}difficulty=${this.state.chosenDif}&type=multiple`)
+     .then(response => response.json())
+      .then(data => {
+        this.setState(
             // push runs immediately without waiting for request
             // results in page change without receiving json
             // here, they are functions instead of objects
             // thus we get extra functionality including "waiting"
-            (state) => ({
-              ...state,
-              quizInfo : data["results"],
+          (state) => ({
+             ...state,
+             quizInfo : data["results"],
             }), 
-            () => this.props.history.push('/quiz')
-          )
+          () => this.props.history.push('/quiz')
+        )
+      })
+  }
+
+  componentDidMount() {
+    this.getCategory()
+  }
+
+      // Trial for fetching dropdowns 
+  getCategory = () => {
+    fetch('https://opentdb.com/api_category.php')
+      .then (response => response.json())
+      .then (results => {
+        this.setState({ 
+          chosenCat: results.trivia_categories})
         })
-      }
-
-
+  }
+handleCategory = (clickedCat) => {
+    this.setState({
+       chosenCat: clickedCat
+      });
+  }
 
   handleDifficulty = (clickedDif) => {
     this.setState({
-        chosenDif: clickedDif
+       chosenDif: clickedDif
       });
-    }
+  }
+
+  
 
   render () {
     return (
@@ -83,6 +89,8 @@ class App extends Component {
                   selectDif={this.handleDifficulty}
                   chosenDif={this.state.chosenDif}
                   difficulties={difficulty}
+                  chosenCat={this.state.chosenCat}
+                  selectCat={this.handleCategory}
                 />
               )} 
             />

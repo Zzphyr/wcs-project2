@@ -4,21 +4,21 @@ import './ChooseSettings.css';
   
 
 const ChooseSettings = (props) =>  {
-   const handleSelect= (e) => props.selectDif (e.target.value);
+   const handleDiffSelect= (e) => props.selectDif (e.target.value);
     return ( 
     <div className="chooseSettingsWrap">
-        <select  className="settingsOptionsDrop" value={props.chosenDif} onChange={handleSelect}>
+        <select  className="settingsOptionsDrop" value={props.chosenDif} onChange={handleDiffSelect}>
             {props.difficulties.map(diff => (
                     <option  key={diff.difficulty} value={diff.difficulty}>{ diff.difficulty === "" ? 'any difficulty' : diff.difficulty}</option>
             ))}
 
         </select>
-        {/* <select className="settingsOptionsDrop">
+         <select className="settingsOptionsDrop">
             {categories.map(cat => (
             
                     <option key={cat.id} >{cat.name}</option>
             ))}
-        </select> */}
+        </select> 
     </div> 
     )}
 

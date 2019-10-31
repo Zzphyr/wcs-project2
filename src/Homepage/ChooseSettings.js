@@ -1,13 +1,11 @@
 import React from 'react';
 import './ChooseSettings.css';
-
-  
-
+ 
 const ChooseSettings = (props) =>  {
    const handleDiffSelect= (e) => props.selectDif (e.target.value);
    const handleCatSelect= (e) => props.selectCat (props.categories.find(cat=> cat.name === e.target.value));
 
-    return ( 
+   return ( 
         <div className="chooseSettingsWrap">
             <select  className="settingsOptionsDrop" value={props.chosenDif} onChange={handleDiffSelect}>
                 {props.difficulties.map(diff => (

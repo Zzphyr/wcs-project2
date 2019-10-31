@@ -70,7 +70,7 @@ handleCategory = (clickedCat) => {
       });
   }
 
-  handleDifficulty = (clickedDif) => {
+handleDifficulty = (clickedDif) => {
     this.setState({
        chosenDif: clickedDif
       });

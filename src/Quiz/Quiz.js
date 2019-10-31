@@ -27,6 +27,7 @@ const Quiz = ({ quizInfo }) =>{
 */
 
    // weird way to both update user choice and to add a new entry to quizInfo   
+   // likely need to redo this... with setState in app.js
    const updateUserAnswer = (numQ, value) => {
       quizInfo[numQ-1]['user_answer']=value;
       console.log("aaa", numQ, value, quizInfo)
@@ -59,24 +60,21 @@ const Quiz = ({ quizInfo }) =>{
             }
             console.log(quizInfo)
             return (
-               
-                     <div key={i+1} >
-                        <Question 
-                           userAnswer={q.userAnswer}
-                           updateUserAnswer={updateUserAnswer}
-                           numQ={i+1} 
-                           question={q.question} 
-                           correct={q.correct_answer} 
-                           incorrect={q.incorrect_answers} 
-                        />   
-                        <Btn 
-                           destination= {`./result`}
-                           text = {`Submit`} 
-                        /> 
-                     </div>
-            )   
-               
-            
+               <div key={i+1} >
+                  <Question 
+                     userAnswer={q.userAnswer}
+                     updateUserAnswer={updateUserAnswer}
+                     numQ={i+1} 
+                     question={q.question} 
+                     correct={q.correct_answer} 
+                     incorrect={q.incorrect_answers} 
+                  />   
+                  <Btn 
+                     destination= {`./result`}
+                     text = {`Submit`} 
+                  /> 
+               </div>
+            )    
          })} 
       </> 
    )

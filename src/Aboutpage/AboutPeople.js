@@ -25,11 +25,12 @@ const people = [{
 const People = () => (
     <div> 
         {people.map(person => (
-        <Person key= {person.name} 
-            name={person.name}
-            photo={person.photo}
-        linkedin={person.linkedin} />))
-        } 
+            <Person key= {person.name} 
+                name={person.name}
+                photo={person.photo}
+                linkedin={person.linkedin} 
+            />
+        ))} 
     </div> 
     );
 

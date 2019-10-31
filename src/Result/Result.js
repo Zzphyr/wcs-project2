@@ -18,22 +18,21 @@ const Result = ({ quizInfo }) =>{
       let message = '';
       let relativeScore = getScore();
       if (relativeScore===10) {
-         message = 'You are (wait for it) a total genius!';
+         message = 'LEGEN (wait for it) DARY!!!';
       } else if (relativeScore>=8) {
-         message = 'Wow... Fantastic!';
+         message = 'WOW... you are a genius!';
       } else if (relativeScore>=6) {
-         message = 'Yay, you did it!';
+         message = 'Good job!';
       } else if (relativeScore>=4) {
-         message = "It wasn't that bad...?";
+         message = "Well, it wasn't that bad...?";
       } else {
-         message = 'Might want to pick up a book or two';
+         message = '*sigh* You might want to pick up a book or two';
       }
       return message;
    }  
 
    return (
       <>
-         <p>This is Result</p>
          <p>{resultMessage()}</p>
          <p>Your score: {getScore()} / 10 </p>
          <Btn 

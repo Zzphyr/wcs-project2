@@ -9,19 +9,22 @@ const ChooseSettings = (props) =>  {
         <div className="chooseSettingsWrap">
             <select  className="settingsOptionsDrop" value={props.chosenDif} onChange={handleDiffSelect}>
                 {props.difficulties.map(diff => (
-                     <option key={diff.difficulty} value={diff.difficulty}>{diff.difficulty === "" ? 'any difficulty' : diff.difficulty}</option>
+                    <option 
+                        key={diff.difficulty} 
+                        value={diff.difficulty}>{diff.difficulty === "" ? 'any difficulty' : diff.difficulty}
+                    </option>
                 ))}
-
             </select>
             <select className="settingsOptionsDrop" value={props.chosenCat.name} onChange={handleCatSelect}>
                 {props.categories.map(cat => (
-                    <option key={cat.id}>{cat.name}</option>
+                    <option 
+                        key={cat.id}>{cat.name}
+                    </option>
                 ))} 
             </select>
         </div> 
-    )}
-
-
+    )
+}
 
 
 export default ChooseSettings;

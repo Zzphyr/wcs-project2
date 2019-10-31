@@ -27,9 +27,9 @@ class App extends Component {
       chosenCat: { id:0, name:"Any Category" },
       chosenDif: difficulty[0].difficulty,
       categories:[],
-    }}
+    }
+  }
    
-    // TODO: catch errors
   getQuiz = () => {
     fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${this.state.chosenDif}&type=multiple`)
      .then(response => response.json())
@@ -49,7 +49,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    this.getCategories()
+    this.getCategories();
   }
 
       // Trial for fetching dropdowns 
@@ -63,21 +63,20 @@ class App extends Component {
          })
         )})
   }
-handleCategory = (clickedCat) => {
-  console.log('clicked', clickedCat)
-    this.setState({
-       chosenCat: clickedCat
-      });
+  handleCategory = (clickedCat) => {
+    console.log('clicked', clickedCat)
+      this.setState({
+        chosenCat: clickedCat
+        });
   }
 
-handleDifficulty = (clickedDif) => {
-    this.setState({
-       chosenDif: clickedDif
-      });
+  handleDifficulty = (clickedDif) => {
+      this.setState({
+        chosenDif: clickedDif
+        });
   }
 
   
-
   render () {
     return (
       <>
@@ -109,13 +108,13 @@ handleDifficulty = (clickedDif) => {
               )}
             />
             <Route 
-            path='/result' 
-            render = {() => (
-              <Result 
-                quizInfo={this.state.quizInfo}
-              />
-            )}
-          />  
+              path='/result' 
+              render = {() => (
+                <Result 
+                  quizInfo={this.state.quizInfo}
+                />
+              )}
+            />  
             <Route path='/about' component={Aboutpage} />
           </Switch>      
       </>

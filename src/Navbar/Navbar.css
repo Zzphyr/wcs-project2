@@ -1,14 +1,19 @@
 nav { 
-    background-color:rgba(0,0,0,0.3);
-    
-  }
+  background-color:rgba(0,0,0,0.3);
+}
   
 .navbar {  
-    width: 100%;
-    overflow: hidden;
-  }
+  width: 100%;
+  overflow: hidden;
+}
 
-  .nav-item {
-    padding: 0 2em;
-    list-style: none;
-   } 
+.nav-item {
+  padding: 0 2em;
+  list-style: none;
+  
+} 
+
+.active {
+  color: red;
+  text-decoration: none;
+}

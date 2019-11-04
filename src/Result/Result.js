@@ -25,7 +25,7 @@ const Result = ({ quizInfo }) =>{
       } else if (relativeScore>=6) {
          message = 'Good job!';
       } else if (relativeScore>=4) {
-         message = "Well, it wasn't that bad...?";
+         message = "Well, it wasn't that bad...";
       } else {
          message = '*sigh* You might want to pick up a book or two';
       }

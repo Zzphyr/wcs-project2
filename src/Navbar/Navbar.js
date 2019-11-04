@@ -9,11 +9,11 @@ return (
             </button><span className="navbar-toggler-icon"></span>
       <div className="collapse navbar-collapse menu" id="main-navigation">
          <ul className="navbar-nav nav">
-            <li className="nav-item" activeclassName='active'>
-               <NavLink exact to='/' >Homepage</NavLink>
+            <li className="nav-item">
+               <NavLink exact to='/' activeClassName='active'>Homepage</NavLink>
             </li>
-            <li className="nav-item" activeclassName='active'>
-               <NavLink to='/about' >About us</NavLink>
+            <li className="nav-item">
+               <NavLink to='/about' activeClassName='active'>About us</NavLink>
             </li>
          </ul>
       </div>

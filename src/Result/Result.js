@@ -1,5 +1,6 @@
 import React from 'react';
 import Btn from '../Btn';
+import ShowCorrectAnswers from './ShowCorrectAnwers';
 
 const Result = ({ quizInfo }) =>{
    
@@ -35,6 +36,7 @@ const Result = ({ quizInfo }) =>{
       <>
          <p>{resultMessage()}</p>
          <p>Your score: {getScore()} / 10 </p>
+         <ShowCorrectAnswers quizInfo={quizInfo}/>
          <Btn 
             destination= {'./'}
             text = {`Play Again`} 

@@ -14,23 +14,10 @@ const Quiz = ({ quizInfo }) =>{
       arr.push(quizInfo[key]);
     });
 
-/*    
-   // add "user_info" to quizInfo so we can save user answer
-   // this does not work due to page refresh on question advancement
-   // still, removing it somehow works. Keeping it just in case.
-   const addNewStateEntry = () => {
-      quizInfo.forEach((q)=>{
-         q['user_answer'] = '';
-      })
-   }
-   addNewStateEntry() 
-*/
-
    // weird way to both update user choice and to add a new entry to quizInfo   
    // likely need to redo this... with setState in app.js
    const updateUserAnswer = (numQ, value) => {
       quizInfo[numQ-1]['user_answer']=value;
-      console.log("aaa", numQ, value, quizInfo)
    }
    
    // hooks
@@ -43,7 +30,6 @@ const Quiz = ({ quizInfo }) =>{
          {arr.map((q,i) => {
             if (step!==i) return null;
             if (step<9) {
-               console.log(quizInfo)
                return (
                   <div key={i+1} >
                      <Question 
@@ -58,7 +44,6 @@ const Quiz = ({ quizInfo }) =>{
                   </div>
                )
             }
-            console.log(quizInfo)
             return (
                <div key={i+1} >
                   <Question 

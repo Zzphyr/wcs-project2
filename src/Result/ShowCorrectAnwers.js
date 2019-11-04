@@ -4,10 +4,10 @@ const ShowCorrectAnswers = ({ quizInfo }) => {
 
    return (
       <div>
-         <button type="button" class="btn btn-outline-danger" data-toggle="collapse" data-target="#answer-table">See answers!</button>
-         <div id="answer-table" class="collapse">
-            <table class="table table-hover">
-               <thead class="thead-dark">
+         <button type="button" className="btn btn-outline-danger" data-toggle="collapse" data-target="#answer-table">See answers!</button>
+         <div id="answer-table" className="collapse">
+            <table className="table table-hover">
+               <thead className="thead-dark">
                   <tr>
                      <th scope="col">#</th>
                      <th scope="col">Question</th>
@@ -18,14 +18,12 @@ const ShowCorrectAnswers = ({ quizInfo }) => {
                <tbody>
                   {quizInfo.map((q, i)=>{
                      return (
-                        <>
-                        <tr>
+                        <tr key={i+1}>
                            <th scope="row">{i+1}</th>
                            <td>{q.question}</td>
                            <td>{q.correct_answer}</td>
                            <td>{q.user_answer}</td>
-                        </tr>
-                        </>
+                        </tr> 
                      )
                   })}
                </tbody>

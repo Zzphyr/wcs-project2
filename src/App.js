@@ -13,10 +13,10 @@ import './App.css';
 
 
 const difficulty = [
-  {difficulty: "" }, 
-  {difficulty: "easy"},
-  {difficulty: "medium"},
-  {difficulty: "hard"},
+  {id: "", difficulty: "Any Difficulty"}, 
+  {id: "easy", difficulty: "Easy"},
+  {id: "medium", difficulty: "Medium"},
+  {id: "hard", difficulty: "Hard"},
 ]
 
 class App extends Component {
@@ -25,13 +25,13 @@ class App extends Component {
     this.state = {
       quizInfo: {},
       chosenCat: { id:0, name:"Any Category" },
-      chosenDif: difficulty[0].difficulty,
+      chosenDif: { id:0, difficulty: "Any Difficulty"},
       categories:[],
     }
   }
    
   getQuiz = () => {
-    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${this.state.chosenDif}&type=multiple`)
+    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${this.state.chosenDif.id}&type=multiple`)
      .then(response => response.json())
       .then(data => {
         this.setState(

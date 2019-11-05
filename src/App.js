@@ -104,6 +104,8 @@ class App extends Component {
               render = {() => (
                 <Quiz
                   quizInfo={this.state.quizInfo}
+                  chosenCat={this.state.chosenCat}
+                  chosenDif={this.state.chosenDif}
                 />
               )}
             />
@@ -112,6 +114,8 @@ class App extends Component {
               render = {() => (
                 <Result 
                   quizInfo={this.state.quizInfo}
+/*                   chosenCat={this.chosenCat}
+                  chosenDif={this.chosenDif} */
                 />
               )}
             />  

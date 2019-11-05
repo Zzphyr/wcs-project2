@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import Btn from '../Btn';
 import Question from './Question';
+import ShowSettings from './ShowSettings';
 
 
-const Quiz = ({ quizInfo }) =>{
+const Quiz = ({ quizInfo, chosenCat, chosenDif }) =>{
 
    // setup Hooks!
    const [step, setStep] = useState(0);
@@ -31,17 +32,23 @@ const Quiz = ({ quizInfo }) =>{
             if (step!==i) return null;
             if (step<9) {
                return (
-                  <div key={i+1} >
-                     <Question 
-                        userAnswer={q.userAnswer}
-                        updateUserAnswer={updateUserAnswer}
-                        numQ={i+1} 
-                        question={q.question} 
-                        correct={q.correct_answer} 
-                        incorrect={q.incorrect_answers} 
+                  <>
+                     <ShowSettings 
+                        chosenCat={chosenCat}
+                        chosenDif={chosenDif}
                      />
-                     <button onClick={incrementStep}>Next</button>    
-                  </div>
+                     <div key={i+1} >
+                        <Question 
+                           userAnswer={q.userAnswer}
+                           updateUserAnswer={updateUserAnswer}
+                           numQ={i+1} 
+                           question={q.question} 
+                           correct={q.correct_answer} 
+                           incorrect={q.incorrect_answers} 
+                        />
+                        <button onClick={incrementStep}>Next</button>    
+                     </div>
+                  </>
                )
             }
             return (

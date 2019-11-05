@@ -28,15 +28,15 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif }) =>{
 
    return (
       <>         
+         <ShowSettings 
+            chosenCat={chosenCat}
+            chosenDif={chosenDif}
+         />
          {arr.map((q,i) => {
             if (step!==i) return null;
             if (step<9) {
                return (
                   <>
-                     <ShowSettings 
-                        chosenCat={chosenCat}
-                        chosenDif={chosenDif}
-                     />
                      <div key={i+1} >
                         <Question 
                            userAnswer={q.userAnswer}

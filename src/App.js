@@ -31,7 +31,7 @@ class App extends Component {
   }
    
   getQuiz = () => {
-    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${this.state.chosenDif.id}&type=multiple`)
+    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${this.state.chosenDif.id}&type=multiple&encode=url3986`)
      .then(response => response.json())
       .then(data => {
         this.setState(

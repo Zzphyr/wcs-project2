@@ -38,12 +38,12 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
                      correct={q.correct_answer} 
                      incorrect={q.incorrect_answers} 
                   />
-               { 
-               (step<9) && <input type="submit" value="Next" /> 
-               }
-               {
-               (step===9) && <Btn destination= {`./result`} text = {`Submit`} /> 
-               }
+                  { 
+                  (step<9) && <input type="submit" value="Next" /> 
+                  }
+                  {
+                  (step===9) && <Btn destination= {`./result`} text = {`Submit`} /> 
+                  }
                </form>
             )    
          })} 

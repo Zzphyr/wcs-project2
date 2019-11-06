@@ -59,9 +59,13 @@ class App extends Component {
       .then (results => {
         this.setState( (state) => ({ 
           ...state,
-          categories: [{ id:0, name:"Any Category" }, ...results.trivia_categories],
-         })
-        )})
+          categories: [
+            { id:0, name:"Any Category" }, 
+            ...results.trivia_categories
+          ],
+        })
+      )}
+    )
   }
   handleCategory = (clickedCat) => {
     
@@ -104,7 +108,7 @@ class App extends Component {
               render={()=> (
                 <Homepage 
                   // do we even need quizInfo here? maybe for Quiz only?
-                  quizInfo={this.state.quizInfo} 
+                  /* quizInfo={this.state.quizInfo} */ 
                   getQuiz={this.getQuiz}
                   selectDif={this.handleDifficulty}
                   chosenDif={this.state.chosenDif}

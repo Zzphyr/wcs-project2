@@ -64,7 +64,7 @@ class App extends Component {
         )})
   }
   handleCategory = (clickedCat) => {
-    console.log('clicked', clickedCat)
+    
       this.setState({
         chosenCat: clickedCat
         });
@@ -76,6 +76,23 @@ class App extends Component {
         });
   }
 
+  updateUserAnswer = (numQ, ans) => {
+    this.setState(
+      (state) => {
+        const updateAnswer = state.quizInfo.map((q,i) => {
+          if(i===numQ-1) {
+            q['user_answer']=ans;
+          }
+          return q;
+        })
+
+        return {
+          ...state,
+          quizInfo: updateAnswer,
+        }
+      }
+    )
+  }
   
   render () {
     return (
@@ -95,17 +112,18 @@ class App extends Component {
                   chosenCat={this.state.chosenCat}
                   selectCat={this.handleCategory}
                   categories={this.state.categories}
-                />
-              )} 
-            />
+                  />
+                  )} 
+                  />
             
             <Route 
               exact path='/quiz' 
               render = {() => (
                 <Quiz
-                  quizInfo={this.state.quizInfo}
-                  chosenCat={this.state.chosenCat}
-                  chosenDif={this.state.chosenDif}
+                quizInfo={this.state.quizInfo}
+                chosenCat={this.state.chosenCat}
+                chosenDif={this.state.chosenDif}
+                updateUserAnswer={this.updateUserAnswer}
                 />
               )}
             />

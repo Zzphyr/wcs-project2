@@ -28,7 +28,7 @@ class App extends Component {
       quizInfo: {},
       chosenCat: { id:0, name:"Any Category" },
       chosenDif: { id:0, difficulty: "Any Difficulty"},
-      categories:[],
+      categories:[{ id:0, name:"Any Category" }],
     }
   }
    
@@ -70,9 +70,8 @@ class App extends Component {
             { id:0, name:"Any Category" }, 
             ...results.trivia_categories
           ],
-        })
-      )}
-    )
+        }))
+      })
   };
 
   handleCategory = (clickedCat) => {

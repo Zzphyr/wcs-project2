@@ -3,8 +3,7 @@ import Btn from '../Btn';
 import Question from './Question';
 import ShowSettings from './ShowSettings';
 
-
-const Quiz = ({ quizInfo, chosenCat, chosenDif }) =>{
+const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
 
    // setup Hooks!
    const [step, setStep] = useState(0);
@@ -14,15 +13,10 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif }) =>{
    Object.keys(quizInfo).forEach(function(key) {
       arr.push(quizInfo[key]);
     });
-
-   // weird way to both update user choice and to add a new entry to quizInfo   
-   // likely need to redo this... with setState in app.js
-   const updateUserAnswer = (numQ, value) => {
-      quizInfo[numQ-1]['user_answer']=value;
-   }
    
    // hooks
-   const incrementStep = () => { 
+   const incrementStep = (e) => { 
+      e.preventDefault();
       setStep(step+1);
    }
 
@@ -34,25 +28,8 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif }) =>{
          />
          {arr.map((q,i) => {
             if (step!==i) return null;
-            if (step<9) {
-               return (
-                  <>
-                     <div key={i+1} >
-                        <Question 
-                           userAnswer={q.userAnswer}
-                           updateUserAnswer={updateUserAnswer}
-                           numQ={i+1} 
-                           question={q.question} 
-                           correct={q.correct_answer} 
-                           incorrect={q.incorrect_answers} 
-                        />
-                        <button onClick={incrementStep}>Next</button>    
-                     </div>
-                  </>
-               )
-            }
             return (
-               <div key={i+1} >
+               <form onSubmit={incrementStep} key={q.question} >
                   <Question 
                      userAnswer={q.userAnswer}
                      updateUserAnswer={updateUserAnswer}
@@ -60,12 +37,14 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif }) =>{
                      question={q.question} 
                      correct={q.correct_answer} 
                      incorrect={q.incorrect_answers} 
-                  />   
-                  <Btn 
-                     destination= {`./result`}
-                     text = {`Submit`} 
-                  /> 
-               </div>
+                  />
+               { 
+               (step<9) && <input type="submit" value="Next" /> 
+               }
+               {
+               (step===9) && <Btn destination= {`./result`} text = {`Submit`} /> 
+               }
+               </form>
             )    
          })} 
       </> 

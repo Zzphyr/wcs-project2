@@ -14,7 +14,7 @@ const Result = ({ quizInfo }) =>{
       return score;
    }
 
-   // to show a more personal message depending on user score
+   // show a more personal message depending on user score
    const resultMessage = () => {
       let message = '';
       let relativeScore = getScore();
@@ -25,9 +25,9 @@ const Result = ({ quizInfo }) =>{
       } else if (relativeScore>=6) {
          message = 'Good job!';
       } else if (relativeScore>=4) {
-         message = "Well, it wasn't that bad...";
+         message = "Well, it wasn't thaaat bad...";
       } else {
-         message = '*sigh* You might want to pick up a book or two';
+         message = 'Oh dear! You might want to pick up a book or two.';
       }
       return message;
    }  

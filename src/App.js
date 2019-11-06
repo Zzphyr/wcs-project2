@@ -37,7 +37,7 @@ class App extends Component {
       askedDif='';
     }
     fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${askedDif}&type=multiple&encode=url3986`)
-     .then(response => response.json())
+      .then(response => response.json())
       .then(data => {
         this.setState(
             // push runs immediately without waiting for request
@@ -45,8 +45,8 @@ class App extends Component {
             // here, they are functions instead of objects
             // thus we get extra functionality including "waiting"
           (state) => ({
-             ...state,
-             quizInfo : data["results"],
+              ...state,
+              quizInfo : data["results"],
             }), 
           () => this.props.history.push('/quiz')
         )
@@ -57,7 +57,7 @@ class App extends Component {
     this.getCategories();
   }
 
-      // Trial for fetching dropdowns 
+  // Fetch category list from API (for the dropdown) 
   getCategories = () => {
     fetch('https://opentdb.com/api_category.php')
       .then (response => response.json())
@@ -71,17 +71,18 @@ class App extends Component {
         })
       )}
     )
-  }
+  };
+
   handleCategory = (clickedCat) => {
-      this.setState({
-        chosenCat: clickedCat
-        });
+    this.setState({
+      chosenCat: clickedCat
+    });
   }
 
   handleDifficulty = (clickedDif) => {
-      this.setState({
-        chosenDif: clickedDif
-        });
+    this.setState({
+      chosenDif: clickedDif
+    });
   }
 
   updateUserAnswer = (numQ, ans) => {
@@ -93,7 +94,6 @@ class App extends Component {
           }
           return q;
         })
-
         return {
           ...state,
           quizInfo: updateAnswer,
@@ -111,8 +111,6 @@ class App extends Component {
               exact path='/' 
               render={()=> (
                 <Homepage 
-                  // do we even need quizInfo here? maybe for Quiz only?
-                  /* quizInfo={this.state.quizInfo} */ 
                   getQuiz={this.getQuiz}
                   selectDif={this.handleDifficulty}
                   chosenDif={this.state.chosenDif}
@@ -120,10 +118,9 @@ class App extends Component {
                   chosenCat={this.state.chosenCat}
                   selectCat={this.handleCategory}
                   categories={this.state.categories}
-                  />
-                  )} 
-                  />
-            
+                />
+              )} 
+            />
             <Route 
               exact path='/quiz' 
               render = {() => (
@@ -140,8 +137,6 @@ class App extends Component {
               render = {() => (
                 <Result 
                   quizInfo={this.state.quizInfo}
-/*                   chosenCat={this.chosenCat}
-                  chosenDif={this.chosenDif} */
                 />
               )}
             />  

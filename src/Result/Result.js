@@ -7,7 +7,8 @@ const Result = ({ quizInfo }) =>{
    const getScore = () => {
       let score = 0;
       quizInfo.forEach((el) => {
-         if (el['correct_answer'] === el['user_answer']) {
+         let correct = decodeURIComponent(el['correct_answer']);
+         if (correct === el['user_answer']) {
             score +=1;
          }
       })

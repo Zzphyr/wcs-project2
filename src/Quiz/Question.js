@@ -15,6 +15,7 @@ class Question extends Component {
    // ES6 Fisher–Yates shuffle algorithm
    shuffleAnswers = (array) => {
       for (let i = array.length - 1; i > 0; i--) {
+         decodeURIComponent(array[i])
          const j = Math.floor(Math.random() * (i + 1));
          [array[i], array[j]] = [array[j], array[i]];
       }
@@ -26,18 +27,18 @@ class Question extends Component {
       const { updateUserAnswer, numQ, question} = this.props;
       return (
          <div>           
-            <legend>{numQ} - {question}</legend>
+            <legend>{numQ} - {decodeURIComponent(question)}</legend>
             {this.state.answers.map((ans, i)=>{
                return (
-                  <div key={ans} >
+                  <div key={decodeURIComponent(ans)} >
                      <input 
                         type="radio" 
                         name={numQ} 
-                        value={ans} 
+                        value={decodeURIComponent(ans)} 
                         id={numQ*10+i}
-                        onChange={() => updateUserAnswer(numQ, ans)}
+                        onChange={() => updateUserAnswer(numQ, decodeURIComponent(ans))}
                      /> 
-                     <label htmlFor={numQ*10+i}>{ans}</label>
+                     <label htmlFor={numQ*10+i}>{decodeURIComponent(ans)}</label>
                      <br/>
                   </div>
                )

@@ -20,8 +20,8 @@ const ShowCorrectAnswers = ({ quizInfo }) => {
                      return (
                         <tr key={i+1}>
                            <th scope="row">{i+1}</th>
-                           <td>{q.question}</td>
-                           <td>{q.correct_answer}</td>
+                           <td>{decodeURIComponent(q.question)}</td>
+                           <td>{decodeURIComponent(q.correct_answer)}</td>
                            <td>{q.user_answer}</td>
                         </tr> 
                      )

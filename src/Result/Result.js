@@ -22,9 +22,9 @@ const Result = ({ quizInfo }) =>{
          message = 'LEGEN (wait for it) DARY!!!';
       } else if (relativeScore>=8) {
          message = 'WOW... you are a genius!';
-      } else if (relativeScore>=6) {
-         message = 'Good job!';
       } else if (relativeScore>=4) {
+         message = 'Good job!';
+      } else if (relativeScore>=2) {
          message = "Well, it wasn't thaaat bad...";
       } else {
          message = 'Oh dear! You might want to pick up a book or two.';

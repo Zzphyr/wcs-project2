@@ -22,6 +22,7 @@ class Question extends Component {
    }
    
    render() {
+      // destructuring props
       const { updateUserAnswer, numQ, question} = this.props;
       return (
          <div>           

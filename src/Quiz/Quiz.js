@@ -36,7 +36,6 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
             if (step!==i) return null;
             return (
                <form onSubmit={incrementStep} key={decodeURIComponent(q.question)} >
-                  
                   <Question 
                      userAnswer={q.userAnswer}
                      updateUserAnswer={updateUserAnswer}

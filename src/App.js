@@ -31,7 +31,12 @@ class App extends Component {
   }
    
   getQuiz = () => {
-    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${this.state.chosenDif.id}&type=multiple&encode=url3986`)
+    const lessThan10Questions = [13, 25,26, 29, 30];
+    let askedDif = this.state.chosenDif.id;
+    if (lessThan10Questions.includes(this.state.chosenCat.id)){
+      askedDif='';
+    }
+    fetch(`https://opentdb.com/api.php?amount=10&category=${this.state.chosenCat.id}&difficulty=${askedDif}&type=multiple&encode=url3986`)
      .then(response => response.json())
       .then(data => {
         this.setState(
@@ -68,7 +73,6 @@ class App extends Component {
     )
   }
   handleCategory = (clickedCat) => {
-    
       this.setState({
         chosenCat: clickedCat
         });

@@ -8,6 +8,8 @@ import Quiz from "./Quiz/Quiz";
 import Result from "./Result/Result";
 import Aboutpage from "./Aboutpage/Aboutpage";
 
+import ErrorBoundary from './ErrorBoundary';
+import NotFoundPage from './NotFoundPage';
 
 import './App.css';
 
@@ -105,6 +107,7 @@ class App extends Component {
   render () {
     return (
       <>
+      <ErrorBoundary>
       <Navbar />
           <Switch>
             <Route 
@@ -141,7 +144,9 @@ class App extends Component {
               )}
             />  
             <Route path='/about' component={Aboutpage} />
-          </Switch>      
+            <Route path="*" component={NotFoundPage} />
+          </Switch>
+        </ErrorBoundary>      
       </>
     );
   }

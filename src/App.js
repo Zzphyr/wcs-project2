@@ -104,6 +104,7 @@ class App extends Component {
   }
   
   render () {
+    const { quizInfo, chosenCat, chosenDif, categories} = this.state;
     return (
       <>
       <ErrorBoundary>
@@ -115,11 +116,11 @@ class App extends Component {
                 <Homepage 
                   getQuiz={this.getQuiz}
                   selectDif={this.handleDifficulty}
-                  chosenDif={this.state.chosenDif}
+                  chosenDif={chosenDif}
                   difficulties={difficulty}
-                  chosenCat={this.state.chosenCat}
+                  chosenCat={chosenCat}
                   selectCat={this.handleCategory}
-                  categories={this.state.categories}
+                  categories={categories}
                 />
               )} 
             />
@@ -127,9 +128,9 @@ class App extends Component {
               exact path='/quiz' 
               render = {() => (
                 <Quiz
-                quizInfo={this.state.quizInfo}
-                chosenCat={this.state.chosenCat}
-                chosenDif={this.state.chosenDif}
+                quizInfo={quizInfo}
+                chosenCat={chosenCat}
+                chosenDif={chosenDif}
                 updateUserAnswer={this.updateUserAnswer}
                 />
               )}
@@ -138,9 +139,9 @@ class App extends Component {
               path='/result' 
               render = {() => (
                 <Result 
-                  quizInfo={this.state.quizInfo}
-                  chosenCat={this.state.chosenCat}
-                  chosenDif={this.state.chosenDif}
+                  quizInfo={quizInfo}
+                  chosenCat={chosenCat}
+                  chosenDif={chosenDif}
                 />
               )}
             />  

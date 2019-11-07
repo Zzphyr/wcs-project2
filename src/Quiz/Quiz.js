@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Btn from '../Btn';
 import Question from './Question';
 import ShowSettings from './ShowSettings';
+import Timer from './Timer'
 
 //import { Html5Entities } from "html-entities";
 
@@ -31,6 +32,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
             chosenCat={chosenCat}
             chosenDif={chosenDif}
          />
+         <Timer />
          {arr.map((q,i) => {
             if (step!==i) return null;
             return (

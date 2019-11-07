@@ -1,8 +1,9 @@
 import React from 'react';
 import Btn from '../Btn';
 import ShowCorrectAnswers from './ShowCorrectAnwers';
+import ShowSettings from '../Quiz/ShowSettings';
 
-const Result = ({ quizInfo }) =>{
+const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
    
    const getScore = () => {
       let score = 0;
@@ -37,6 +38,9 @@ const Result = ({ quizInfo }) =>{
       <>
          <p>{resultMessage()}</p>
          <p>Your score: {getScore()} / 10 </p>
+         <ShowSettings 
+            chosenDif={chosenDif}
+            chosenCat={chosenCat} />
          <ShowCorrectAnswers quizInfo={quizInfo}/>
          <Btn 
             destination= {'./'}

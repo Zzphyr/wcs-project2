@@ -139,6 +139,8 @@ class App extends Component {
               render = {() => (
                 <Result 
                   quizInfo={this.state.quizInfo}
+                  chosenCat={this.state.chosenCat}
+                  chosenDif={this.state.chosenDif}
                 />
               )}
             />  

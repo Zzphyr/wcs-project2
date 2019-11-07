@@ -19,7 +19,10 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
    // hooks
    const incrementStep = (e) => { 
       e.preventDefault();
-      setStep(step+1);
+      
+      console.log("s",step,quizInfo[step])
+      //go to next question after a delay
+      setTimeout(()=> setStep(step+1), 200);
    }
 
    return (
@@ -48,6 +51,5 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
       </> 
    )
 }
-
 
 export default Quiz;

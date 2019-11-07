@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Quiz.css';
+
 class Question extends Component {
    constructor(props) {
       super(props);
@@ -19,12 +21,14 @@ class Question extends Component {
          const j = Math.floor(Math.random() * (i + 1));
          [array[i], array[j]] = [array[j], array[i]];
       }
+      
       return this.setState({answers: array})
    }
    
    render() {
       // destructuring props
-      const { updateUserAnswer, numQ, question} = this.props;
+      const { updateUserAnswer, numQ, question } = this.props;
+      console.log("pp", this.props.btnColor)
       return (
          <div>           
             <legend>{numQ} - {decodeURIComponent(question)}</legend>
@@ -37,8 +41,9 @@ class Question extends Component {
                         value={decodeURIComponent(ans)} 
                         id={numQ*10+i}
                         onChange={() => updateUserAnswer(numQ, decodeURIComponent(ans))}
-                     /> 
-                     <label htmlFor={numQ*10+i}>{decodeURIComponent(ans)}</label>
+                        /> 
+                        
+                     <label className={this.props.btnColor} htmlFor={numQ*10+i}>{decodeURIComponent(ans)}</label>
                      <br/>
                   </div>
                )

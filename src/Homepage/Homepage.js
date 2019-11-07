@@ -53,7 +53,7 @@ class Homepage extends Component {
             <button 
               onClick={() => this.handleChoices()} 
               className="StartBtn"
-            > Start
+            >Start
             </button>
           </div>
 

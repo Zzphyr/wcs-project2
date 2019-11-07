@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Question from './Question';
 import ShowSettings from './ShowSettings';
 import { useHistory } from "react-router-dom";
-
 import './Quiz.css';
+import Timer from './Timer'
+
 
 
 const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
@@ -44,6 +45,8 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
             chosenDif={chosenDif}
          />
          {console.log("xx",btnColor)}
+         <Timer />
+
          {arr.map((q,i) => {
             if (step!==i) return null;
             return (

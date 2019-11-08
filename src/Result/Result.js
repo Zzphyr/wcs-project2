@@ -21,15 +21,17 @@ const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
       let message = '';
       let relativeScore = getScore();
       if (relativeScore===10) {
-         message = 'LEGEN (wait for it) DARY!!!';
+         message = "LEGEN (wait for it) DARY!!!";
       } else if (relativeScore>=8) {
-         message = 'WOW... you are a genius!';
+         message = "WOW... you are a genius!";
+      } else if (relativeScore>=6) {
+         message = "You are amazing!";
       } else if (relativeScore>=4) {
-         message = 'Good job!';
+         message = "Good job!";
       } else if (relativeScore>=2) {
          message = "Well, it wasn't thaaat bad...";
       } else {
-         message = 'Oh dear! You might want to pick up a book or two.';
+         message = "Oh dear! You might want to pick up a book or two.";
       }
       return message;
    }  

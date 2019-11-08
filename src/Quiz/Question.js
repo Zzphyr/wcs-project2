@@ -20,30 +20,29 @@ class Question extends Component {
          decodeURIComponent(array[i])
          const j = Math.floor(Math.random() * (i + 1));
          [array[i], array[j]] = [array[j], array[i]];
-      }
-      
+      }  
       return this.setState({answers: array})
    }
    
    render() {
       // destructuring props
-      const { updateUserAnswer, numQ, question } = this.props;
-      console.log("pp", this.props.btnColor)
+      const { updateUserAnswer, numQ, question, btnColor, userAnswer, clickedNext } = this.props;
+      const { answers } = this.state;
       return (
          <div>           
             <legend>{numQ} - {decodeURIComponent(question)}</legend>
-            {this.state.answers.map((ans, i)=>{
+            {answers.map((ans, i)=>{
+               let answer = decodeURIComponent(ans);
                return (
-                  <div key={decodeURIComponent(ans)} >
+                  <div key={answer} >
                      <input 
                         type="radio" 
                         name={numQ} 
-                        value={decodeURIComponent(ans)} 
+                        value={answer} 
                         id={numQ*10+i}
-                        onChange={() => updateUserAnswer(numQ, decodeURIComponent(ans))}
-                        /> 
-                        
-                     <label className={this.props.btnColor} htmlFor={numQ*10+i}>{decodeURIComponent(ans)}</label>
+                        onChange={() => updateUserAnswer(numQ, answer)}
+                        />     
+                     <label className={(answer===userAnswer&&clickedNext) ? btnColor : ''} htmlFor={numQ*10+i}>{answer}</label>
                      <br/>
                   </div>
                )

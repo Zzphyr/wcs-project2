@@ -73,6 +73,6 @@ p {
 }
 
 .homepage-main {
-    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    background-image: linear-gradient(to top, #e98dbf 0%, rgb(255, 225, 168) 50%, #c7eafd 100%);
     height: 95vh;
 }

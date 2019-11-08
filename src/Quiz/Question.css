@@ -13,6 +13,7 @@ input[type="radio"]{
    visibility:hidden;
 }
 
+/* currently is overiddes all background color! */
 input[type="radio"]:checked + label {
-   background: rgb(223, 232, 243);
+   background: rgb(228, 234, 241);
 }

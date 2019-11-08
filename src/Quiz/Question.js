@@ -30,28 +30,33 @@ class Question extends Component {
       const { updateUserAnswer, numQ, question, btnColor, userAnswer, clickedNext } = this.props;
       const { answers } = this.state;
       return (
-         <div className="question-div">           
+         <div className="question-div text-center">           
             <legend>{numQ} - {decodeURIComponent(question)}</legend>
+            <div>
+            
             {answers.map((ans, i)=>{
                let answer = decodeURIComponent(ans);
                return (
-                  
+                  <>
+                     <input 
+                        type="radio" 
+                        name={numQ} 
+                        value={answer} 
+                        id={numQ*10+i}
+                        onChange={() => updateUserAnswer(numQ, answer)}
+                     />     
                      <label 
                         htmlFor={numQ*10+i} 
                         key={answer} 
-                        className={(answer===userAnswer&&clickedNext) ? `answer-div text-center col-sm-4 ${btnColor}` : `answer-div col-sm-4 text-center answer-div-nonClickedNext`}
+                        className={(answer===userAnswer&&clickedNext) ? `answer-div ${btnColor} col-sm-5 col-md-4` : `answer-div answer-div-nonClickedNext col-sm-5 col-md-4`}
                      >
-                        <input 
-                           type="radio" 
-                           name={numQ} 
-                           value={answer} 
-                           id={numQ*10+i}
-                           onChange={() => updateUserAnswer(numQ, answer)}
-                        />     
                         {answer}
                      </label>
+                  </>
                )
             })} 
+            </div>
+             
          </div>
       )
    }

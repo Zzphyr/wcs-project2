@@ -65,7 +65,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
                      clickedNext={clickedNext}
                      />
                   {(step<9) && <input className="next-btn" type="submit" value="Next" />}
-                  {(step===9) && <input type="submit" value="See score!" />}    
+                  {(step===9) && <input className="submit-btn" type="submit" value="See score!" />}    
                </form>
             )    
          })} 

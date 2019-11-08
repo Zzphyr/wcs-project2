@@ -12,7 +12,16 @@
    padding: 1em 2em;
 }
 
-.next-btn {
+.next-btn, .next-btn {
    display: block;
+   color: darkslategray;
    margin: 10px auto;
+   border: 1px solid darkslategray;
+   border-radius: 5px;
+   padding: 5px 20px;
+   background: whitesmoke;
+}
+
+.next-btn:hover, .next-btn:hover {
+   background: rgb(218, 217, 217);
 }

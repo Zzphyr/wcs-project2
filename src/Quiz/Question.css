@@ -5,8 +5,15 @@
 }
 
 .answer-div-nonClickedNext {
-   color: blue;
-   border: 1px solid blue;
+   border: 2px solid black;
    border-radius: 12px;
    padding: 1em 2em;
+}
+/* to hide the radio buttons */
+input[type="radio"]{
+   visibility:hidden;
+}
+
+input[type="radio"]:checked + label {
+   background: rgb(223, 232, 243);
 }

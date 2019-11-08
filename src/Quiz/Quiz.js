@@ -54,7 +54,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
          {arr.map((q,i) => {
             if (step!==i) return null;
             return (
-               <form onSubmit={incrementStep} key={decodeURIComponent(q.question)} >
+               <form onSubmit={incrementStep} key={decodeURIComponent(q.question)} className="container" >
                   <Question 
                      userAnswer={quizInfo[i].user_answer}
                      updateUserAnswer={updateUserAnswer}
@@ -65,7 +65,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
                      btnColor={btnColor}
                      clickedNext={clickedNext}
                      />
-                  {(step<9) && <input type="submit" value="Next" />}
+                  {(step<9) && <input className="next-btn" type="submit" value="Next" />}
                   {(step===9) && <input type="submit" value="See score!" />}    
                </form>
             )    

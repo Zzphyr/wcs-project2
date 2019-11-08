@@ -1,13 +1,18 @@
 .correct {
    color: green;
-   border: 1px solid green;
+   border: 2px solid green;
    border-radius: 12px;
    padding: 1em 2em;
 }
 
 .incorrect {
    color: red;
-   border: 1px solid red;
+   border: 2px solid red;
    border-radius: 12px;
    padding: 1em 2em;
+}
+
+.next-btn {
+   display: block;
+   margin: 10px auto;
 }

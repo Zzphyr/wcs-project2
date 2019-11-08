@@ -12,7 +12,7 @@ class Timer extends Component {
         const {count} = this.state
         return (
             <div>
-                <h3> Time: {count} </h3>
+                <p> Time: {count} </p>
             </div>
         )
     }

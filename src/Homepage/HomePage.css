@@ -74,5 +74,5 @@ p {
 
 .homepage-main {
     background-image: linear-gradient(to top, #e98dbf 0%, rgb(255, 225, 168) 50%, #c7eafd 100%);
-    height: 95vh;
+    height: calc(100vh - 50px);
 }

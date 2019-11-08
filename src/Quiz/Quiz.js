@@ -35,41 +35,48 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
             setStep(step+1);
             setClickedNext(false);
             setBtnColor('');
-         },1000); 
+         },700); 
       } else {
          setTimeout(()=> {
             history.push("/result")
-         },1000);
+         },700);
       } 
    }
 
    return (
-      <>         
-         <ShowSettings 
-            chosenCat={chosenCat}
-            chosenDif={chosenDif}
-         />
-         <Timer />
-         {arr.map((q,i) => {
-            if (step!==i) return null;
-            return (
-               <form onSubmit={incrementStep} key={decodeURIComponent(q.question)} className="container" >
-                  <Question 
-                     userAnswer={quizInfo[i].user_answer}
-                     updateUserAnswer={updateUserAnswer}
-                     numQ={i+1} 
-                     question={q.question} 
-                     correct={q.correct_answer} 
-                     incorrect={q.incorrect_answers} 
-                     btnColor={btnColor}
-                     clickedNext={clickedNext}
-                     />
-                  {(step<9) && <input className="next-btn" type="submit" value="Next" />}
-                  {(step===9) && <input className="submit-btn" type="submit" value="See score!" />}    
-               </form>
-            )    
-         })} 
-      </> 
+      <main>
+         <section className="show-settings-timer">
+            <ShowSettings 
+               chosenCat={chosenCat}
+               chosenDif={chosenDif}
+               />
+            <Timer />
+         </section>
+         <section className="container section-question">
+            <div >
+
+            {arr.map((q,i) => {
+               if (step!==i) return null;
+               return (
+                  <form className="question-form text-center" onSubmit={incrementStep} key={decodeURIComponent(q.question)} >
+                     <Question 
+                        userAnswer={quizInfo[i].user_answer}
+                        updateUserAnswer={updateUserAnswer}
+                        numQ={i+1} 
+                        question={q.question} 
+                        correct={q.correct_answer} 
+                        incorrect={q.incorrect_answers} 
+                        btnColor={btnColor}
+                        clickedNext={clickedNext}
+                        />
+                     {(step<9) && <input className="submit-btn" type="submit" value="Submit" />}
+                     {(step===9) && <input className="submit-btn" type="submit" value="Submit" />}    
+                  </form>
+               )    
+            })} 
+            </div>
+         </section>         
+      </main> 
    )
 }
 

@@ -1,27 +1,50 @@
-.correct {
-   color: green;
-   border: 2px solid green;
+.container {
+   height: calc(100vh - 50px);
+}
+
+.show-settings-timer {
+   display: flex;
+   justify-content: center;
+   padding-top: 45px;
+}
+
+.correct, .incorrect {
    border-radius: 12px;
    padding: 1em 2em;
+   width: 50vw;
+   cursor: pointer;
+   font-weight: bold;
+}
+
+.correct {
+   color: darkgreen;
+   border: 2px solid darkgreen;
+   background: rgb(128, 209, 128);
 }
 
 .incorrect {
-   color: red;
-   border: 2px solid red;
-   border-radius: 12px;
-   padding: 1em 2em;
+   color: crimson;
+   border: 2px solid crimson;
+   background: rgb(233, 161, 175);
 }
 
-.next-btn, .next-btn {
+.submit-btn {
    display: block;
    color: darkslategray;
-   margin: 10px auto;
+   margin: 5% auto;
    border: 1px solid darkslategray;
    border-radius: 5px;
    padding: 5px 20px;
    background: whitesmoke;
 }
 
-.next-btn:hover, .next-btn:hover {
+.submit-btn:hover {
    background: rgb(218, 217, 217);
+}
+
+.section-question {
+   height: 70vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }

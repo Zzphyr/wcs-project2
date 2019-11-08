@@ -30,9 +30,9 @@ class Question extends Component {
       const { updateUserAnswer, numQ, question, btnColor, userAnswer, clickedNext } = this.props;
       const { answers } = this.state;
       return (
-         <div className="question-div text-center">           
-            <legend>{numQ} - {decodeURIComponent(question)}</legend>
-            <div>
+         <div className="question-div">           
+            <legend className="question">{numQ} - {decodeURIComponent(question)}</legend>
+            <div className="answers-div">
                {answers.map((ans, i)=>{
                   let answer = decodeURIComponent(ans);
                   return (
@@ -43,11 +43,12 @@ class Question extends Component {
                            value={answer} 
                            id={numQ*10+i}
                            onChange={() => updateUserAnswer(numQ, answer)}
+                           className="radio"
                         />     
                         <label 
                            htmlFor={numQ*10+i} 
                            key={answer} 
-                           className={(answer===userAnswer&&clickedNext) ? `answer-div ${btnColor} col-sm-5 col-md-4` : `answer-div answer-div-nonClickedNext col-sm-5 col-md-4`}
+                           className={(answer===userAnswer&&clickedNext) ? `answer-div ${btnColor} col-sm-5 col-md-4` : `answer-div answer-div-nonClickedNext col-sm-5 col-md-4 label-before-submit`}
                         >
                            {answer}
                         </label>

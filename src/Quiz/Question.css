@@ -1,19 +1,37 @@
+.question {
+   padding: 0 0 2em 0;
+   margin-bottom: 1em;
+}
+
+.answers-div {
+   margin-top: 1em;
+   
+}
+
 .answer-div {
+   min-height: 5em;
    margin: 10px;
-   flex-wrap: wrap;
+   padding: 1.4em 1.5em 1.1em 1.5em;
+   vertical-align: middle;
 }
 
 .answer-div-nonClickedNext {
    border: 2px solid black;
    border-radius: 12px;
-   padding: 1em 2em;
+   /* padding: 1em 2em; */
+   width: 50vw;
+   cursor: pointer;
 }
 /* to hide the radio buttons */
-input[type="radio"]{
+.radio {
    visibility:hidden;
 }
 
 /* currently is overiddes all background color! */
-input[type="radio"]:checked + label {
-   background: rgb(228, 234, 241);
+.radio:checked + .label-before-submit {
+   background: rgb(200, 227, 243);
+}
+
+.label-before-submit:hover {
+   background: rgb(232, 243, 245);
 }

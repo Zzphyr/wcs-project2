@@ -1,4 +1,5 @@
 import React from 'react';
+import './ShowSettings.css'
 
 const ShowSettings = ({ chosenCat, chosenDif }) => {
    return (

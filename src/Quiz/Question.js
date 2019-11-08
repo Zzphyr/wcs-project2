@@ -33,30 +33,28 @@ class Question extends Component {
          <div className="question-div text-center">           
             <legend>{numQ} - {decodeURIComponent(question)}</legend>
             <div>
-            
-            {answers.map((ans, i)=>{
-               let answer = decodeURIComponent(ans);
-               return (
-                  <>
-                     <input 
-                        type="radio" 
-                        name={numQ} 
-                        value={answer} 
-                        id={numQ*10+i}
-                        onChange={() => updateUserAnswer(numQ, answer)}
-                     />     
-                     <label 
-                        htmlFor={numQ*10+i} 
-                        key={answer} 
-                        className={(answer===userAnswer&&clickedNext) ? `answer-div ${btnColor} col-sm-5 col-md-4` : `answer-div answer-div-nonClickedNext col-sm-5 col-md-4`}
-                     >
-                        {answer}
-                     </label>
-                  </>
-               )
-            })} 
-            </div>
-             
+               {answers.map((ans, i)=>{
+                  let answer = decodeURIComponent(ans);
+                  return (
+                     <>
+                        <input 
+                           type="radio" 
+                           name={numQ} 
+                           value={answer} 
+                           id={numQ*10+i}
+                           onChange={() => updateUserAnswer(numQ, answer)}
+                        />     
+                        <label 
+                           htmlFor={numQ*10+i} 
+                           key={answer} 
+                           className={(answer===userAnswer&&clickedNext) ? `answer-div ${btnColor} col-sm-5 col-md-4` : `answer-div answer-div-nonClickedNext col-sm-5 col-md-4`}
+                        >
+                           {answer}
+                        </label>
+                     </>
+                  )
+               })} 
+            </div>    
          </div>
       )
    }

@@ -37,7 +37,7 @@ class Homepage extends Component {
   
   render() {
     return ( 
-       <>
+       <div className="homepage-main">
        <ChooseSettings 
           selectDif={this.props.selectDif} 
           chosenDif={this.props.chosenDif}
@@ -71,7 +71,7 @@ class Homepage extends Component {
               </div>
             </Modal>
          </div>
-      </>
+      </div>
     );
   }
 }

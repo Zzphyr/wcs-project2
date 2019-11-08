@@ -1,0 +1,12 @@
+.answer-div {
+   
+   margin: 10px;
+   flex-wrap: wrap;
+}
+
+.answer-div-nonClickedNext {
+   color: blue;
+   border: 1px solid blue;
+   border-radius: 12px;
+   padding: 1em 2em;
+}

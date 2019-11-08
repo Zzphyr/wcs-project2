@@ -38,11 +38,11 @@ const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
 
    return (
       <>
-         <p>{resultMessage()}</p>
-         <p>Your score: {getScore()} / 10 </p>
          <ShowSettings 
             chosenDif={chosenDif}
             chosenCat={chosenCat} />
+         <p>{resultMessage()}</p>
+         <p>Your score: {getScore()} / 10 </p>
          <ShowCorrectAnswers quizInfo={quizInfo}/>
          <Btn 
             destination= {'./'}

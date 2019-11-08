@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './Quiz.css';
+import './Question.css'
 
 class Question extends Component {
    constructor(props) {
@@ -29,22 +30,26 @@ class Question extends Component {
       const { updateUserAnswer, numQ, question, btnColor, userAnswer, clickedNext } = this.props;
       const { answers } = this.state;
       return (
-         <div>           
+         <div className="question-div">           
             <legend>{numQ} - {decodeURIComponent(question)}</legend>
             {answers.map((ans, i)=>{
                let answer = decodeURIComponent(ans);
                return (
-                  <div key={answer} >
-                     <input 
-                        type="radio" 
-                        name={numQ} 
-                        value={answer} 
-                        id={numQ*10+i}
-                        onChange={() => updateUserAnswer(numQ, answer)}
+                  
+                     <label 
+                        htmlFor={numQ*10+i} 
+                        key={answer} 
+                        className={(answer===userAnswer&&clickedNext) ? `answer-div text-center col-sm-4 ${btnColor}` : `answer-div col-sm-4 text-center answer-div-nonClickedNext`}
+                     >
+                        <input 
+                           type="radio" 
+                           name={numQ} 
+                           value={answer} 
+                           id={numQ*10+i}
+                           onChange={() => updateUserAnswer(numQ, answer)}
                         />     
-                     <label className={(answer===userAnswer&&clickedNext) ? btnColor : ''} htmlFor={numQ*10+i}>{answer}</label>
-                     <br/>
-                  </div>
+                        {answer}
+                     </label>
                )
             })} 
          </div>

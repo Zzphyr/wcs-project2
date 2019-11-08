@@ -22,7 +22,6 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
       arr.push(quizInfo[key]);
     });
    
-   
    // using hooks
    const incrementStep = (e) => { 
       e.preventDefault();

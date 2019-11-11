@@ -1,9 +1,53 @@
-.stockPhotos {
-    width: 30vw;
-    overflow: hidden;
+.people {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photos-us {
+    width: 200px;
+    height: auto;
+    margin: 15px 10vw;
+    box-shadow: 1px 1px 5px grey;
+    border-radius: 50%;
+}
+
+.person {
+    text-align: center;
+    margin-bottom: 2em;
 }
 
 figure {
-    display:inline-block;
-    
+    text-align: center;
+}
+
+.job-student {
+    color: rgb(90, 90, 90);
+    font-weight: lighter;
+}
+
+.social-media a img {
+    height: 60px;
+    margin: 0 10px;
+}
+
+.project-description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 5% 12%;
+}
+
+.project-description p {
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+.about-main {
+    height: calc(100vh - 50px);
+}
+
+.about-title {
+    padding: 1em;
 }

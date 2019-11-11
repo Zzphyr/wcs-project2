@@ -36,7 +36,7 @@ figure {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    margin: 5% 20%;
+    margin: 5% 12%;
 }
 
 .project-description p {
@@ -45,12 +45,9 @@ figure {
 }
 
 .about-main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     height: calc(100vh - 50px);
 }
 
 .about-title {
-    padding: 0 1em 1em 1em;
+    padding: 1em;
 }

@@ -60,7 +60,6 @@ button.StartBtn:hover { background-color:#f5b233;
     border-radius: 10px;
 }
 
-
 p {
     position: relative;
     padding: 20px;
@@ -71,4 +70,9 @@ p {
     color: black; 
     padding-top: 10px;
     padding: 0px; 
+}
+
+.homepage-main {
+    background-image: linear-gradient(to top, #e98dbf 0%, rgb(255, 225, 168) 50%, #c7eafd 100%);
+    height: calc(100vh - 50px);
 }

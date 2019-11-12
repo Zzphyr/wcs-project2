@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import './Quiz.css';
+import './Question.css'
 
 class Question extends Component {
    constructor(props) {
@@ -20,34 +21,41 @@ class Question extends Component {
          decodeURIComponent(array[i])
          const j = Math.floor(Math.random() * (i + 1));
          [array[i], array[j]] = [array[j], array[i]];
-      }
-      
+      }  
       return this.setState({answers: array})
    }
    
    render() {
       // destructuring props
-      const { updateUserAnswer, numQ, question } = this.props;
-      console.log("pp", this.props.btnColor)
+      const { updateUserAnswer, numQ, question, btnColor, userAnswer, clickedNext } = this.props;
+      const { answers } = this.state;
       return (
-         <div>           
-            <legend>{numQ} - {decodeURIComponent(question)}</legend>
-            {this.state.answers.map((ans, i)=>{
-               return (
-                  <div key={decodeURIComponent(ans)} >
-                     <input 
-                        type="radio" 
-                        name={numQ} 
-                        value={decodeURIComponent(ans)} 
-                        id={numQ*10+i}
-                        onChange={() => updateUserAnswer(numQ, decodeURIComponent(ans))}
-                        /> 
-                        
-                     <label className={this.props.btnColor} htmlFor={numQ*10+i}>{decodeURIComponent(ans)}</label>
-                     <br/>
-                  </div>
-               )
-            })} 
+         <div className="question-div">           
+            <legend className="question">{numQ} - {decodeURIComponent(question)}</legend>
+            <div className="answers-div">
+               {answers.map((ans, i)=>{
+                  let answer = decodeURIComponent(ans);
+                  return (
+                     <>
+                        <input 
+                           type="radio" 
+                           name={numQ} 
+                           value={answer} 
+                           id={numQ*10+i}
+                           onChange={() => updateUserAnswer(numQ, answer)}
+                           className="radio"
+                        />     
+                        <label 
+                           htmlFor={numQ*10+i} 
+                           key={answer} 
+                           className={(answer===userAnswer&&clickedNext) ? `answer-div ${btnColor} col-sm-5 col-md-4` : `answer-div answer-div-nonClickedNext col-sm-5 col-md-4 label-before-submit`}
+                        >
+                           {answer}
+                        </label>
+                     </>
+                  )
+               })} 
+            </div>    
          </div>
       )
    }

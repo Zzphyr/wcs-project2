@@ -6,7 +6,10 @@ import './Quiz.css';
 import Timer from './Timer'
 
 
-const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
+
+
+const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, totalTime }) =>{
+
 
    // to allow use of history.push
    let history = useHistory();
@@ -44,6 +47,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer }) =>{
    }
 
    return (
+
       <main>
          <section className="show-settings-timer">
             <ShowSettings 

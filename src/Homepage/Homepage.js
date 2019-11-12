@@ -36,15 +36,16 @@ class Homepage extends Component {
    
   
   render() {
+    const { chosenCat, chosenDif, categories, difficulties, selectCat, selectDif} = this.props;
     return ( 
        <div className="homepage-main">
        <ChooseSettings 
-          selectDif={this.props.selectDif} 
-          chosenDif={this.props.chosenDif}
-          difficulties={this.props.difficulties}
-          chosenCat={this.props.chosenCat}
-          selectCat={this.props.selectCat}
-          categories={this.props.categories}
+          selectDif={selectDif} 
+          chosenDif={chosenDif}
+          difficulties={difficulties}
+          chosenCat={chosenCat}
+          selectCat={selectCat}
+          categories={categories}
         />
         
         <HomeTitle /> 

@@ -24,8 +24,8 @@ class Timer extends Component {
             }))
         }, 1000);
     }
-    componentWillUnmount () {
-           clearInterval(this.myInterval)
-    }
+    // componentWillUnmount () {
+    //        clearInterval(this.myInterval)
+    // }
 }
 export default Timer;

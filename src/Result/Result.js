@@ -16,6 +16,8 @@ const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
       return score;
    }
 
+
+
    // show a more personal message depending on user score
    const resultMessage = () => {
       let message = '';

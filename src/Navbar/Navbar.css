@@ -6,8 +6,8 @@
 }
 
 .nav-item, .navbar-text {
+  overflow: hidden;
   padding: 0.5em 2em;
-  list-style: none;
 } 
 
 .navbar-links {
@@ -29,14 +29,17 @@
 }
 
 @media screen and (max-width: 767px) {
-  .nav-item {
-    padding: 1.5em 5em;
-    text-align: center;
+  .nav-item, .navbar-text {
     font-size: large;
+  } 
+  .nav-item {
+    padding: 1.5em;
+    text-align: center;
     background: rgb(38, 42, 49);
   } 
-  
   .navbar-text {
     font-size: large;
+    padding: 0;
   }
+
 }

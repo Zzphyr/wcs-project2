@@ -4,21 +4,36 @@ import './Navbar.css';
 
 const Navbar = () =>{
 return (
-   <nav className="navbar navbar-expand-sm nav-center">
-          <button className="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
-            </button><span className="navbar-toggler-icon"></span>
-      <div className="collapse navbar-collapse menu" id="main-navigation">
-         <ul className="navbar-nav nav">
-            <li className="nav-item">
-               <NavLink exact to='/' activeClassName='active'>Homepage</NavLink>
-            </li>
-            <li className="nav-item">
-               <NavLink to='/about' activeClassName='active'>About us</NavLink>
-            </li>
-         </ul>
-      </div>
-   </nav> 
+
+
+   <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+
+<span className="navbar-text">
+   Trivia Game
+  </span>
+   
+   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+   <span className="navbar-toggler-icon"></span>
+   </button>
+
+   
+   <div className="collapse navbar-collapse" id="collapsibleNavbar">
+   <ul className="navbar-nav">
+      <li className="nav-item">
+      <NavLink exact to='/' className="navbar-links" activeClassName='active'>Homepage</NavLink>
+      </li>
+      <li className="nav-item">
+      <NavLink to='/about' className="navbar-links" activeClassName='active'>About us</NavLink>
+      </li>
+   </ul>
+   </div>
+   </nav>
+
    )
+
+   
+
+
 }
 
 export default Navbar;

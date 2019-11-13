@@ -73,6 +73,9 @@ p {
 }
 
 .homepage-main {
-    background-image: linear-gradient(to top, #e98dbf 0%, rgb(255, 225, 168) 50%, #c7eafd 100%);
+    background-image: linear-gradient(60deg, #212931 0%, #485563 100%);
     height: calc(100vh - 50px);
+    /* height: 100vh; */
+    position: relative;
+    top: 50px;
 }

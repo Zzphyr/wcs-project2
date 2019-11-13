@@ -55,7 +55,7 @@ class Homepage extends Component {
           <div className="start_container">
             <button 
               onClick={() => this.handleChoices()} 
-              className="StartBtn"
+              className="start-btn"
             >Start
             </button>
           </div>

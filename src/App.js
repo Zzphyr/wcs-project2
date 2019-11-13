@@ -11,6 +11,7 @@ import Aboutpage from "./Aboutpage/Aboutpage";
 import ErrorBoundary from './ErrorBoundary';
 import NotFoundPage from './NotFoundPage';
 
+
 import './App.css';
 
 
@@ -29,6 +30,7 @@ class App extends Component {
       chosenCat: { id:0, name:"Any Category" },
       chosenDif: { id:0, difficulty: "Any Difficulty"},
       categories:[{ id:0, name:"Any Category" }],
+      seconds: 0,
     }
   }
    
@@ -102,9 +104,21 @@ class App extends Component {
       }
     )
   }
-  
+
+   updateTimer = () => {
+    this.myInterval = setInterval(() => {
+      this.setState(preState => ({
+      seconds: preState.seconds +1
+      }))
+  }, 1000)
+}
+  pauseTimer = () => {
+    clearInterval(this.myInterval)  
+    }
+    
+
   render () {
-    const { quizInfo, chosenCat, chosenDif, categories} = this.state;
+    const { quizInfo, chosenCat, chosenDif, categories, seconds} = this.state;
     return (
       <>
       <ErrorBoundary>
@@ -121,6 +135,7 @@ class App extends Component {
                   chosenCat={chosenCat}
                   selectCat={this.handleCategory}
                   categories={categories}
+                  updatedTimer={this.updateTimer}
                 />
               )} 
             />
@@ -131,7 +146,10 @@ class App extends Component {
                 quizInfo={quizInfo}
                 chosenCat={chosenCat}
                 chosenDif={chosenDif}
-                updateUserAnswer={this.updateUserAnswer}
+                updateUserAnswer={this.updateUserAnswer} 
+                componentDidUpdate={this.componentDidUpdate}
+                seconds={seconds}
+                pausedTimer={this.pauseTimer}
                 />
               )}
             />
@@ -142,6 +160,7 @@ class App extends Component {
                   quizInfo={quizInfo}
                   chosenCat={chosenCat}
                   chosenDif={chosenDif}
+                  seconds={seconds}
                 />
               )}
             />  

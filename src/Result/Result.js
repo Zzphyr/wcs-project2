@@ -2,8 +2,9 @@ import React from 'react';
 import Btn from '../Btn';
 import ShowCorrectAnswers from './ShowCorrectAnwers';
 import ShowSettings from '../Quiz/ShowSettings';
+import ShowTimer from '../Quiz/ShowTimer';
 
-const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
+const Result = ({ quizInfo, chosenCat, chosenDif, seconds}) =>{
    
    const getScore = () => {
       let score = 0;
@@ -15,8 +16,6 @@ const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
       })
       return score;
    }
-
-
 
    // show a more personal message depending on user score
    const resultMessage = () => {
@@ -37,12 +36,17 @@ const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
       }
       return message;
    }  
+  
 
    return (
       <>
          <ShowSettings 
             chosenDif={chosenDif}
-            chosenCat={chosenCat} />
+            chosenCat={chosenCat}
+            />
+         <ShowTimer 
+         seconds={seconds}
+          /> 
          <p>{resultMessage()}</p>
          <p>Your score: {getScore()} / 10 </p>
          <ShowCorrectAnswers quizInfo={quizInfo}/>

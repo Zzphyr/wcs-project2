@@ -32,6 +32,7 @@ class Homepage extends Component {
   
   handleChoices() {
     this.props.getQuiz(); 
+    this.props.updatedTimer();
   };
    
   

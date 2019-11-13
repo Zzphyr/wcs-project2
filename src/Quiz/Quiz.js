@@ -8,7 +8,8 @@ import Timer from './Timer'
 
 
 
-const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, totalTime }) =>{
+
+const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, pausedTimer}) =>{
 
 
    // to allow use of history.push
@@ -18,6 +19,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, totalTime }) =
    const [step, setStep] = useState(0);
    const [btnColor, setBtnColor] = useState('');
    const [clickedNext, setClickedNext] = useState(false);
+  
   
    // turns the json object from props into an array so we can iterate over it
    let arr = [];
@@ -43,8 +45,11 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, totalTime }) =
          setTimeout(()=> {
             history.push("/result")
          },700);
-      } 
+         pausedTimer(); 
+      }
+      
    }
+  
 
    return (
 
@@ -54,7 +59,9 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, totalTime }) =
                chosenCat={chosenCat}
                chosenDif={chosenDif}
                />
-            <Timer />
+            <Timer 
+               seconds={seconds}
+             />
          </section>
          <section className="container section-question">
             <div >

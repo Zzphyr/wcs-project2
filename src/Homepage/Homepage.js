@@ -26,9 +26,11 @@ class Homepage extends Component {
   }
 
   closeModal = () => {
+    if (this.state.modalIsOpen === true) {
     this.setState({
       modalIsOpen: false
     });
+  }
   }
   
   handleChoices() {
@@ -51,7 +53,7 @@ class Homepage extends Component {
         />
           
         <HomeTitle /> 
-        <div className="btns_container">
+        <div className="btns_container" onClick={this.closeModal}>
           <div className="start_container">
             <button 
               onClick={() => this.handleChoices()} 

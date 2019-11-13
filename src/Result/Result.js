@@ -6,7 +6,7 @@ import ShowTimer from '../Quiz/ShowTimer';
 
 import '../App.css';
 
-const Result = ({ quizInfo, chosenCat, chosenDif, seconds}) =>{
+const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
   
    const getScore = () => {
       let score = 0;
@@ -39,6 +39,7 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds}) =>{
       return message;
    }  
   
+
 
    return (
       <main className="result-main">

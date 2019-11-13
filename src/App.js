@@ -51,6 +51,7 @@ class App extends Component {
           (state) => ({
               ...state,
               quizInfo : data["results"],
+              seconds : 0,
             }), 
           () => this.props.history.push('/quiz')
         )
@@ -105,16 +106,18 @@ class App extends Component {
     )
   }
 
-   updateTimer = () => {
+  updateTimer = () => {
     this.myInterval = setInterval(() => {
       this.setState(preState => ({
       seconds: preState.seconds +1
       }))
-  }, 1000)
-}
+    }, 1000)
+  }
   pauseTimer = () => {
-    clearInterval(this.myInterval)  
+    clearInterval(this.myInterval) 
     }
+
+
     
 
   render () {

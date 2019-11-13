@@ -18,8 +18,9 @@
   color: cornflowerblue;
 }
 
-.navbar-text {
+.navbar-text, .navbar-text:hover {
   font-weight: bold;
+  text-decoration: none;
 }
 
 .active {
@@ -29,7 +30,7 @@
 
 @media screen and (max-width: 767px) {
   .nav-item {
-    padding: 2em 5em;
+    padding: 1.5em 5em;
     text-align: center;
     font-size: large;
     background: rgb(38, 42, 49);

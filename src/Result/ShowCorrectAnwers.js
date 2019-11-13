@@ -1,13 +1,21 @@
-import React from 'react'
+import React from 'react';
+import "./ShowCorrectAnswers.css";
 
 const ShowCorrectAnswers = ({ quizInfo }) => {
 
    return (
-      <div>
-         <button type="button" className="btn btn-outline-danger" data-toggle="collapse" data-target="#answer-table">See answers!</button>
+      <section className="answers-table">
+         <button 
+            type="button" 
+            className="btn btn-outline-danger" 
+            data-toggle="collapse" 
+            data-target="#answer-table"
+            >
+            See answers!
+         </button>
          <div id="answer-table" className="collapse">
             <table className="table table-hover">
-               <thead className="thead-dark">
+               <thead className="answers-tablehead thead-dark">
                   <tr>
                      <th scope="col">#</th>
                      <th scope="col">Question</th>
@@ -29,7 +37,7 @@ const ShowCorrectAnswers = ({ quizInfo }) => {
                </tbody>
             </table>
          </div>
-      </div>
+      </section>
    )
 }
 

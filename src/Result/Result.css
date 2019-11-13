@@ -1,0 +1,14 @@
+.result-showsettings {
+   display: flex;
+   justify-content: center;
+}
+
+.result-showsettings p {
+   padding: 45px 30px;
+}
+
+.result-main {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}

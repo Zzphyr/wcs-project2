@@ -7,7 +7,7 @@ const ShowCorrectAnswers = ({ quizInfo }) => {
       <section className="answers-table">
          <button 
             type="button" 
-            className="btn btn-outline-danger" 
+            className="btn btn-outline-danger see-answers-btn" 
             data-toggle="collapse" 
             data-target="#answer-table"
             >

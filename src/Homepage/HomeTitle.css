@@ -20,11 +20,13 @@
 
 @media screen and (max-width: 767px) {
     .home-title {
-        font-size: 40px;
+        font-size: 37px;
     }
     
     .home-subtitle {
-        font-size: 24px;
+        font-size: 20px;
     }
 
 }
+
+

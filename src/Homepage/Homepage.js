@@ -1,9 +1,10 @@
 import HomeTitle from './HomeTitle';
 import Modal from 'react-modal';
-import './HomePage.css';
 import React, { Component } from 'react';
 import ChooseSettings from './ChooseSettings';
 
+import './HomePage.css';
+import '../App.css';
 
 class Homepage extends Component {
   constructor(props){
@@ -39,16 +40,16 @@ class Homepage extends Component {
   render() {
     const { chosenCat, chosenDif, categories, difficulties, selectCat, selectDif} = this.props;
     return ( 
-       <div className="homepage-main">
-       <ChooseSettings 
-          selectDif={selectDif} 
-          chosenDif={chosenDif}
-          difficulties={difficulties}
-          chosenCat={chosenCat}
-          selectCat={selectCat}
-          categories={categories}
+      <main className="homepage-main">
+        <ChooseSettings 
+            selectDif={selectDif} 
+            chosenDif={chosenDif}
+            difficulties={difficulties}
+            chosenCat={chosenCat}
+            selectCat={selectCat}
+            categories={categories}
         />
-        
+          
         <HomeTitle /> 
         <div className="btns_container">
           <div className="start_container">
@@ -72,8 +73,8 @@ class Homepage extends Component {
                 <button onClick={this.closeModal} className="Close">Close</button>
               </div>
             </Modal>
-         </div>
-      </div>
+        </div>
+      </main>
     );
   }
 }

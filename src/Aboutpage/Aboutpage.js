@@ -1,7 +1,8 @@
 import React from 'react';
 import People from './People';
-import './Aboutpage.css';
 
+import './Aboutpage.css';
+import '../App.css';
 
 const Aboutpage = () => {
    

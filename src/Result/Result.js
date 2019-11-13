@@ -4,8 +4,10 @@ import ShowCorrectAnswers from './ShowCorrectAnwers';
 import ShowSettings from '../Quiz/ShowSettings';
 import ShowTimer from '../Quiz/ShowTimer';
 
+import '../App.css';
+
 const Result = ({ quizInfo, chosenCat, chosenDif, seconds}) =>{
-   
+  
    const getScore = () => {
       let score = 0;
       quizInfo.forEach((el) => {
@@ -39,7 +41,7 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds}) =>{
   
 
    return (
-      <>
+      <main className="result-main">
          <ShowSettings 
             chosenDif={chosenDif}
             chosenCat={chosenCat}
@@ -54,7 +56,7 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds}) =>{
             destination= {'./'}
             text = {`Play Again`} 
          /> 
-      </>
+      </main>
    )
 }
 

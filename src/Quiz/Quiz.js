@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import Question from './Question';
 import ShowSettings from './ShowSettings';
 import { useHistory } from "react-router-dom";
-import './Quiz.css';
 import Timer from './Timer'
 
-
+import './Quiz.css';
+import '../App.css';
 
 
 
@@ -53,7 +53,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, pause
 
    return (
 
-      <main>
+      <main className="quiz-main">
          <section className="show-settings-timer">
             <ShowSettings 
                chosenCat={chosenCat}

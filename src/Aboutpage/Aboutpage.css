@@ -44,10 +44,6 @@ figure {
     padding-bottom: 1em;
 }
 
-.about-main {
-    height: calc(100vh - 50px);
-}
-
 .about-title {
     padding: 1em;
 }

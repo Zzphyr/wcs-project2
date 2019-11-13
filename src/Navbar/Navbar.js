@@ -11,14 +11,14 @@ const Navbar = () =>{
             <span className="navbar-toggler-icon"></span>
          </button>
          <div className="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul className="navbar-nav">
-               <li className="nav-item">
-                  <NavLink exact to='/' className="navbar-links" activeClassName='active'>Homepage</NavLink>
-               </li>
-               <li className="nav-item">
-                  <NavLink to='/about' className="navbar-links" activeClassName='active'>About us</NavLink>
-               </li>
-            </ul>
+            <div className="navbar-nav">
+               
+                  <NavLink exact to='/' className="navbar-links nav-item" activeClassName='active'>Homepage</NavLink>
+               
+               
+                  <NavLink to='/about' className="navbar-links nav-item" activeClassName='active'>About us</NavLink>
+               
+            </div>
          </div>
       </nav>
    )

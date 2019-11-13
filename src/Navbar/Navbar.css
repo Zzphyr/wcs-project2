@@ -1,9 +1,8 @@
 
 .nav-adjust {  
-  height: 50px;
+  height: 60px;
   width: 100%;
-  overflow: hidden;
-  background: #212931;
+  background: rgb(38, 42, 49);
 }
 
 .nav-item, .navbar-text {
@@ -29,9 +28,21 @@
 }
 
 @media screen and (max-width: 768px) {
+  .navbar-nav {
+    display: flex;
+    align-items: flex-end;
+  }
   .nav-item {
-    padding: 1em 2em;
+    width: 75vw;
+    padding: 2em 5em;
+    display: flex;
+    justify-content: flex-end;
     text-align: center;
     font-size: large;
+    background: rgb(38, 42, 49);
   } 
+  
+  .navbar-text {
+    font-size: large;
+  }
 }

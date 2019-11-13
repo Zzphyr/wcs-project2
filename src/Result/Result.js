@@ -3,6 +3,8 @@ import Btn from '../Btn';
 import ShowCorrectAnswers from './ShowCorrectAnwers';
 import ShowSettings from '../Quiz/ShowSettings';
 
+import '../App.css';
+
 const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
    
    const getScore = () => {
@@ -39,7 +41,7 @@ const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
    }  
 
    return (
-      <>
+      <main className="result-main">
          <ShowSettings 
             chosenDif={chosenDif}
             chosenCat={chosenCat} />
@@ -50,7 +52,7 @@ const Result = ({ quizInfo, chosenCat, chosenDif, }) =>{
             destination= {'./'}
             text = {`Play Again`} 
          /> 
-      </>
+      </main>
    )
 }
 

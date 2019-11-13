@@ -1,14 +1,30 @@
- h1 {
-    color: #2679C1; 
-    display: flex; 
-    justify-content: center;
-    font-size: 50px;
+.home-title,
+.home-subtitle {
+    text-align: center;
+    position: relative;
+    top: -10vh;
+    /*changes vertical position*/
 }
 
-h2 {
+.home-title {
+    color: #2679C1;
+    font-size: 60px;
+    padding: 0.5em 1em;
+}
+
+.home-subtitle {
     color: #f5b233;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    padding-bottom: 40px; 
-} 
+    padding-bottom: 40px;
+}
+
+
+@media screen and (max-width: 768px) {
+    .home-title {
+        font-size: 49px;
+    }
+    
+    .home-subtitle {
+        font-size: 28px;
+    }
+
+}

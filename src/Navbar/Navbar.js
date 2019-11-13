@@ -6,7 +6,7 @@ const Navbar = () =>{
 return (
 
 
-   <nav className="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+   <nav className="navbar navbar-expand-md navbar-dark fixed-top nav-adjust">
 
 <span className="navbar-text">
    Trivia Game

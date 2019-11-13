@@ -3,15 +3,45 @@
     width: 100%; 
     display: inline-block;
     margin: 5% auto; 
-    text-align: center; 
+    text-align: center;
+    position: relative;
+    top: -20vh; /*changes vertical position*/
 }
 
  
 .settingsOptionsDrop { 
-    margin: 10px 10%; 
-    padding: 1%; 
-    width: 290px; 
-    transition: all 0.8s ease; 
-    border-radius: 15px; 
-    font-size: 23px; 
+    margin: 10px 7%; 
+    padding: 1em; 
+    width: 310px;  
+    border-radius: 10px; 
+    font-size: large;
 } 
+
+.settingsOptionsDrop option {
+    font-size: medium;
+}
+
+@media screen and (max-width: 865px) {
+    .chooseSettingsWrap { 
+        top: -12vh; /*changes vertical position*/
+    }
+
+    .settingsOptionsDrop {
+        margin: 20px;
+        width: 60%;
+    }
+    
+}
+
+
+@media screen and (max-width: 758px) {
+    .settingsOptionsDrop {
+        width: 75%;
+        padding: 1em;
+        font-size: larger;
+    }
+    
+    .settingsOptionsDrop option {
+        font-size: large;
+    }
+}

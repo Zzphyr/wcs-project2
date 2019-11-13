@@ -5,6 +5,7 @@ import ShowSettings from '../Quiz/ShowSettings';
 import ShowTimer from '../Quiz/ShowTimer';
 
 import '../App.css';
+import './Result.css';
 
 const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
   
@@ -13,7 +14,7 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
       quizInfo.forEach((el) => {
          let correct = decodeURIComponent(el['correct_answer']);
          if (correct === el['user_answer']) {
-            score +=1;
+            score +=10;
          }
       })
       return score;
@@ -23,15 +24,15 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
    const resultMessage = () => {
       let message = '';
       let relativeScore = getScore();
-      if (relativeScore===10) {
+      if (relativeScore===100) {
          message = "LEGEN (wait for it) DARY!!!";
-      } else if (relativeScore>=8) {
+      } else if (relativeScore>=80) {
          message = "WOW... you are a genius!";
-      } else if (relativeScore>=6) {
+      } else if (relativeScore>=60) {
          message = "You are amazing!";
-      } else if (relativeScore>=4) {
+      } else if (relativeScore>=40) {
          message = "Good job!";
-      } else if (relativeScore>=2) {
+      } else if (relativeScore>=20) {
          message = "Well, it wasn't thaaat bad...";
       } else {
          message = "Oh dear! You might want to pick up a book or two.";
@@ -39,24 +40,16 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
       return message;
    }  
   
-
-
    return (
       <main className="result-main">
-         <ShowSettings 
-            chosenDif={chosenDif}
-            chosenCat={chosenCat}
-            />
-         <ShowTimer 
-         seconds={seconds}
-          /> 
+         <section className="result-showsettings">
+            <ShowSettings chosenDif={chosenDif} chosenCat={chosenCat} />
+         </section>
          <p>{resultMessage()}</p>
-         <p>Your score: {getScore()} / 10 </p>
+         <p>Your score: {getScore()} / 100 </p>
+         <ShowTimer seconds={seconds} /> 
          <ShowCorrectAnswers quizInfo={quizInfo}/>
-         <Btn 
-            destination= {'./'}
-            text = {`Play Again`} 
-         /> 
+         <Btn destination= {'./'} text = {`Play Again`} /> 
       </main>
    )
 }

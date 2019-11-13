@@ -1,0 +1,13 @@
+.answers-table {
+   width: 80vw;
+   text-align: center;
+   margin: 10vh 0;
+}
+
+.answers-table button {
+   margin-bottom: 1.5em;
+}
+
+.answers-tablehead tr th {
+   vertical-align: middle;
+}

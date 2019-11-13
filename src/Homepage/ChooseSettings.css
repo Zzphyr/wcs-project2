@@ -22,7 +22,7 @@
     font-size: medium;
 }
 
-@media screen and (max-width: 865px) {
+@media screen and (max-width: 967px) {
     .chooseSettingsWrap { 
         padding-top: 5vh;
         padding-bottom: 8vh;

@@ -17,7 +17,7 @@
 
 .start-btn {
     background-color:rgb(228, 158, 29);
-    color: rgb(24, 27, 32);;
+    color: rgb(24, 27, 32);
     font-weight: 500;
     font-size: 28px;
     border-radius: 15px; 
@@ -44,7 +44,7 @@ button.start-btn:hover {
 
 .Close {
     border-radius:10px ;
-    background:#EA4F33;
+    background:rgb(240, 191, 84);
     align-self: center;
     border-color: #2679C1;
     position: relative;
@@ -62,7 +62,7 @@ button.start-btn:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgba(140, 220, 226, 0.98);
+    background: rgba(144, 174, 228, 0.70);
     border-radius: 10px;
 }
 
@@ -73,7 +73,7 @@ button.start-btn:hover {
 }
 
 .Modal_Container h2 {
-    color: black; 
+    color: rgb(82, 205, 236)  !important;
     padding-top: 10px;
     padding: 0px; 
 }

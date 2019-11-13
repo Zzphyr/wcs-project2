@@ -113,6 +113,7 @@ class App extends Component {
       }))
     }, 1000)
   }
+  
   pauseTimer = () => {
     clearInterval(this.myInterval) 
     }

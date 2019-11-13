@@ -2,7 +2,7 @@
 
 /* for main cointainer */
 
-.homepage-main, .quiz-main, .result-main, .about-main {
+.quiz-main, .result-main, .about-main {
   position: relative;
   top: 60px;
   height: calc(100vh - 60px);

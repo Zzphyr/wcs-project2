@@ -4,8 +4,7 @@
     display: inline-block;
     margin: 5% auto; 
     text-align: center;
-    position: relative;
-    top: -20vh; /*changes vertical position*/
+    padding-bottom: 20vh;
 }
 
  
@@ -15,6 +14,7 @@
     width: 310px;  
     border-radius: 10px; 
     font-size: large;
+    cursor: pointer;
 } 
 
 .settingsOptionsDrop option {
@@ -23,7 +23,8 @@
 
 @media screen and (max-width: 865px) {
     .chooseSettingsWrap { 
-        top: -12vh; /*changes vertical position*/
+        padding-top: 20vh;
+        padding-bottom: 10vh;
     }
 
     .settingsOptionsDrop {
@@ -37,7 +38,7 @@
 @media screen and (max-width: 758px) {
     .settingsOptionsDrop {
         width: 75%;
-        padding: 1em;
+        padding: 0.8em;
         font-size: larger;
     }
     

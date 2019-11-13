@@ -4,8 +4,8 @@ import './HomeTitle.css'
 const HomeTitle = () =>{
     return ( 
        <>
-          <h1>Welcome to our Trivia Quiz!</h1>
-          <h2> Press start to begin</h2>
+          <h1 className="home-title">Welcome to our Trivia Quiz!</h1>
+          <h2 className="home-subtitle"> Press start to begin</h2>
        </>
     )
  }

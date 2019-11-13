@@ -1,13 +1,20 @@
 
-.HelpBtn {
-    border-radius:10px ;
-    background: lightblue;
+.help-btn-div {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    width: 2%; 
-    height: 60%;
+    justify-content: center; 
 }
+
+.HelpBtn {
+    position: relative;
+    left: 100px;
+    background: lightblue;
+    text-align: center;
+    top: 10px;
+    width: 2em;
+    height: 2em; 
+    border-radius: 50%;
+}
+
 .start-btn {
     background-color:rgb(228, 158, 29);
     color: rgb(24, 27, 32);;
@@ -16,24 +23,25 @@
     border-radius: 15px; 
     border: 2px solid rgb(38, 42, 49);
     padding: 0.5em 1.5em;
-    transition: 200ms ease;
-    
+    transition: 200ms ease;    
 }
+
 button.start-btn:hover { 
     background-color:rgb(241, 114, 91);
 }
 
 .btns_container {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; 
+  position: relative;
+  top: -5%;
 }
-.start_container {
-    margin-top: 10px; 
+
+.start-btn-div {
     display: flex;
-    justify-content: center;
-    width: 15%;
+    justify-content: center; 
 }
+
+
+
 .Close {
     border-radius:10px ;
     background:#EA4F33;
@@ -58,7 +66,7 @@ button.start-btn:hover {
     border-radius: 10px;
 }
 
-p {
+.modal-text {
     position: relative;
     padding: 20px;
     padding-top: 5px;  
@@ -73,7 +81,18 @@ p {
 .homepage-main {
     height: 100vh;
     background-image: linear-gradient(60deg, #212931 0%, #485563 100%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+}
+
+
+@media screen and (max-width: 758px) {
+    .btns_container {
+        top: -10%;
+    }
+}
+    
+@media screen and (max-width: 420px) {
+    .start-btn {
+        font-weight: 500;
+        font-size: 20px;
+    }
 }

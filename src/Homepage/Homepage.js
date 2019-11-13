@@ -54,15 +54,16 @@ class Homepage extends Component {
           
         <HomeTitle /> 
         <div className="btns_container" onClick={this.closeModal}>
-          <div className="start_container">
+          <div className="help-btn-div">
+            <button onClick={this.openModal} className="HelpBtn">?</button>
+          </div>
+          <div className="start-btn-div">
             <button 
               onClick={() => this.handleChoices()} 
               className="start-btn"
             >Start
             </button>
           </div>
-
-          <button onClick={this.openModal} className="HelpBtn">?</button>
             <Modal 
               className="ModalStyle"
               isOpen={this.state.modalIsOpen}
@@ -71,7 +72,7 @@ class Homepage extends Component {
             >
               <div className='Modal_Container'>
                 <h2 ref={subtitle => this.subtitle = subtitle}>Questions</h2>
-                <p>Choose the Category and leve of dificulty. By default it shows a random mix of questions. There are 10 of them... are you ready?</p>
+                <p className="modal-text">Choose the Category and leve of dificulty. By default it shows a random mix of questions. There are 10 of them... are you ready?</p>
                 <button onClick={this.closeModal} className="Close">Close</button>
               </div>
             </Modal>

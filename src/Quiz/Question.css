@@ -1,11 +1,15 @@
 .question {
-   padding: 0 0 2em 0;
+   padding: 2em 0 2em 0;
    margin-bottom: 1em;
+  color:rgba(116, 185, 255,1.0)
+}
+.quiz-main p {
+   color: rgba(116, 185, 255,1.0);
+   padding-left: 10px; 
 }
 
 .answers-div {
    margin-top: 1em;
-   
 }
 
 .answer-div {
@@ -21,6 +25,7 @@
    /* padding: 1em 2em; */
    width: 50vw;
    cursor: pointer;
+   background-image: linear-gradient(60deg,rgba(108, 92, 231) 0%,rgb(165, 159, 250) 100%);
 }
 /* to hide the radio buttons */
 .radio {
@@ -29,9 +34,9 @@
 
 /* currently is overiddes all background color! */
 .radio:checked + .label-before-submit {
-   background: rgb(200, 227, 243);
+   background:rgba(116, 185, 255,1.0)
 }
 
 .label-before-submit:hover {
-   background: rgb(232, 243, 245);
+   background: rgba(116, 185, 255,1.0)
 }

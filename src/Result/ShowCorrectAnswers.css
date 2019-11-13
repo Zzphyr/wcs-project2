@@ -11,3 +11,10 @@
 .answers-tablehead tr th {
    vertical-align: middle;
 }
+
+@media screen and (max-width: 420px) {
+   .answers-table {
+      width: auto;
+      font-size: small;
+   }
+}

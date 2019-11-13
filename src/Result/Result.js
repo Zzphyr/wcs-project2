@@ -45,9 +45,11 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
          <section className="result-showsettings">
             <ShowSettings chosenDif={chosenDif} chosenCat={chosenCat} />
          </section>
-         <p>{resultMessage()}</p>
-         <p>Your score: {getScore()} / 100 </p>
-         <ShowTimer seconds={seconds} /> 
+            <p>{resultMessage()}</p>
+         <div className="result-info">
+            <p>Your score: {getScore()} / 100 </p>
+            <ShowTimer seconds={seconds} /> 
+         </div>
          <ShowCorrectAnswers quizInfo={quizInfo}/>
          <Btn destination= {'./'} text = {`Play Again`} /> 
       </main>

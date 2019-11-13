@@ -1,20 +1,37 @@
-nav { 
-  background-color:rgba(0,0,0,0.3);
-}
 
-.navbar {  
+.nav-adjust {  
   height: 50px;
   width: 100%;
   overflow: hidden;
+  background: #212931;
 }
 
-.nav-item {
-  padding: 0 2em;
+.nav-item, .navbar-text {
+  padding: 0.5em 2em;
   list-style: none;
-  
 } 
 
+.navbar-links {
+  color: lightsteelblue;
+}
+
+.navbar-links:hover {
+  color: cornflowerblue;
+}
+
+.navbar-text {
+  font-weight: bold;
+}
+
 .active {
-  color: red;
+  color: cornflowerblue;
   text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav-item {
+    padding: 1em 2em;
+    text-align: center;
+    font-size: large;
+  } 
 }

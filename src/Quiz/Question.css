@@ -7,13 +7,7 @@
 .answers-div label {
    color: rgba(99, 110, 114,1.0);
    font-weight: bold; 
-  color:rgba(116, 185, 255,1.0);
 }
-.quiz-main p {
-   color: rgba(116, 185, 255,1.0);
-   padding-left: 10px; 
-}
-
 
 .answer-div {
    margin-top: 1em;

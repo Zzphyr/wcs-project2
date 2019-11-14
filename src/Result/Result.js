@@ -55,7 +55,7 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
       } else if (relativeScore>=20) {
          imageUrl ="https://media.giphy.com/media/1URYTNvDM2LJoMIdxE/giphy.gif";
       } else {
-         imageUrl ="https://media.giphy.com/media/10REAHB999ScSY/giphy.gif";
+         imageUrl ="https://media.giphy.com/media/3ogsjHPK2mjgUUmdag/giphy.gif";
       }
       return imageUrl;
    }

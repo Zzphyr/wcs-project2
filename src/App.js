@@ -169,7 +169,7 @@ class App extends Component {
               )}
             />  
             <Route path='/about' component={Aboutpage} />
-            <Route path='*' component={NotFoundPage} />
+            <Route component={NotFoundPage} />
           </Switch>
         </ErrorBoundary>      
       </>

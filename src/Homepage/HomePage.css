@@ -28,8 +28,6 @@
 
 button.start-btn:hover { 
     background-color:rgba(243, 166, 131,1.0);
-    
-    /* rgb(241, 114, 91); */
 }
 
 .btns_container {
@@ -41,8 +39,6 @@ button.start-btn:hover {
     display: flex;
     justify-content: center; 
 }
-
-
 
 .Close {
     border-radius:10px ;

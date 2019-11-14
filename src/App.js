@@ -125,24 +125,23 @@ class App extends Component {
     const { quizInfo, chosenCat, chosenDif, categories, seconds} = this.state;
     return (
       <>
-      <ErrorBoundary>
       <Navbar />
           <Switch>
             <Route 
               exact path='/' 
               render={()=> (
                 <Homepage 
-                  getQuiz={this.getQuiz}
-                  selectDif={this.handleDifficulty}
-                  chosenDif={chosenDif}
-                  difficulties={difficulty}
-                  chosenCat={chosenCat}
-                  selectCat={this.handleCategory}
-                  categories={categories}
-                  updatedTimer={this.updateTimer}
+                getQuiz={this.getQuiz}
+                selectDif={this.handleDifficulty}
+                chosenDif={chosenDif}
+                difficulties={difficulty}
+                chosenCat={chosenCat}
+                selectCat={this.handleCategory}
+                categories={categories}
+                updatedTimer={this.updateTimer}
                 />
               )} 
-            />
+              />
             <Route 
               exact path='/quiz' 
               render = {() => (
@@ -156,22 +155,23 @@ class App extends Component {
                 pausedTimer={this.pauseTimer}
                 />
               )}
-            />
-            <Route 
-              path='/result' 
-              render = {() => (
-                <Result 
-                  quizInfo={quizInfo}
-                  chosenCat={chosenCat}
-                  chosenDif={chosenDif}
-                  seconds={seconds}
-                />
-              )}
-            />  
-            <Route path='/about' component={Aboutpage} />
-            <Route component={NotFoundPage} />
+              />
+                <Route exact path='/about' component={Aboutpage} />
+              <Route 
+                exact path='/result' 
+                render = {() => (
+                  <ErrorBoundary>
+                  <Result 
+                    quizInfo={quizInfo}
+                    chosenCat={chosenCat}
+                    chosenDif={chosenDif}
+                    seconds={seconds}
+                    />
+                    </ErrorBoundary>      
+                )}
+              />  
+                <Route path='*' component={NotFoundPage} />
           </Switch>
-        </ErrorBoundary>      
       </>
     );
   }

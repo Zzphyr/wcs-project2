@@ -7,13 +7,13 @@
 }
 
 .home-title {
-    color: #2679C1;
+    color:rgba(99, 205, 218,1.0);
     font-size: 60px;
     padding: 0.5em 1em;
 }
 
 .home-subtitle {
-    color: #f5b233;
+    color: rgba(119, 139, 235,0.85); 
     padding-bottom: 40px;
 }
 

@@ -26,16 +26,17 @@
 
 .submit-btn {
    display: block;
-   color: darkslategray;
+   color: rgba(99, 110, 114,1.0);
    margin: 5% auto;
-   border: 1px solid darkslategray;
+   border: 1px solid rgba(99, 110, 114,1.0);
    border-radius: 5px;
    padding: 5px 20px;
-   background: whitesmoke;
+   background: rgb(218, 217, 217);
+   font-weight: bold; 
 }
 
 .submit-btn:hover {
-   background: rgb(218, 217, 217);
+   background: rgba(119, 139, 235,0.7);
 }
 
 .section-question {
@@ -44,7 +45,5 @@
    align-items: center;
    justify-content: center;
 }
-.quiz-main {
-   background-image: linear-gradient(70deg, #212931 0%, #485563 100%);
-}
 
+.quiz-main p {color: rgba(99, 110, 114,1.0);}

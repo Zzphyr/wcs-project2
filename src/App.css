@@ -8,4 +8,7 @@
   height: calc(100vh - 50px);
 }
 
+body {
+  background-color: rgba(247, 215, 148,0.8);
+}
 

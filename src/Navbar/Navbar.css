@@ -1,7 +1,7 @@
 .nav-adjust {  
   height: 60px;
   width: 100%;
-  background: rgb(38, 42, 49);
+  background: rgba(243, 166, 131,0.8);
 }
 
 .nav-item, .navbar-text {
@@ -10,11 +10,12 @@
 } 
 
 .navbar-links {
-  color: lightsteelblue;
+  color:rgba(130, 88, 159,1.0);
+  /* rgba(119, 139, 235,0.8) ; */
 }
 
 .navbar-links:hover {
-  color: cornflowerblue;
+  color: rgba(87, 75, 144,1.0);
 }
 
 .navbar-text, .navbar-text:hover {
@@ -24,7 +25,8 @@
 }
 
 .active {
-  color: cornflowerblue;
+  color: rgba(130, 88, 159,1.0);
+  font-weight: bold; 
   text-decoration: none;
 }
 

@@ -1,5 +1,5 @@
 .question {
-   padding: 0 0 2em 0;
+   padding: 2em 0 2em 0;
    margin-bottom: 1em;
    color: rgba(99, 110, 114,1.0)
 }
@@ -7,9 +7,13 @@
 .answers-div label {
    color: rgba(99, 110, 114,1.0);
    font-weight: bold; 
-  
-   
+  color:rgba(116, 185, 255,1.0);
 }
+.quiz-main p {
+   color: rgba(116, 185, 255,1.0);
+   padding-left: 10px; 
+}
+
 
 .answer-div {
    margin-top: 1em;
@@ -22,7 +26,6 @@
 .answer-div-nonClickedNext {
    border: 2px solid rgba(99, 110, 114, 1.0); 
    border-radius: 12px;
-   /* padding: 1em 2em; */
    width: 50vw;
    cursor: pointer;
    background-color:rgba(99, 205, 218,1.0);

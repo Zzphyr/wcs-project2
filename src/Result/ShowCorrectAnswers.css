@@ -1,7 +1,7 @@
 .answers-table {
    width: 80vw;
    text-align: center;
-   margin: 10vh 0;
+   margin: 10vh 0 0 0;
 }
 
 .answers-table button {
@@ -12,9 +12,28 @@
    vertical-align: middle;
 }
 
+.see-answers-btn {
+   border-radius: 12px;
+   padding: 1em 1.5em;
+   background: white;
+   min-width: 150px;
+   transition: all 180ms ease-out;
+}
+
+@media screen and (max-width: 770px) {
+   .answers-table {
+      font-size: small;
+   }
+}
+
 @media screen and (max-width: 420px) {
    .answers-table {
       width: auto;
+      margin: 7vh 0 0 0;
+   }
+   .see-answers-btn {
       font-size: small;
+      padding: 0.7em 1em;
+      min-width: 120px;
    }
 }

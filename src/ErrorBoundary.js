@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router';
+
 
 class ErrorBoundary extends Component {
    constructor(props) {
@@ -7,24 +9,32 @@ class ErrorBoundary extends Component {
          error: null, 
          errorInfo: null
       };
+      const { history } = this.props;
+
+      history.listen((location, action) => {
+      if (this.state.hasError) {
+         this.setState({
+            hasError: false,
+         });
+      }
+      });
    }
    
    componentDidCatch(error, errorInfo) {
       // Catch errors in any components below and re-render with error message
+      // You can also log error messages to an error reporting service here
       this.setState({
          error: error,
          errorInfo: errorInfo
       })
-      // You can also log error messages to an error reporting service here
    }
    
    render() {
       if (this.state.errorInfo) {
          // Error path
          return (
-            <div>
-               <h2>Oh no! Something went wrong.</h2>
-
+            <div style={{position:"relative",textAlign:"center",top:"10vh"}}>
+               <h2>Hmm... something strange happened...</h2>
                <details style={{ whiteSpace: 'pre-wrap' }}>
                   {this.state.error && this.state.error.toString()}
                   <br />
@@ -38,4 +48,4 @@ class ErrorBoundary extends Component {
    }  
 }
 
-export default ErrorBoundary;
+export default withRouter(ErrorBoundary);

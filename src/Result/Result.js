@@ -1,8 +1,9 @@
 import React from 'react';
-import Btn from '../Btn';
+
 import ShowCorrectAnswers from './ShowCorrectAnwers';
 import ShowSettings from '../Quiz/ShowSettings';
 import ShowTimer from '../Quiz/ShowTimer';
+import { Link } from 'react-router-dom'
 
 import '../App.css';
 import './Result.css';
@@ -73,7 +74,9 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
             <ShowTimer seconds={seconds} /> 
          </div>
          <ShowCorrectAnswers quizInfo={quizInfo}/>
-         <Btn destination= {'./'} text = {`Play Again`} /> 
+         <Link to='/'> 
+            <button className="playAgain-btn">Play again!</button> 
+         </Link>    
       </main>
    )
 }

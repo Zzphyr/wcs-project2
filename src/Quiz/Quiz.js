@@ -46,8 +46,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, pause
             history.push("/result")
          },700);
          pausedTimer(); 
-      }
-      
+      } 
    }
   
 

@@ -168,7 +168,7 @@ class App extends Component {
                 />
               )}
             />  
-            <Route path='/about' component={Aboutpage} />
+            <Route path={process.env.PUBLIC_URL + '/about'} component={Aboutpage} />
             <Route component={NotFoundPage} />
           </Switch>
         </ErrorBoundary>      

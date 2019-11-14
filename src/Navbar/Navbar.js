@@ -1,12 +1,12 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import './Navbar.css';
 
 const Navbar = () =>{
 
    return (  
       <nav className="navbar navbar-expand-md navbar-dark fixed-top nav-adjust">
-         <a href="./" className="navbar-text"><span className="small-logo">(not)</span>TrivialQuest</a>  
+         <Link exact to='/' className="navbar-text"><span className="small-logo">(not)</span>TrivialQuest</Link>  
          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span className="navbar-toggler-icon"></span>
          </button>

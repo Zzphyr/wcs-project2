@@ -1,5 +1,6 @@
 .show-settings-timer {
    display: flex;
+   flex-wrap: wrap;
    justify-content: center;
    padding-top: 45px;
 }
@@ -41,10 +42,13 @@
 
 .section-question {
    height: 70vh;
-   display: flex;
    align-items: center;
    justify-content: center;
 }
 
 .quiz-main p {color: rgba(99, 110, 114,1.0);
-   padding-left: 10px; }
+   padding-left: 10px; 
+}
+
+
+

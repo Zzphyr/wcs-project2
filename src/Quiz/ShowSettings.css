@@ -1,3 +1,6 @@
 .show-settings {
    display:flex;
 }
+.setting-Timer {
+   display: flex; 
+}

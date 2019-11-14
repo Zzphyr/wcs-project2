@@ -52,7 +52,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, pause
 
    return (
 
-      <main className="quiz-main">
+      <main className="container quiz-main">
          <section className="show-settings-timer">
             <ShowSettings 
                chosenCat={chosenCat}
@@ -64,7 +64,6 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, pause
          </section>
          <section className="container section-question">
             <div >
-
             {arr.map((q,i) => {
                if (step!==i) return null;
                return (

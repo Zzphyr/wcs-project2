@@ -1,7 +1,7 @@
 .question {
    padding: 2em 0 2em 0;
    margin-bottom: 1em;
-   color: rgba(99, 110, 114,1.0)
+   color: rgba(99, 110, 114,1.0);
 }
 
 .answers-div label {
@@ -26,7 +26,7 @@
 }
 /* to hide the radio buttons */
 .radio {
-   visibility:hidden;
+   display: none; 
 }
 
 /* currently is overiddes all background color! */
@@ -36,4 +36,15 @@
 
 .label-before-submit:hover {
    background: rgba(243, 166, 131,0.5);
+}
+
+@media screen and (max-width: 767px) {
+   .answer-div {
+      align-items: center;
+      width: 70vw;
+   }
+   .question {
+      padding: 0px;
+      font-size: 20px; 
+   }
 }

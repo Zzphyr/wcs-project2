@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Zzphyr/wcs-project2/static/css/main.6d8e9670.chunk.css",
-    "main.js": "/Zzphyr/wcs-project2/static/js/main.45a3df4a.chunk.js",
-    "main.js.map": "/Zzphyr/wcs-project2/static/js/main.45a3df4a.chunk.js.map",
-    "runtime-main.js": "/Zzphyr/wcs-project2/static/js/runtime-main.0a46cc8f.js",
-    "runtime-main.js.map": "/Zzphyr/wcs-project2/static/js/runtime-main.0a46cc8f.js.map",
-    "static/js/2.633d80aa.chunk.js": "/Zzphyr/wcs-project2/static/js/2.633d80aa.chunk.js",
-    "static/js/2.633d80aa.chunk.js.map": "/Zzphyr/wcs-project2/static/js/2.633d80aa.chunk.js.map",
-    "index.html": "/Zzphyr/wcs-project2/index.html",
-    "precache-manifest.45669ec353d879680f9af44577d2a694.js": "/Zzphyr/wcs-project2/precache-manifest.45669ec353d879680f9af44577d2a694.js",
-    "service-worker.js": "/Zzphyr/wcs-project2/service-worker.js",
-    "static/css/main.6d8e9670.chunk.css.map": "/Zzphyr/wcs-project2/static/css/main.6d8e9670.chunk.css.map"
+    "main.css": "/Zzphyr/wcs-project2/tree/master/public/static/css/main.6d8e9670.chunk.css",
+    "main.js": "/Zzphyr/wcs-project2/tree/master/public/static/js/main.21be4860.chunk.js",
+    "main.js.map": "/Zzphyr/wcs-project2/tree/master/public/static/js/main.21be4860.chunk.js.map",
+    "runtime-main.js": "/Zzphyr/wcs-project2/tree/master/public/static/js/runtime-main.9f05a3aa.js",
+    "runtime-main.js.map": "/Zzphyr/wcs-project2/tree/master/public/static/js/runtime-main.9f05a3aa.js.map",
+    "static/js/2.633d80aa.chunk.js": "/Zzphyr/wcs-project2/tree/master/public/static/js/2.633d80aa.chunk.js",
+    "static/js/2.633d80aa.chunk.js.map": "/Zzphyr/wcs-project2/tree/master/public/static/js/2.633d80aa.chunk.js.map",
+    "index.html": "/Zzphyr/wcs-project2/tree/master/public/index.html",
+    "precache-manifest.8f73b06d71f76b325f7a2ca51ae01336.js": "/Zzphyr/wcs-project2/tree/master/public/precache-manifest.8f73b06d71f76b325f7a2ca51ae01336.js",
+    "service-worker.js": "/Zzphyr/wcs-project2/tree/master/public/service-worker.js",
+    "static/css/main.6d8e9670.chunk.css.map": "/Zzphyr/wcs-project2/tree/master/public/static/css/main.6d8e9670.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.0a46cc8f.js",
+    "static/js/runtime-main.9f05a3aa.js",
     "static/js/2.633d80aa.chunk.js",
     "static/css/main.6d8e9670.chunk.css",
-    "static/js/main.45a3df4a.chunk.js"
+    "static/js/main.21be4860.chunk.js"
   ]
 }

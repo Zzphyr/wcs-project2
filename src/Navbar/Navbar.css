@@ -20,6 +20,7 @@
 .navbar-text, .navbar-text:hover {
   font-weight: bold;
   text-decoration: none;
+  cursor: default;
 }
 
 .active {

@@ -40,12 +40,34 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
       return message;
    }  
   
+   const resultImage = () => {
+      let imageUrl ='';
+      let relativeScore = getScore();
+      if (relativeScore===100) {
+         imageUrl ="https://media.giphy.com/media/zUwHGTclRb7W/giphy.gif";
+      } else if (relativeScore>=80) {
+         imageUrl = "https://media.giphy.com/media/3ohs88j0jPszpGCbYY/giphy.gif";
+      } else if (relativeScore>=60) {
+         imageUrl ="https://media.giphy.com/media/fGImYPTHJ3EXHbmR2W/giphy.gif";
+      } else if (relativeScore>=40) {
+         imageUrl ="https://media.giphy.com/media/l3q2umc327t2nzSOQ/giphy.gif";
+      } else if (relativeScore>=20) {
+         imageUrl ="https://media.giphy.com/media/1URYTNvDM2LJoMIdxE/giphy.gif";
+      } else {
+         imageUrl ="https://media.giphy.com/media/10REAHB999ScSY/giphy.gif";
+      }
+      return imageUrl;
+   }
+
    return (
       <main className="result-main">
          <section className="result-showsettings">
             <ShowSettings chosenDif={chosenDif} chosenCat={chosenCat} />
          </section>
             <p>{resultMessage()}</p>
+            <div>
+               <img className="result-image" src={resultImage()} alt='resultGifs'/> 
+            </div>
          <div className="result-info">
             <p>Your score: {getScore()} / 100 </p>
             <ShowTimer seconds={seconds} /> 

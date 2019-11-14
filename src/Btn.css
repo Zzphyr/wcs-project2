@@ -14,18 +14,18 @@ blue     - #2679C1
 }
 
 button.btn.default{ 
-    background-color: #48914C; 
-    color: #f5b233; 
+    background-color: rgba(99, 205, 218,1.0); 
+    color: rgb(218, 217, 217); 
     font-weight: bold;
     font-size: 27px;
     border-radius: 15px; 
     width: 100%;
-    border:2px solid #673c11; 
+    border:2px solid rgba(99, 110, 114,0.6); 
     transition: all 0.8s ease;
 
     }
-button.btn.default:hover { background-color:#f5b233;
-     color:#48914C;
-     border: 2px solid #EA4F33;
+button.btn.default:hover { background-color:rgba(119, 139, 235,0.85);
+     color:rgba(243, 166, 131,1.0);
+     border: 2px solid rgba(243, 166, 131,1.0);
      transition: all 0.8s ease;
       cursor:pointer; }

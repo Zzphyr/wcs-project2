@@ -1,14 +1,18 @@
 .question {
    padding: 0 0 2em 0;
    margin-bottom: 1em;
+   color: rgba(99, 110, 114,1.0)
 }
 
-.answers-div {
-   margin-top: 1em;
+.answers-div label {
+   color: rgba(99, 110, 114,1.0);
+   font-weight: bold; 
+  
    
 }
 
 .answer-div {
+   margin-top: 1em;
    min-height: 5em;
    margin: 10px;
    padding: 1.4em 1.5em 1.1em 1.5em;
@@ -16,11 +20,12 @@
 }
 
 .answer-div-nonClickedNext {
-   border: 2px solid black;
+   border: 2px solid rgba(99, 110, 114, 1.0); 
    border-radius: 12px;
    /* padding: 1em 2em; */
    width: 50vw;
    cursor: pointer;
+   background-color:rgba(99, 205, 218,1.0);
 }
 /* to hide the radio buttons */
 .radio {
@@ -29,9 +34,9 @@
 
 /* currently is overiddes all background color! */
 .radio:checked + .label-before-submit {
-   background: rgb(200, 227, 243);
+   background: rgba(243, 166, 131,1.0);
 }
 
 .label-before-submit:hover {
-   background: rgb(232, 243, 245);
+   background: rgba(243, 166, 131,0.5);
 }

@@ -5,17 +5,29 @@
 
 .result-showsettings p {
    padding: 45px 30px;
+   color: rgba(99, 205, 218,1.0);
+   font-weight: bold; 
 }
 
 .result-main {
    display: flex;
    flex-direction: column;
    align-items: center;
-   width: 100vw;
+   width:100%;
 }
 
 .result-info {
    text-align: center;
    font-size: large;
    font-weight: 800;
+}
+
+.result-info p {
+   color: rgba(119, 139, 235,0.85);
+   font-weight: bold; 
+}
+
+.result-image{
+   width: 50vw;
+
 }

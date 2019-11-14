@@ -2,7 +2,6 @@
   "name": "proj2-trivia",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://zzphyr.github.io/wcs-project2",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.11.0",

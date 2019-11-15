@@ -4,17 +4,14 @@
    color: rgba(99, 110, 114,1.0);
 }
 
-.answers-div label {
-   color: rgba(99, 110, 114,1.0);
-   font-weight: bold; 
-}
-
-.answer-div {
+.answer {
    margin-top: 1em;
    min-height: 5em;
    margin: 10px;
    padding: 1.4em 1.5em 1.1em 1.5em;
    vertical-align: middle;
+   color: rgba(99, 110, 114,1.0);
+   font-weight: bold;
 }
 
 .answer-div-nonClickedNext {
@@ -22,7 +19,7 @@
    border-radius: 12px;
    width: 50vw;
    cursor: pointer;
-   background-color:rgba(99, 205, 218,1.0);
+   background-color:rgb(133, 209, 219);
 }
 /* to hide the radio buttons */
 .radio {
@@ -39,9 +36,13 @@
 }
 
 @media screen and (max-width: 767px) {
-   .answer-div {
+   .answer {
       align-items: center;
-      width: 70vw;
+      width: 75vw;
+      padding: 1.2em 1em;
+      font-weight: 500;
+      min-height: unset;
+      line-height: normal;
    }
    .question {
       padding: 0px;

@@ -22,14 +22,14 @@
 .incorrect {
    color: crimson;
    border: 2px solid crimson;
-   background: rgb(233, 161, 175);
+   background: rgb(230, 126, 147);
 }
 
 .submit-btn {
    display: block;
-   color: rgba(99, 110, 114,1.0);
+   color: rgb(99, 110, 114);
    margin: 5% auto;
-   border: 1px solid rgba(99, 110, 114,1.0);
+   border: 1px solid rgb(99, 110, 114);
    border-radius: 5px;
    padding: 5px 20px;
    background: rgb(218, 217, 217);
@@ -37,7 +37,8 @@
 }
 
 .submit-btn:hover {
-   background: rgba(119, 139, 235,0.7);
+   background: rgba(119, 139, 235,0.8);
+   color: honeydew;
 }
 
 .section-question {

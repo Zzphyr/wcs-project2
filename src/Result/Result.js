@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 import '../App.css';
 import './Result.css';
 
-const Result = ({ quizInfo, chosenCat, chosenDif, seconds, resetTimer}) =>{
+const Result = ({ quizInfo, chosenCat, chosenDif, seconds,}) =>{
   
    const getScore = () => {
       let score = 0;

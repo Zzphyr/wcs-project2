@@ -31,6 +31,7 @@ class App extends Component {
       chosenDif: { id:0, difficulty: "Any Difficulty"},
       categories:[{ id:0, name:"Any Category" }],
       seconds: 0,
+      isPlaying: true, 
     }
   }
    
@@ -60,6 +61,9 @@ class App extends Component {
 
   componentDidMount() {
     this.getCategories();
+    this.setState({
+      isPlaying: true, 
+    });
   }
 
   // Fetch category list from API (for the dropdown) 
@@ -108,9 +112,15 @@ class App extends Component {
 
   updateTimer = () => {
     this.myInterval = setInterval(() => {
-      this.setState(preState => ({
-      seconds: preState.seconds +1
-      }))
+      this.setState((state) => ({
+        ...state,
+        seconds: state.seconds +1,
+      }),
+      () => { 
+        if (this.state.isPlaying === false ) {
+          this.pauseTimer();
+        }
+      })
     }, 1000)
   }
   
@@ -119,6 +129,11 @@ class App extends Component {
     }
 
 
+    handleStopPlaying = () => {
+      this.setState({
+        isPlaying: false, 
+      });
+    }
     
 
   render () {
@@ -152,7 +167,8 @@ class App extends Component {
                 updateUserAnswer={this.updateUserAnswer} 
                 componentDidUpdate={this.componentDidUpdate}
                 seconds={seconds}
-                pausedTimer={this.pauseTimer}
+                stopPlaying={this.handleStopPlaying}
+                
                 />
               )}
               />

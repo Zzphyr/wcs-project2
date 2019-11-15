@@ -1,7 +1,7 @@
 .nav-adjust {  
   height: 60px;
   width: 100%;
-  background: rgba(243, 166, 131,0.8);
+  background: rgb(243, 166, 131);
 }
 
 .nav-item, .navbar-text {

@@ -48,7 +48,7 @@ class Question extends Component {
                         <label 
                            htmlFor={numQ*10+i} 
                            key={answer} 
-                           className={(answer===userAnswer&&clickedNext) ? `answer-div ${btnColor} col-sm-5 col-md-4` : `answer-div answer-div-nonClickedNext col-sm-5 col-md-4 label-before-submit`}
+                           className={(answer===userAnswer&&clickedNext) ? `answer ${btnColor} col-sm-5 col-md-4` : `answer answer-div-nonClickedNext col-sm-5 col-md-4 label-before-submit`}
                         >
                            {answer}
                         </label>

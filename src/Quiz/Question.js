@@ -31,7 +31,7 @@ class Question extends Component {
       const { answers } = this.state;
       return (
          <div className="question-div">           
-            <legend className="question">{numQ} - {decodeURIComponent(question)}</legend>
+            <legend className="question"><span className="numQ">{numQ} -</span> {decodeURIComponent(question)}</legend>
                {answers.map((ans, i)=>{
                   let answer = decodeURIComponent(ans);
                   return (

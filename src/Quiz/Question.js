@@ -32,11 +32,12 @@ class Question extends Component {
       return (
          <div className="question-div">           
             <legend className="question">{numQ} - {decodeURIComponent(question)}</legend>
+            <div className="answers-div">
+
                {answers.map((ans, i)=>{
                   let answer = decodeURIComponent(ans);
                   return (
-                  <div className="answers-div" key={answer}>
-                     
+                     <div className="answer-div" key={answer}>
                         <input 
                            type="radio" 
                            name={numQ} 
@@ -44,18 +45,20 @@ class Question extends Component {
                            id={numQ*10+i}
                            onChange={() => updateUserAnswer(numQ, answer)}
                            className="radio"
-                        />     
+                           />     
                         <label 
                            htmlFor={numQ*10+i} 
                            key={answer} 
                            className={(answer===userAnswer&&clickedNext) ? `answer ${btnColor} col-sm-5 col-md-4` : `answer answer-div-nonClickedNext col-sm-5 col-md-4 label-before-submit`}
-                        >
+                           
+                           >
                            {answer}
                         </label>
                      
             </div>    
                   )
                })} 
+               </div>
          </div>
       )
    }

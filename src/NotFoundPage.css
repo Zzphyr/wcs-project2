@@ -1,9 +1,27 @@
 .div404 {
-   text-align:center; 
+   text-align: center; 
    position:relative;
    top: 15vh;
 }
 
 .takemehome {
+   padding-top: 1em;
    font-size: large;
+}
+
+
+
+@media screen and (max-width: 767px) {
+   .div404 {
+      margin: 5%;
+   }
+   .div404 img {
+      width: 75%;
+   }
+   .div404 h1 {
+      font-size: 25px;
+   }
+   .div404 h3 {
+      font-size: 18px;
+   }
 }

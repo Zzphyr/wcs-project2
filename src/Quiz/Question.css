@@ -4,6 +4,11 @@
    color: rgba(99, 110, 114,1.0);
 }
 
+.answers-div {
+   display: flex;
+   
+}
+
 .answer {
    margin-top: 1em;
    min-height: 5em;

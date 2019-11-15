@@ -12,8 +12,12 @@ const Person = ({ name, photo, linkedin, github }) => {
                 </figcaption>
             </figure>
             <div className="social-media">
-                <a href={linkedin}> <img src="https://i.imgur.com/hzkKCzQ.png?1" alt={name} /> </a>
-                <a href={github}> <img src="https://i.imgur.com/PYGpHt0.png?1" alt={name} /> </a>
+                <a href={linkedin}>
+                    <img src="https://i.imgur.com/hzkKCzQ.png?1" alt={name} className="social-media-img" /> 
+                </a>
+                <a href={github}>
+                    <img src="https://i.imgur.com/ioIwxQR.png" alt={name} className="social-media-img" />
+                </a>
             </div>
         </article>
     )

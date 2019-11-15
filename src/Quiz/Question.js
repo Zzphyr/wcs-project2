@@ -32,12 +32,10 @@ class Question extends Component {
       return (
          <div className="question-div">           
             <legend className="question">{numQ} - {decodeURIComponent(question)}</legend>
-            <div className="answers-div">
-
                {answers.map((ans, i)=>{
                   let answer = decodeURIComponent(ans);
                   return (
-                     <div className="answer-div" key={answer}>
+                     <React.Fragment key={answer}>
                         <input 
                            type="radio" 
                            name={numQ} 
@@ -49,16 +47,15 @@ class Question extends Component {
                         <label 
                            htmlFor={numQ*10+i} 
                            key={answer} 
-                           className={(answer===userAnswer&&clickedNext) ? `answer ${btnColor} col-sm-5 col-md-4` : `answer answer-div-nonClickedNext col-sm-5 col-md-4 label-before-submit`}
+                           className={(answer===userAnswer&&clickedNext) ? `answer ${btnColor} col-sm-6 col-md-4` : `answer answer-nonClickedNext col-sm-6 col-md-4 label-before-submit`}
                            
                            >
                            {answer}
-                        </label>
-                     
-            </div>    
+                        </label>     
+                     </React.Fragment>    
                   )
                })} 
-               </div>
+            
          </div>
       )
    }

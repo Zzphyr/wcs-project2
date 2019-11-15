@@ -1,20 +1,21 @@
 .question {
    padding: 2em 0 2em 0;
    margin-bottom: 1em;
-   color: rgba(99, 110, 114,1.0);
+   color: rgb(74, 85, 88);
 }
 
+/* answer is the label */
 .answer {
    margin-top: 1em;
    min-height: 5em;
    margin: 10px;
    padding: 1.4em 1.5em 1.1em 1.5em;
    vertical-align: middle; 
-   color: rgba(99, 110, 114,1.0);
+   color: rgb(68, 79, 85);
    font-weight: bold;
 }
 
-.answer-div-nonClickedNext {
+.answer-nonClickedNext {
    border: 2px solid rgba(99, 110, 114, 1.0); 
    border-radius: 12px;
    width: 50vw;
@@ -26,7 +27,6 @@
    display: none; 
 }
 
-/* currently is overiddes all background color! */
 .radio:checked + .label-before-submit {
    background: rgba(243, 166, 131,1.0);
 }

@@ -22,7 +22,7 @@
 .incorrect {
    color: crimson;
    border: 2px solid crimson;
-   background: rgb(230, 126, 147);
+   background: rgb(223, 133, 151);
 }
 
 .submit-btn {

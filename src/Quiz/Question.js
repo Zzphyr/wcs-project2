@@ -32,11 +32,11 @@ class Question extends Component {
       return (
          <div className="question-div">           
             <legend className="question">{numQ} - {decodeURIComponent(question)}</legend>
-            <div className="answers-div">
                {answers.map((ans, i)=>{
                   let answer = decodeURIComponent(ans);
                   return (
-                     <>
+                  <div className="answers-div" key={answer}>
+                     
                         <input 
                            type="radio" 
                            name={numQ} 
@@ -52,10 +52,10 @@ class Question extends Component {
                         >
                            {answer}
                         </label>
-                     </>
+                     
+            </div>    
                   )
                })} 
-            </div>    
          </div>
       )
    }

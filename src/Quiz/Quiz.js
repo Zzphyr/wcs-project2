@@ -63,7 +63,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, pause
              />
          </section>
          <section className="container section-question">
-            <div >
+            
             {arr.map((q,i) => {
                if (step!==i) return null;
                return (
@@ -83,7 +83,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, pause
                   </form>
                )    
             })} 
-            </div>
+            
          </section>         
       </main> 
    )

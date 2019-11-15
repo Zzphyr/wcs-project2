@@ -8,13 +8,15 @@
     width: 200px;
     height: auto;
     margin: 15px 10vw;
-    box-shadow: 1px 1px 5px grey;
+    border: 2px solid rgb(73, 91, 114);;
     border-radius: 50%;
 }
 
 .person {
     text-align: center;
+    font-size: 18px;
     margin-bottom: 2em;
+    color: rgb(37, 50, 66);
 }
 
 figure {
@@ -22,13 +24,18 @@ figure {
 }
 
 .job-student {
-    color: rgb(90, 90, 90);
+    color: rgb(37, 50, 66);
     font-weight: lighter;
+    font-size: 16px;
 }
 
-.social-media a img {
+.social-media-img {
     height: 60px;
     margin: 0 10px;
+}
+
+.social-media-img:hover {
+    opacity: 0.65;
 }
 
 .project-description {
@@ -44,6 +51,33 @@ figure {
     padding-bottom: 1em;
 }
 
+.project-description p:first-child {
+    font-weight: 500;
+}
+
 .about-title {
     padding: 1em;
+    text-align: center;
+    color: rgb(37, 50, 66);
+}
+
+@media screen and (max-width: 420px) {
+    .photos-us {
+        width: 150px;
+        height: auto;
+    }
+    .social-media-img {
+        height: 50px;
+        margin: 0 10px;
+    }
+    .person {
+        font-size: 17px;
+    }
+    .job-student {
+        font-size: 13px;
+    }
+
+    .project-description p {
+        font-size: small;
+    }
 }

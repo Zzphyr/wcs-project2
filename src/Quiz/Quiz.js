@@ -9,7 +9,7 @@ import '../App.css';
 
 
 
-const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, pausedTimer}) =>{
+const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopPlaying}) =>{
 
 
    // to allow use of history.push
@@ -41,11 +41,11 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, pause
             setClickedNext(false);
             setBtnColor('');
          },700); 
-      } else {
+      } else { stopPlaying();
          setTimeout(()=> {
             history.push("/result")
          },700);
-         pausedTimer(); 
+        
       } 
    }
   

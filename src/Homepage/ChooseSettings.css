@@ -4,18 +4,19 @@
     display: inline-block;
     margin: auto; 
     text-align: center;
-    padding-top: 3vh;
+    padding-top: 4vh;
     padding-bottom: 20vh;
 }
 
  
 .settingsOptionsDrop { 
-    margin: 10px 7%; 
-    padding: 1em; 
-    width: 348px;  
+    margin: 20px 5%; 
+    padding: 0.7em; 
+    width: 342px;  
     border-radius: 10px; 
     font-size: large;
     cursor: pointer;
+    color: rgb(34, 34, 34);
 } 
 
 .settingsOptionsDrop option {

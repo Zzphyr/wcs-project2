@@ -2,10 +2,10 @@
 .chooseSettingsWrap { 
     width: 100%; 
     display: inline-block;
-    margin: 5% auto; 
+    margin: auto; 
     text-align: center;
-    padding-top: 5vh;
-    padding-bottom: 15vh;
+    padding-top: 3vh;
+    padding-bottom: 20vh;
 }
 
  

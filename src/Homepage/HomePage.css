@@ -32,7 +32,7 @@ button.start-btn:hover {
 
 .btns_container {
   position: relative;
-  top: -5%;
+  top: 12.5vh; 
 }
 
 .start-btn-div {
@@ -41,7 +41,7 @@ button.start-btn:hover {
 }
 
 .Close {
-    border-radius:10px ;
+    border-radius:10px;
     background:lightblue;
     align-self: center;
     border-color: rgba(99, 110, 114,1.0);
@@ -90,7 +90,7 @@ button.start-btn:hover {
 
 @media screen and (max-width: 758px) {
     .btns_container {
-        top: -10%;
+        top: 10vh; 
     }
 }
     

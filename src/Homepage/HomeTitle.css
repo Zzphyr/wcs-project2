@@ -2,7 +2,7 @@
 .home-subtitle {
     text-align: center;
     position: relative;
-    top: -10vh;
+    top: 10vh;
     /*changes vertical position*/
 }
 
@@ -14,7 +14,6 @@
 
 .home-subtitle {
     color: rgba(119, 139, 235,0.85); 
-    padding-bottom: 40px;
 }
 
 
@@ -25,8 +24,10 @@
     
     .home-subtitle {
         font-size: 20px;
+        padding-bottom: 40px;
     }
 
 }
+
 
 

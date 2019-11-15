@@ -1,5 +1,5 @@
 .nav-adjust {  
-  height: 60px;
+  height: 70px;
   width: 100%;
   background: rgb(243, 166, 131);
 }
@@ -7,6 +7,7 @@
 .nav-item, .navbar-text {
   overflow: hidden;
   padding: 0.5em 2em;
+  font-size: large;
 } 
 
 .navbar-links {
@@ -35,9 +36,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .nav-item, .navbar-text {
-    font-size: large;
-  } 
   .nav-item {
     padding: 1.5em;
     text-align: center;
@@ -46,6 +44,9 @@
   .navbar-text {
     font-size: large;
     padding: 0;
+  }
+  .nav-adjust {  
+    height: 55px;
   }
 
 }

@@ -4,6 +4,10 @@
    color: rgb(74, 85, 88);
 }
 
+.numQ {
+   font-weight: 500;
+}
+
 /* answer is the label */
 .answer {
    margin-top: 1em;

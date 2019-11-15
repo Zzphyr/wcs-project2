@@ -43,16 +43,7 @@ class Homepage extends Component {
     const { chosenCat, chosenDif, categories, difficulties, selectCat, selectDif} = this.props;
     return ( 
       <main className="homepage-main">
-        <ChooseSettings 
-            selectDif={selectDif} 
-            chosenDif={chosenDif}
-            difficulties={difficulties}
-            chosenCat={chosenCat}
-            selectCat={selectCat}
-            categories={categories}
-        />
-          
-        <HomeTitle /> 
+        <HomeTitle />
         <div className="btns_container" onClick={this.closeModal}>
           <div className="help-btn-div">
             <button onClick={this.openModal} className="HelpBtn">?</button>
@@ -75,7 +66,15 @@ class Homepage extends Component {
                 <p className="modal-text">Choose the Category and leve of dificulty. By default it shows a random mix of questions. There are 10 of them... are you ready?</p>
                 <button onClick={this.closeModal} className="Close">Close</button>
               </div>
-            </Modal>
+            </Modal> 
+            <ChooseSettings 
+              selectDif={selectDif} 
+              chosenDif={chosenDif}
+              difficulties={difficulties}
+              chosenCat={chosenCat}
+              selectCat={selectCat}
+              categories={categories}
+          />
         </div>
       </main>
     );

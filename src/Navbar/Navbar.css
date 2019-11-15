@@ -41,7 +41,7 @@
   .nav-item {
     padding: 1.5em;
     text-align: center;
-    background: rgb(38, 42, 49);
+    background: rgba(243, 166, 131,0.9);
   } 
   .navbar-text {
     font-size: large;

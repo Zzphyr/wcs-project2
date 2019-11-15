@@ -1,9 +1,10 @@
 import React from 'react';
+import './ShowSettings.css'
 
 const Timer = ({seconds}) => {
         return (
             <div>
-                <p> Time: {seconds} </p>
+                <p className= "setting-Timer"> Time: {seconds} </p>
             </div>
         )
     }

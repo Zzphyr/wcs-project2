@@ -27,10 +27,14 @@
 .result-info p {
    color: rgba(119, 139, 235,0.85);
    font-weight: bold; 
+   max-width: 70vw; 
 }
 
 .result-image{
-   max-width: 50vw; 
+   max-width: 70vw; 
+}
+.result-message{
+   max-width: 70vw; 
 }
 
 .playAgain-btn {

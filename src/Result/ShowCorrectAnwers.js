@@ -9,11 +9,11 @@ const ShowCorrectAnswers = ({ quizInfo }) => {
             type="button" 
             className="btn btn-outline-danger see-answers-btn" 
             data-toggle="collapse" 
-            data-target="#answer-table"
+            data-target="#answer-tabs"
             >
             See answers!
          </button>
-         <div id="answer-table" className="collapse">
+         <div id="answer-tabs" className="collapse">
             <table className="table table-hover">
                <thead className="answers-tablehead thead-dark">
                   <tr>

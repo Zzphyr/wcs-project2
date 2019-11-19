@@ -36,6 +36,8 @@
 }
 .result-message{
    max-width: 70vw; 
+   color: #feac5e;
+   font-weight: bold; 
 }
 
 .playAgain-btn {

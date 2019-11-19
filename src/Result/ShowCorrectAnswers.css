@@ -1,7 +1,10 @@
 .answers-table {
    width: 80vw;
    text-align: center;
-   margin: 10vh 0 0 0;
+}
+#answer-tabs {
+  background-color: #feac5e;
+  margin: 5vh 0 0 0;
 }
 
 .answers-table button {

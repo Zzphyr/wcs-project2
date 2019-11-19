@@ -1,7 +1,8 @@
 .question {
    padding: 2em 0 2em 0;
    margin-bottom: 1em;
-   color: rgb(74, 85, 88);
+   color: #feac5e;
+   font-weight: bold; 
 }
 
 .numQ {

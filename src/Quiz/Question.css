@@ -54,3 +54,9 @@
       font-size: 20px; 
    }
 }
+
+@media screen and (max-height: 650px) and (min-width: 768px) {
+   .question {
+      padding: 3vh;
+   }
+}

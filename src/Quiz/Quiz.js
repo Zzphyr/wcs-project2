@@ -62,6 +62,7 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopP
                seconds={seconds}
              />
          </section>
+         
          <section className="container section-question">
             
             {arr.map((q,i) => {
@@ -84,7 +85,8 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopP
                )    
             })} 
             
-         </section>         
+         </section>    
+           
       </main> 
    )
 }

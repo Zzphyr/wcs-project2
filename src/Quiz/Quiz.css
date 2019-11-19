@@ -47,9 +47,7 @@
 }
 
 .section-question {
-   height: 70vh;
-   align-items: center;
-   justify-content: center;
+   padding-top: 10vh;
 }
 
 .quiz-main p {
@@ -77,5 +75,13 @@
       font-size: small;
       margin: 0;
    }
+   .section-question {
+      padding-top: 0;
+   }
 }
    
+@media screen and (max-height: 700px) and (min-width: 1050px) {
+   .section-question {
+      padding-top: 1vh;
+   }
+}

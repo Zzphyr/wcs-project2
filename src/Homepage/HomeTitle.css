@@ -2,8 +2,8 @@
 .home-subtitle {
     text-align: center;
     position: relative;
-    top: 25vh;  
-    /*changes vertical position*/
+    top: 18vh;  
+    padding-bottom: 0.5em;
 }
 
 
@@ -40,21 +40,41 @@
     font-weight: bold;
 }
 .box-title {
-    width: 100%;
-	height: 100%;
+	height: 50%;
 }
 
 
 @media screen and (max-width: 767px) {
+    .home-title,
+    .home-subtitle {
+        top: 10vh;
+    }
+    
     .home-title {
-        font-size: 37px;
+        font-size: 60px;
+        padding: 0 0.8em 1em 0.8em;
+    }
+    
+    .home-subtitle {
+        font-size: 22px;
+        padding-bottom: 20px;
+    }
+
+    .box-title {
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .home-title {
+        font-size: 50px;
+        padding: 0 0.5em 1em 0.5em;
     }
     
     .home-subtitle {
         font-size: 20px;
-        padding-bottom: 40px;
+        padding-bottom: 0;
     }
-
 }
 
 

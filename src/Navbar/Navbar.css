@@ -11,12 +11,13 @@
 } 
 
 .navbar-links {
-  color:rgb(121, 119, 185);
+  color:#1da5af; 
+  
   /* rgba(119, 139, 235,0.8) ; */
 }
 
 .navbar-links:hover {
-  color:rgb(121, 119, 185);
+  color:#1da5af; 
 }
 
 .navbar-text, .navbar-text:hover {
@@ -26,7 +27,7 @@
 }
 
 .active {
-  color: rgb(133, 86, 167);
+  color: #004e89; 
   font-weight: bold; 
   text-decoration: none;
 }

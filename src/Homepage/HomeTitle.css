@@ -3,7 +3,7 @@
     text-align: center;
     position: relative;
     top: 18vh;  
-    padding-bottom: 0.5em;
+    padding-bottom: 0.4em;
 }
 
 
@@ -44,7 +44,7 @@
 }
 
 
-@media screen and (max-height: 800px) and (min-width: 1250px) {
+@media screen and (max-height: 810px) and (min-width: 1250px) {
     .home-title {
         font-size: 8vw;
         /* background: rgba(22, 22, 33, 0.5); */
@@ -64,12 +64,12 @@
     }
     
     .home-title {
-        font-size: 60px;
+        font-size: 62px;
         padding: 0 0.8em 1em 0.8em;
     }
     
     .home-subtitle {
-        font-size: 22px;
+        font-size: 25px;
         padding-bottom: 20px;
     }
 

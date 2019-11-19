@@ -3,6 +3,11 @@
    flex-wrap: wrap;
    justify-content: center;
    padding-top: 45px;
+   font-weight: 500;
+}
+
+.show-settings-timer p {
+   padding: 0 5vw;
 }
 
 .correct, .incorrect {
@@ -22,12 +27,12 @@
 .incorrect {
    color: crimson;
    border: 2px solid crimson;
-   background: rgb(223, 133, 151);
+   background: rgb(223, 118, 139);
 }
 
 .submit-btn {
    display: block;
-   color: rgb(80, 91, 95);
+   color: rgb(59, 69, 75);
    margin: 5% auto;
    border: 1px solid rgb(99, 110, 114);
    border-radius: 5px;
@@ -51,5 +56,25 @@
    padding-left: 10px; 
 }
 
+@media screen and (max-width: 768px) {
+   .show-settings-timer p {
+      padding: 2vw;
+   }
+}
 
-
+@media screen and (max-width: 420px) {
+   .show-settings-timer {
+      flex-direction: column;
+      align-content: center;
+      margin-bottom: 3vh;
+      padding-top: 4vh;
+      text-align: center;
+   }
+   
+   .show-settings-timer p {
+      padding: 0 1em;
+      font-size: small;
+      margin: 0;
+   }
+}
+   

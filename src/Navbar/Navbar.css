@@ -12,16 +12,16 @@
 
 .navbar-links {
   color:#1da5af; 
-  
-  /* rgba(119, 139, 235,0.8) ; */
 }
 
 .navbar-links:hover {
   color:#1da5af; 
 }
 
-.navbar-text, .navbar-text:hover {
+.navbar-text {
   font-weight: bold;
+}
+.navbar-text:hover {
   text-decoration: none;
   cursor: default;
 }
@@ -40,10 +40,9 @@
   .nav-item {
     padding: 1.5em;
     text-align: center;
-    background: rgba(243, 166, 131,0.9);
+    background: #feac5e;
   } 
   .navbar-text {
-    font-size: large;
     padding: 0;
   }
   .nav-adjust {  

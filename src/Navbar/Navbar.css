@@ -11,11 +11,11 @@
 } 
 
 .navbar-links {
-  color:#1da5af; 
+  color: #004e89;
 }
 
 .navbar-links:hover {
-  color:#1da5af; 
+  color: #004e89; 
 }
 
 .navbar-text {
@@ -27,7 +27,7 @@
 }
 
 .active {
-  color: #004e89; 
+  color:#1da5af; 
   font-weight: bold; 
   text-decoration: none;
 }

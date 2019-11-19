@@ -44,6 +44,19 @@
 }
 
 
+@media screen and (max-height: 800px) and (min-width: 1250px) {
+    .home-title {
+        font-size: 8vw;
+        /* background: rgba(22, 22, 33, 0.5); */
+        padding-bottom: 0.3em;
+    }
+    
+    .home-subtitle {
+        font-size: 32px;
+        padding-bottom: 0;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .home-title,
     .home-subtitle {
@@ -67,13 +80,13 @@
 
 @media screen and (max-width: 420px) {
     .home-title {
-        font-size: 50px;
-        padding: 0 0.5em 1em 0.5em;
+        font-size: 52px;
+        padding: 0 0.3em 0.2em 0.3em;
     }
     
     .home-subtitle {
         font-size: 20px;
-        padding-bottom: 0;
+        padding-bottom: 0.5em;
     }
 }
 

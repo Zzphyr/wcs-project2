@@ -16,7 +16,8 @@
 }
 
 .start-btn {
-    background-color:rgba(243, 166, 131,0.5);
+    /* background-color:rgba(243, 166, 131,0.5); */
+    background-color: #feac5e;
     color: rgb(60, 71, 77); 
     font-weight: 500;
     font-size: 28px;
@@ -32,7 +33,7 @@ button.start-btn:hover {
 
 .btns_container {
   position: relative;
-  top: 12.5vh; 
+  top: 10vh; 
 }
 
 .start-btn-div {

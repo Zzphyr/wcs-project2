@@ -62,9 +62,9 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds,}) =>{
 
    return (
       <main className="result-main">
-         <section className="result-showsettings">
+         <div className="result-showsettings">
             <ShowSettings chosenDif={chosenDif} chosenCat={chosenCat} />
-         </section>
+         </div>
             <p className="result-message">{resultMessage()}</p>
             <div>
                <img className="result-image" src={resultImage()} alt='resultGifs'/> 

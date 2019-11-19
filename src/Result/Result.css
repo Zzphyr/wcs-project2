@@ -22,11 +22,13 @@
 .result-info {
    text-align: center;
    font-size: large;
-   font-weight: 800;
+   display: flex;
 }
 
 .result-info p {
-   color: rgba(119, 139, 235,0.85);
+   color: #4bc0c8;
+   padding: 10px 10px;
+
    font-weight: bold; 
    max-width: 70vw; 
 }

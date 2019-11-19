@@ -6,13 +6,13 @@ const Navbar = () =>{
 
    return (  
       <nav className="navbar navbar-expand-md navbar-dark fixed-top nav-adjust">
-         <Link exact to='/' className="navbar-text"><span className="small-logo">(not)</span>TrivialQuest</Link>  
+         <Link to='/' className="navbar-text"><span className="small-logo">(not)</span>TrivialQuest</Link>  
          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
             <span className="navbar-toggler-icon"></span>
          </button>
          <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <div className="navbar-nav">
-               <NavLink exact to='/' className="navbar-links nav-item" activeClassName='active'>Homepage</NavLink>
+               <NavLink to='/' className="navbar-links nav-item" activeClassName='active'>Homepage</NavLink>
                <NavLink to='/about' className="navbar-links nav-item" activeClassName='active'>About us</NavLink>
             </div>
          </div>

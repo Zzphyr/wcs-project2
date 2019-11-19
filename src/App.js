@@ -62,8 +62,9 @@ class App extends Component {
 
   componentDidMount() {
     this.getCategories();
+    this.pauseTimer();
   }
-
+  
   // Fetch category list from API (for the dropdown) 
   getCategories = () => {
     fetch('https://opentdb.com/api_category.php')

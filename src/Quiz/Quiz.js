@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Question from './Question';
 import ShowSettings from './ShowSettings';
 import { useHistory } from "react-router-dom";
@@ -48,7 +48,10 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopP
         
       } 
    }
-  
+  // Unmounting/ Mounting with hooks. 
+   useEffect(()=> { 
+       return () =>  stopPlaying(); 
+   }, [])
 
    return (
 

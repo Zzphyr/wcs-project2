@@ -12,8 +12,8 @@ const Navbar = () =>{
          </button>
          <div className="collapse navbar-collapse" id="collapsibleNavbar">
             <div className="navbar-nav">
-               <NavLink to='/' className="navbar-links nav-item" activeClassName='active'>Homepage</NavLink>
-               <NavLink to='/about' className="navbar-links nav-item" activeClassName='active'>About us</NavLink>
+               <NavLink exact to='/' className="navbar-links nav-item" activeClassName='active'>Homepage</NavLink>
+               <NavLink exact to='/about' className="navbar-links nav-item" activeClassName='active'>About us</NavLink>
             </div>
          </div>
       </nav>

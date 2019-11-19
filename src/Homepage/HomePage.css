@@ -1,4 +1,3 @@
-
 .help-btn-div {
     display: flex;
     justify-content: center; 
@@ -7,7 +6,7 @@
 .HelpBtn {
     position: relative;
     left: 100px;
-    background: lightblue;
+    background: #4BC0C8;
     text-align: center;
     top: 10px;
     width: 2em;
@@ -28,7 +27,7 @@
 }
 
 button.start-btn:hover { 
-    background-color:rgba(243, 166, 131,1.0);
+    background-color:#f58d2d;
 }
 
 .btns_container {
@@ -43,11 +42,14 @@ button.start-btn:hover {
 
 .Close {
     border-radius:10px;
-    background:lightblue;
     align-self: center;
     position: relative;
-    padding: 0.5em 0.7em;
+    padding: 0.3em 0.7em;
     color: rgb(55, 65, 68);
+    background: #4BC0C8;
+}
+.Close:hover {
+    background:lightblue;
 }
 .ModalStyle {
     display: flex;
@@ -77,7 +79,6 @@ button.start-btn:hover {
 .Modal_Container h2 {
     color: #4bc0c8 !important; 
     padding-top: 10px;
-    
 }
 
 .homepage-main {

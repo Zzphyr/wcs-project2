@@ -47,7 +47,7 @@
     }
 }
 
-@media screen and (max-height: 800px) and (min-width: 1250px) {
+@media screen and (max-height: 800px) and (min-width: 1150px) {
     .chooseSettingsWrap { 
         padding-top: 2vh;
         padding-bottom: 5vh;

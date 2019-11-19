@@ -87,6 +87,14 @@ button.start-btn:hover {
     justify-content: center;
 }
 
+@media screen and (max-height: 800px) and (min-width: 1150px) {
+    .btns_container {
+        top: 15vh;
+    }
+    .start-btn {
+        font-size: 23px;
+    }
+}
 
 @media screen and (max-width: 758px) {
     .btns_container {
@@ -131,11 +139,4 @@ button.start-btn:hover {
     
 }
 
-@media screen and (max-height: 800px) and (min-width: 1250px) {
-    .btns_container {
-        top: 15vh;
-    }
-    .start-btn {
-        font-size: 23px;
-    }
-}
+

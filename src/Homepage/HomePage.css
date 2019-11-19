@@ -1,4 +1,3 @@
-
 .help-btn-div {
     display: flex;
     justify-content: center; 
@@ -78,9 +77,8 @@ button.start-btn:hover {
 }
 
 .Modal_Container h2 {
-    color: #004E8A !important; 
+    color: #4bc0c8 !important; 
     padding-top: 10px;
-    
 }
 
 .homepage-main {

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { withRouter } from 'react-router';
-
 import Navbar from "./Navbar/Navbar";
 import Homepage from "./Homepage/Homepage";
 import Quiz from "./Quiz/Quiz";

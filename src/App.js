@@ -53,6 +53,7 @@ class App extends Component {
               ...state,
               quizInfo : data["results"],
               seconds : 0,
+              isPlaying: true, 
             }), 
           () => this.props.history.push('/quiz')
         )
@@ -61,9 +62,6 @@ class App extends Component {
 
   componentDidMount() {
     this.getCategories();
-    this.setState({
-      isPlaying: true, 
-    });
   }
 
   // Fetch category list from API (for the dropdown) 

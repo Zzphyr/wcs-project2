@@ -13,7 +13,8 @@ const ShowCorrectAnswers = ({ quizInfo }) => {
             >
             See answers!
          </button>
-         <div id="answer-tabs" className="collapse">
+
+         <div id="answer-tabs" className="collapse" >
             <table className="table table-hover">
                <thead className="answers-tablehead thead-dark">
                   <tr>

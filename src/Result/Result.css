@@ -1,10 +1,11 @@
 .result-showsettings {
    display: flex;
-   justify-content: center;
+   flex-wrap: wrap;
+   margin-top: 3vh; 
 }
 
 .result-showsettings p {
-   padding: 45px 30px;
+   padding: 10px 10px;
    color: rgba(99, 205, 218,1.0);
    font-weight: bold; 
 }
@@ -13,7 +14,6 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   justify-content: center;
    width: 100vw;
    height: calc(100vh - 60px);
    overflow-x: hidden;
@@ -33,6 +33,7 @@
 
 .result-image{
    max-width: 70vw; 
+   max-height: 50vh; 
 }
 .result-message{
    max-width: 70vw; 

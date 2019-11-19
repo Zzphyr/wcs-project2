@@ -5,7 +5,7 @@
     margin: auto; 
     text-align: center;
     padding-top: 4vh;
-    padding-bottom: 20vh;
+    padding-bottom: 10vh;
 }
 
  
@@ -26,7 +26,7 @@
 @media screen and (max-width: 967px) {
     .chooseSettingsWrap { 
         padding-top: 5vh;
-        padding-bottom: 8vh;
+        padding-bottom: 5vh;
     }
 
     .settingsOptionsDrop {
@@ -44,5 +44,12 @@
     
     .settingsOptionsDrop option {
         font-size: large;
+    }
+}
+
+@media screen and (max-height: 800px) and (min-width: 1250px) {
+    .chooseSettingsWrap { 
+        padding-top: 2vh;
+        padding-bottom: 5vh;
     }
 }

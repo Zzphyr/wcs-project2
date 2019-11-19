@@ -81,7 +81,7 @@ button.start-btn:hover {
 }
 
 .homepage-main {
-    height: 100vh;
+    height: calc(100vh - 80px);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -95,12 +95,15 @@ button.start-btn:hover {
     .Modal_Container {
         width: 60%;
     }
+    .start-btn {
+        font-size: 23px;   
+    }
 }
     
 @media screen and (max-width: 420px) {
     .start-btn {
         font-weight: 500;
-        font-size: 20px;
+        font-size: 22px;
     }
 
     .Modal_Container {
@@ -116,5 +119,21 @@ button.start-btn:hover {
 
     .Close {
         font-size: 12px;
+    }
+
+    .HelpBtn {
+        font-size: smaller;
+        top: 15px;
+        left: 23vw;
+    }
+    
+}
+
+@media screen and (max-height: 800px) and (min-width: 1250px) {
+    .btns_container {
+        top: 15vh;
+    }
+    .start-btn {
+        font-size: 23px;
     }
 }

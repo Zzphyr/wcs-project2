@@ -7,26 +7,31 @@
 .photos-us {
     width: 200px;
     height: auto;
-    margin: 15px 10vw;
-    border: 2px solid rgb(73, 91, 114);;
+    margin: 15px;
+    border: 2px solid rgb(73, 98, 114);
     border-radius: 50%;
 }
 
 .person {
     text-align: center;
     font-size: 18px;
-    margin-bottom: 2em;
     color: rgb(37, 50, 66);
+    margin: 0 2vw;
+    margin-bottom: 2em;
+    background: rgba(138, 168, 207, 0.884);
+    padding: 2% 0;
+    border-radius: 15px;
 }
 
 figure {
     text-align: center;
+    width: 35vw;
+    max-width: 400px;
 }
 
 .job-student {
     color: rgb(37, 50, 66);
-    font-weight: lighter;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .social-media-img {
@@ -49,6 +54,7 @@ figure {
 .project-description p {
     margin: 0;
     padding-bottom: 1em;
+    color: rgb(173, 211, 255);
 }
 
 .project-description p:first-child {
@@ -59,26 +65,62 @@ figure {
     font-size: 50px;
     padding: 1em;
     text-align: center;
-    color: rgb(37, 50, 66);
+    color: #FEAC5E;
 }
 
-@media screen and (max-width: 420px) {
+
+@media screen and (max-width: 752px) {
     .photos-us {
-        width: 150px;
+        width: 140px;
         height: auto;
+    } 
+    .social-media-img {
+        height: 50px;
+        margin: 0 10px;
+    }
+    .person {
+        font-size: 19px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .people {
+        flex-direction: column;
+        align-content: center;
+    }
+    .photos-us {
+        width: 120px;
     }
     .social-media-img {
         height: 50px;
         margin: 0 10px;
     }
     .person {
-        font-size: 17px;
+        font-size: 18px;
+        padding: 20px 30px;
+        
     }
     .job-student {
-        font-size: 13px;
+        font-size: 14px;
     }
 
-    .project-description p {
-        font-size: small;
+}
+
+@media screen and (max-width: 472px) {
+    .person {
+        font-size: 17px;
+        padding: 20px 30px;
+        margin: 3vh 10vw;
     }
+    .photos-us figcaption {
+        display: inline;
+    }
+    .project-description p {
+        font-size: smaller;
+    }
+
+    figure {
+        width: unset;
+    }
+
 }

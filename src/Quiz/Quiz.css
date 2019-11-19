@@ -52,7 +52,8 @@
    justify-content: center;
 }
 
-.quiz-main p {color: #feac5e;
+.quiz-main p {
+   color: #feac5e;
    padding-left: 10px; 
 }
 

@@ -1,4 +1,5 @@
 .question {
+   font-family: 'Anonymous Pro', monospace;
    padding: 2em 0 2em 0;
    margin-bottom: 1em;
    color: #feac5e;
@@ -11,6 +12,7 @@
 
 /* answer is the label */
 .answer {
+   font-family: 'Anonymous Pro', monospace;
    margin-top: 1em;
    min-height: 5em;
    margin: 10px;

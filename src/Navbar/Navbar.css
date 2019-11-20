@@ -5,6 +5,7 @@
 }
 
 .nav-item, .navbar-text {
+  font-family: 'Anonymous Pro', monospace;
   overflow: hidden;
   padding: 0.5em 2em;
   font-size: large;

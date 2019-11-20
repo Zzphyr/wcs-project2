@@ -1,4 +1,5 @@
 .show-settings-timer {
+   font-family: 'Anonymous Pro', monospace;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
@@ -31,6 +32,7 @@
 }
 
 .submit-btn {
+   font-family: 'Anonymous Pro', monospace;
    display: block;
    color: rgb(59, 69, 75);
    margin: 5% auto;
@@ -47,10 +49,12 @@
 }
 
 .section-question {
+   font-family: 'Anonymous Pro', monospace;
    padding-top: 10vh;
 }
 
 .quiz-main p {
+   font-family: 'Anonymous Pro', monospace;
    color: #feac5e;
    padding-left: 10px; 
 }

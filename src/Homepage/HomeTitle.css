@@ -25,16 +25,13 @@
 	background-size: 20px 20px;
 	background-position: 0 0;
 	animation: stripes 1s linear infinite;
-
-    /* color:rgb(48, 177, 194);
-    font-size: 60px;
-    padding: 0.5em 1em; */
 }
 
 @keyframes stripes {
 	100% { background-position: 20px 0, 20px 0, 20px 0; }
 }
 .home-subtitle {
+    font-family: 'Anonymous Pro', monospace;
     color: #4bc0c8; 
     font-size: 40px;
     font-weight: bold;

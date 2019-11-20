@@ -1,13 +1,13 @@
 .result-showsettings {
    display: flex;
    flex-wrap: wrap;
-   margin-top: 3vh; 
+   margin-top: 3vh;
 }
 
 .result-showsettings p {
    padding: 10px 10px;
-   color: rgba(99, 205, 218,1.0);
-   font-weight: bold; 
+   color: rgba(99, 205, 218, 1.0);
+   font-weight: bold;
 }
 
 .result-main {
@@ -28,34 +28,35 @@
 .result-info p {
    color: #4bc0c8;
    padding: 10px 10px;
-
-   font-weight: bold; 
-   max-width: 70vw; 
+   font-weight: bold;
+   max-width: 70vw;
 }
 
-.result-image{
-   max-width: 70vw; 
-   max-height: 50vh; 
+.result-image {
+   max-width: 70vw;
+   max-height: 50vh;
 }
-.result-message{
-   max-width: 70vw; 
+
+.result-message {
+   max-width: 70vw;
    color: #feac5e;
-   font-weight: bold; 
+   font-weight: bold;
    font-size: x-large;
 }
 
 .playAgain-btn {
-   border: 1px solid #796CEB;
-   color: rgb(81, 68, 199);
+   border: 1px solid #feac5e;
+   color: #ff7b00;
    border-radius: 12px;
    padding: 1em 2em;
    background: white;
    transition: all 180ms ease-out;
    min-width: 150px;
+   margin-bottom: 5vh;
 }
 
 .playAgain-btn:hover {
-   background: #796CEB;
+   background: #feac5e;
    color: white;
 }
 

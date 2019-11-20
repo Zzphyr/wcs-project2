@@ -1,6 +1,6 @@
 .help-btn-div {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .HelpBtn {
@@ -10,74 +10,78 @@
     text-align: center;
     top: 10px;
     width: 2em;
-    height: 2em; 
+    height: 2em;
     border-radius: 50%;
+    font-weight: 700;
 }
 
 .start-btn {
-    font-family: 'Anonymous Pro', monospace;
     background-color: #feac5e;
-    color: rgb(60, 71, 77); 
-    font-weight: 500;
+    color: rgb(60, 71, 77);
+    font-weight: 700;
     font-size: 28px;
-    border-radius: 15px; 
-    border: 2px solid rgba(99, 110, 114,1.0);
+    border-radius: 15px;
+    border: 2px solid rgba(99, 110, 114, 1.0);
     padding: 0.5em 1.5em;
-    transition: 200ms ease;    
+    transition: 200ms ease;
 }
 
-button.start-btn:hover { 
-    background-color:#f58d2d;
+button.start-btn:hover {
+    background-color: #f58d2d;
 }
 
 .btns_container {
-  position: relative;
-  top: 10vh; 
+    position: relative;
+    top: 10vh;
 }
 
 .start-btn-div {
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
 
 .Close {
-    border-radius:10px;
+    border-radius: 10px;
     align-self: center;
     position: relative;
     padding: 0.3em 0.7em;
     color: rgb(55, 65, 68);
     background: #4BC0C8;
 }
+
 .Close:hover {
-    background:lightblue;
+    background: lightblue;
 }
+
 .ModalStyle {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
 }
+
 .Modal_Container {
-    height: auto; 
+    height: auto;
     width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: rgba(247, 215, 148,0.9);
+    background: rgba(247, 215, 148, 0.9);
     border-radius: 10px;
     padding: 1.5em 0.5em;
 }
 
 .modal-text {
-    text-align: center;  
-    width: 70%;
+    font-family: 'Anonymous Pro', monospace;
+    text-align: center;
+    width: 75%;
     color: rgb(55, 65, 68);
 }
 
 .Modal_Container h2 {
-    color: #004e89 !important; 
+    color: #004e89 !important;
     padding-top: 10px;
 }
 
@@ -92,6 +96,7 @@ button.start-btn:hover {
     .btns_container {
         top: 15vh;
     }
+
     .start-btn {
         font-size: 23px;
     }
@@ -99,19 +104,22 @@ button.start-btn:hover {
 
 @media screen and (max-width: 758px) {
     .btns_container {
-        top: 10vh; 
+        top: 10vh;
     }
+
     .Modal_Container {
         width: 60%;
     }
+
     .start-btn {
-        font-size: 23px;   
+        font-size: 23px;
     }
+
     .HelpBtn {
         font-size: smaller;
     }
 }
-    
+
 @media screen and (max-width: 420px) {
     .start-btn {
         font-weight: 500;
@@ -119,12 +127,14 @@ button.start-btn:hover {
     }
 
     .Modal_Container {
-        height: 45%; 
+        height: 45%;
         width: 80%;
     }
+
     .modal-text {
         font-size: small;
     }
+
     .Modal_Container h2 {
         font-size: 26px;
     }
@@ -137,7 +147,4 @@ button.start-btn:hover {
         top: 15px;
         left: 23vw;
     }
-    
 }
-
-

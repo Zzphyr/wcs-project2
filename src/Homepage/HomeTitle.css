@@ -2,11 +2,9 @@
 .home-subtitle {
     text-align: center;
     position: relative;
-    top: 18vh;  
+    top: 18vh;
     padding-bottom: 0.4em;
 }
-
-
 
 .home-title {
     font-family: 'Bungee Shade', cursive;
@@ -28,18 +26,20 @@
 }
 
 @keyframes stripes {
-	100% { background-position: 20px 0, 20px 0, 20px 0; }
+    100% {
+        background-position: 20px 0, 20px 0, 20px 0;
+    }
 }
+
 .home-subtitle {
-    font-family: 'Anonymous Pro', monospace;
-    color: #4bc0c8; 
+    color: #4bc0c8;
     font-size: 40px;
     font-weight: bold;
 }
-.box-title {
-	height: 50%;
-}
 
+.box-title {
+    height: 50%;
+}
 
 @media screen and (max-height: 810px) and (min-width: 1250px) {
     .home-title {
@@ -47,7 +47,7 @@
         /* background: rgba(22, 22, 33, 0.5); */
         padding-bottom: 0.3em;
     }
-    
+
     .home-subtitle {
         font-size: 32px;
         padding-bottom: 0;
@@ -59,12 +59,12 @@
     .home-subtitle {
         top: 10vh;
     }
-    
+
     .home-title {
         font-size: 62px;
         padding: 0 0.8em 1em 0.8em;
     }
-    
+
     .home-subtitle {
         font-size: 25px;
         padding-bottom: 20px;
@@ -80,12 +80,9 @@
         font-size: 52px;
         padding: 0 0.3em 0.2em 0.3em;
     }
-    
+
     .home-subtitle {
         font-size: 20px;
         padding-bottom: 0.5em;
     }
 }
-
-
-

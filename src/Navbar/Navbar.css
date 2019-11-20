@@ -1,35 +1,36 @@
-.nav-adjust {  
+.nav-adjust {
   height: 70px;
   width: 100%;
   background-color: #feac5e;
 }
 
-.nav-item, .navbar-text {
-  font-family: 'Anonymous Pro', monospace;
+.nav-item,
+.navbar-text {
   overflow: hidden;
   padding: 0.5em 2em;
   font-size: large;
-} 
+}
 
 .navbar-links {
   color: #004e89;
 }
 
 .navbar-links:hover {
-  color: #004e89; 
+  color: #004e89;
 }
 
 .navbar-text {
   font-weight: bold;
 }
+
 .navbar-text:hover {
   text-decoration: none;
   cursor: default;
 }
 
 .active {
-  color:#1da5af; 
-  font-weight: bold; 
+  color: #1da5af;
+  font-weight: bold;
   text-decoration: none;
 }
 
@@ -42,12 +43,13 @@
     padding: 1.5em;
     text-align: center;
     background: #feac5e;
-  } 
+  }
+
   .navbar-text {
     padding: 0;
   }
-  .nav-adjust {  
+
+  .nav-adjust {
     height: 55px;
   }
-
 }

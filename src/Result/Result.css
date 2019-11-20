@@ -6,7 +6,7 @@
 
 .result-showsettings p {
    font-family: 'Anonymous Pro', monospace;
-   padding: 10px 10px;
+   padding: 3vh 5vw;
    color: rgba(99, 205, 218, 1.0);
    font-weight: bold;
 }
@@ -22,6 +22,11 @@
    text-align: center;
    font-size: large;
    display: flex;
+   margin: 0.6em;
+}
+
+.result-info p {
+   margin: 0 3vw 2vh 3vw;
 }
 
 .result-info p {
@@ -42,24 +47,26 @@
    max-width: 70vw;
    color: #feac5e;
    font-weight: bold;
-   font-size: x-large;
+   font-size: xx-large;
+   text-align: center;
 }
 
 .playAgain-btn {
-   font-family: 'Anonymous Pro', monospace;
-   border: 1px solid #4bc0c8;;
+   border: 1px solid #4bc0c8;
    color:#004e89;
    border-radius: 12px;
-   padding: 1em 2em;
-   background: white;
+   padding: 1em 1.5em;
+   background: #d0f0f3;
    transition: all 180ms ease-out;
    min-width: 150px;
    margin-bottom: 5vh;
+   font-weight: bold;
 }
 
 .playAgain-btn:hover {
    background: #4bc0c8;
    color: white;
+   border: 1px solid #004e89;
 }
 
 @media screen and (max-width: 420px) {

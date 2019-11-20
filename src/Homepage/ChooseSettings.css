@@ -1,30 +1,28 @@
-
-.chooseSettingsWrap { 
-    width: 100%; 
+.chooseSettingsWrap {
+    width: 100%;
     display: inline-block;
-    margin: auto; 
+    margin: auto;
     text-align: center;
     padding-top: 4vh;
     padding-bottom: 10vh;
 }
 
- 
-.settingsOptionsDrop { 
-    margin: 20px 5%; 
-    padding: 0.7em; 
-    width: 342px;  
-    border-radius: 10px; 
+.settingsOptionsDrop {
+    margin: 20px 5%;
+    padding: 0.7em;
+    width: 342px;
+    border-radius: 10px;
     font-size: large;
     cursor: pointer;
     color: rgb(34, 34, 34);
-} 
+}
 
 .settingsOptionsDrop option {
     font-size: medium;
 }
 
 @media screen and (max-width: 967px) {
-    .chooseSettingsWrap { 
+    .chooseSettingsWrap {
         padding-top: 5vh;
         padding-bottom: 5vh;
     }
@@ -39,16 +37,16 @@
 @media screen and (max-width: 758px) {
     .settingsOptionsDrop {
         width: 80%;
-        padding: 0.6em; 
+        padding: 0.6em;
     }
-    
+
     .settingsOptionsDrop option {
         font-size: large;
     }
 }
 
 @media screen and (max-height: 800px) and (min-width: 1150px) {
-    .chooseSettingsWrap { 
+    .chooseSettingsWrap {
         padding-top: 2vh;
         padding-bottom: 5vh;
     }

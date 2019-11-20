@@ -27,10 +27,10 @@ class Homepage extends Component {
 
   closeModal = () => {
     if (this.state.modalIsOpen === true) {
-    this.setState({
-      modalIsOpen: false
-    });
-  }
+      this.setState({
+        modalIsOpen: false
+      });
+    }
   }
   
   handleChoices() {
@@ -63,7 +63,9 @@ class Homepage extends Component {
             >
               <div className='Modal_Container'>
                 <h2 ref={subtitle => this.subtitle = subtitle}>How to play</h2>
-                <p className="modal-text">Choose your favourite Category and the level of dificulty. Select <em>Any</em> to challenge yourself with a random mix of questions.</p> 
+                <p className="modal-text">
+                  Choose your favourite Category and the level of dificulty. Select <em>Any</em> to challenge yourself with a random mix of questions.
+                </p> 
                 <p className="modal-text">There are 10 of them... are you ready?</p>
                 <button onClick={this.closeModal} className="Close">Close</button>
               </div>

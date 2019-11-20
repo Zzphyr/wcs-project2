@@ -1,9 +1,8 @@
 .question {
-   font-family: 'Anonymous Pro', monospace;
    padding: 2em 0 2em 0;
    margin-bottom: 1em;
    color: #feac5e;
-   font-weight: bold; 
+   font-weight: bold;
 }
 
 .numQ {
@@ -12,26 +11,26 @@
 
 /* answer is the label */
 .answer {
-   font-family: 'Anonymous Pro', monospace;
    margin-top: 1em;
    min-height: 5em;
    margin: 10px;
    padding: 1.4em 1.5em 1.1em 1.5em;
-   vertical-align: middle; 
+   vertical-align: middle;
    color: rgb(59, 69, 75);
    font-weight: bold;
 }
 
 .answer-nonClickedNext {
-   border: 2px solid rgba(99, 110, 114, 1.0); 
+   border: 2px solid rgba(99, 110, 114, 1.0);
    border-radius: 12px;
    width: 50vw;
    cursor: pointer;
-   background-color:rgb(133, 209, 219);
+   background-color: rgb(133, 209, 219);
 }
+
 /* to hide the radio buttons */
 .radio {
-   display: none; 
+   display: none;
 }
 
 .radio:checked + .label-before-submit {
@@ -51,9 +50,10 @@
       min-height: unset;
       line-height: normal;
    }
+
    .question {
       padding: 0px;
-      font-size: 20px; 
+      font-size: 20px;
    }
 }
 

@@ -32,35 +32,31 @@ class Question extends Component {
       return (
          <div className="question-div">           
             <legend className="question"><span className="numQ">{numQ} -</span> {decodeURIComponent(question)}</legend>
-               {answers.map((ans, i)=>{
-                  let answer = decodeURIComponent(ans);
-                  return (
-                     <React.Fragment key={answer}>
-                        <input 
-                           type="radio" 
-                           name={numQ} 
-                           value={answer} 
-                           id={numQ*10+i}
-                           onChange={() => updateUserAnswer(numQ, answer)}
-                           className="radio"
-                           />     
-                        <label 
-                           htmlFor={numQ*10+i} 
-                           key={answer} 
-                           className={(answer===userAnswer&&clickedNext) ? `answer ${btnColor} col-sm-6 col-md-4` : `answer answer-nonClickedNext col-sm-6 col-md-4 label-before-submit`}
-                           
-                           >
-                           {answer}
-                        </label>     
-                     </React.Fragment>    
-                  )
-               })} 
-            
+            {answers.map((ans, i)=>{
+               let answer = decodeURIComponent(ans);
+               return (
+                  <React.Fragment key={answer}>
+                     <input 
+                        type="radio" 
+                        name={numQ} 
+                        value={answer} 
+                        id={numQ*10+i}
+                        onChange={() => updateUserAnswer(numQ, answer)}
+                        className="radio"
+                        />     
+                     <label 
+                        htmlFor={numQ*10+i} 
+                        key={answer} 
+                        className={(answer===userAnswer&&clickedNext) ? `answer ${btnColor} col-sm-6 col-md-4` : `answer answer-nonClickedNext col-sm-6 col-md-4 label-before-submit`}
+                     >
+                        {answer}
+                     </label>     
+                  </React.Fragment>    
+               )
+            })}  
          </div>
       )
    }
 }
-
-
 
 export default Question;

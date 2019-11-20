@@ -5,6 +5,7 @@
 }
 
 .result-showsettings p {
+   font-family: 'Anonymous Pro', monospace;
    padding: 10px 10px;
    color: rgba(99, 205, 218, 1.0);
    font-weight: bold;
@@ -26,6 +27,7 @@
 }
 
 .result-info p {
+   font-family: 'Anonymous Pro', monospace;
    color: #4bc0c8;
    padding: 10px 10px;
    font-weight: bold;
@@ -38,6 +40,7 @@
 }
 
 .result-message {
+   font-family: 'Anonymous Pro', monospace;
    max-width: 70vw;
    color: #feac5e;
    font-weight: bold;
@@ -45,6 +48,7 @@
 }
 
 .playAgain-btn {
+   font-family: 'Anonymous Pro', monospace;
    border: 1px solid #4bc0c8;;
    color:#004e89;
    border-radius: 12px;

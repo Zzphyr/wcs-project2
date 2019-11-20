@@ -15,7 +15,7 @@
 }
 
 .start-btn {
-    /* background-color:rgba(243, 166, 131,0.5); */
+    font-family: 'Anonymous Pro', monospace;
     background-color: #feac5e;
     color: rgb(60, 71, 77); 
     font-weight: 500;

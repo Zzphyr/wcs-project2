@@ -1,4 +1,5 @@
 .answers-table {
+   font-family: 'Anonymous Pro', monospace;
    width: 80vw;
    text-align: center;
 }
@@ -17,6 +18,7 @@
 }
 
 .see-answers-btn {
+   font-family: 'Anonymous Pro', monospace;
    border-radius: 12px;
    padding: 1em 1.5em;
    background: white;

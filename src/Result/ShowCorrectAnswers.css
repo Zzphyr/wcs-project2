@@ -21,7 +21,13 @@
    padding: 1em 1.5em;
    background: white;
    min-width: 150px;
+   color: peru; 
+   border: #feac5e;
    transition: all 180ms ease-out;
+}
+
+.see-answers-btn:hover {
+   background: #feac5e;
 }
 
 @media screen and (max-width: 770px) {

@@ -8,7 +8,7 @@ class NotFoundPage extends React.Component{
       return (
          <div className="div404">
             <h1>Ops! This is not the page you are looking for!</h1>
-            <h3>Now dog is sad it only exists in his imagination...</h3>
+            <h3>Dog is sad it exist only in his imagination...</h3>
             <img src='https://i.imgur.com/ZSzQ3W4.png?1' alt='' />
             <p className="takemehome">
                <Link to="/">Click here to bring him Home </Link>

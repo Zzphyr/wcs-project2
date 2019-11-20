@@ -2,11 +2,22 @@
    text-align: center; 
    position:relative;
    top: 15vh;
+   color: #4BC0C8;
+}
+
+.div404 img {
+   width: 500px;
+   margin-top: 50px;
+   margin-bottom: 30px;
 }
 
 .takemehome {
    padding-top: 1em;
+}
+
+.takemehome a {
    font-size: large;
+   color: whitesmoke;
 }
 
 

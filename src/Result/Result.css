@@ -70,4 +70,7 @@
       padding: 0.7em 1em;
       min-width: 120px;
    }
+   .results-message {
+      font-size: medium; 
+   }
 }

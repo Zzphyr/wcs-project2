@@ -1,5 +1,4 @@
 .answers-table {
-   font-family: 'Anonymous Pro', monospace;
    width: 80vw;
    text-align: center;
 }
@@ -11,6 +10,7 @@
 
 .answers-table button {
    margin-bottom: 1.5em;
+   min-width: 150px;
 }
 
 .answers-tablehead tr th {
@@ -18,13 +18,13 @@
 }
 
 .see-answers-btn {
-   font-family: 'Anonymous Pro', monospace;
    border-radius: 12px;
    padding: 1em 1.5em;
-   background: white;
    min-width: 150px;
+   background: #f0e6d6;
+   font-weight: bold;
    color: peru; 
-   border: #feac5e;
+   border: 1px solid #feac5e;
    transition: all 180ms ease-out;
 }
 

@@ -8,8 +8,8 @@ import Result from "./Result/Result";
 import Aboutpage from "./Aboutpage/Aboutpage";
 import {VerticleButton as ScrollUpButton} from 'react-scroll-up-button';
 
-import ErrorBoundary from './ErrorBoundary';
-import NotFoundPage from './NotFoundPage';
+import ErrorBoundary from './Errors/ErrorBoundary';
+import NotFoundPage from './Errors/NotFoundPage';
 
 import './App.css';
 import { NONAME } from 'dns';

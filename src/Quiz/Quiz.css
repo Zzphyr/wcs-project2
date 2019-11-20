@@ -1,9 +1,8 @@
 .show-settings-timer {
-   font-family: 'Anonymous Pro', monospace;
    display: flex;
    flex-wrap: wrap;
    justify-content: center;
-   padding-top: 50px;
+   padding-top: 60px;
    font-weight: 500;
 }
 
@@ -11,7 +10,8 @@
    padding: 0 5vw;
 }
 
-.correct, .incorrect {
+.correct,
+.incorrect {
    border-radius: 12px;
    padding: 1em 2em;
    width: 50vw;
@@ -40,7 +40,7 @@
    border-radius: 5px;
    padding: 5px 20px;
    background: rgb(201, 201, 201);
-   font-weight: bold; 
+   font-weight: bold;
 }
 
 .submit-btn:hover {
@@ -49,14 +49,12 @@
 }
 
 .section-question {
-   font-family: 'Anonymous Pro', monospace;
    padding-top: 10vh;
 }
 
 .quiz-main p {
-   font-family: 'Anonymous Pro', monospace;
    color: #feac5e;
-   padding-left: 10px; 
+   padding-left: 10px;
 }
 
 @media screen and (max-width: 768px) {
@@ -73,17 +71,18 @@
       padding-top: 4vh;
       text-align: center;
    }
-   
+
    .show-settings-timer p {
       padding: 0 1em;
       font-size: small;
       margin: 0;
    }
+
    .section-question {
       padding-top: 0;
    }
 }
-   
+
 @media screen and (max-height: 700px) and (min-width: 1050px) {
    .section-question {
       padding-top: 1vh;

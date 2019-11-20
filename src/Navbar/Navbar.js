@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import './Navbar.css';
 
-const Navbar = () =>{
+const Navbar = () => {
 
    return (  
       <nav className="navbar navbar-expand-md navbar-dark fixed-top nav-adjust">

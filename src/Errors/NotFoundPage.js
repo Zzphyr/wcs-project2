@@ -11,7 +11,7 @@ class NotFoundPage extends React.Component{
             <h3>Dog is sad it exist only in his imagination...</h3>
             <img src='https://i.imgur.com/ZSzQ3W4.png?1' alt='' />
             <p className="takemehome">
-               <Link to="/">Click here to bring him Home </Link>
+               <Link to="/">Click here to bring him HOME</Link>
             </p>
          </div>
       ) 

@@ -7,11 +7,7 @@ import Timer from './Timer'
 import './Quiz.css';
 import '../App.css';
 
-
-
-const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopPlaying}) =>{
-
-
+const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopPlaying }) =>{
    // to allow use of history.push
    let history = useHistory();
 
@@ -20,7 +16,6 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopP
    const [btnColor, setBtnColor] = useState('');
    const [clickedNext, setClickedNext] = useState(false);
   
-  
    // turns the json object from props into an array so we can iterate over it
    let arr = [];
    Object.keys(quizInfo).forEach(function(key) {
@@ -28,33 +23,33 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopP
     });
    
    // using hooks
-   const incrementStep = (e) => { 
+   const incrementStep = e => { 
       e.preventDefault();
       let corrAns = decodeURIComponent(quizInfo[step].correct_answer);
       let userAns = quizInfo[step].user_answer;
       corrAns===userAns ? setBtnColor("correct") : setBtnColor("incorrect");
       setClickedNext(true);
-      //go to next question after a delay, otherwise go to result page
+      // go to next question after a delay, otherwise go to result page
       if (step<9) { 
          setTimeout(()=> {
             setStep(step+1);
             setClickedNext(false);
             setBtnColor('');
          },700); 
-      } else { stopPlaying();
+      } else { 
+         stopPlaying();
          setTimeout(()=> {
             history.push("/result")
          },700);
-        
       } 
    }
+
   // Unmounting/ Mounting with hooks. 
    useEffect(()=> { 
        return () =>  stopPlaying(); 
    }, [])
 
    return (
-
       <main className="container quiz-main">
          <section className="show-settings-timer">
             <ShowSettings 
@@ -63,11 +58,9 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopP
                />
             <Timer 
                seconds={seconds}
-             />
+               />
          </section>
-         
          <section className="container section-question">
-            
             {arr.map((q,i) => {
                if (step!==i) return null;
                return (
@@ -86,10 +79,8 @@ const Quiz = ({ quizInfo, chosenCat, chosenDif, updateUserAnswer, seconds, stopP
                      {(step===9) && <input className="submit-btn" type="submit" value="Submit" />}    
                   </form>
                )    
-            })} 
-            
-         </section>    
-           
+            })}   
+         </section>      
       </main> 
    )
 }

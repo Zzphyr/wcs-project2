@@ -7,7 +7,7 @@ import ShowTimer from '../Quiz/ShowTimer';
 import '../App.css';
 import './Result.css';
 
-const Result = ({ quizInfo, chosenCat, chosenDif, seconds,}) =>{
+const Result = ({ quizInfo, chosenCat, chosenDif, seconds }) =>{
   
    const getScore = () => {
       let score = 0;
@@ -35,13 +35,13 @@ const Result = ({ quizInfo, chosenCat, chosenDif, seconds,}) =>{
       } else if (relativeScore>=20) {
          message = "Well, it wasn't thaaat bad...";
       } else {
-         message = "Oh dear! You might want to pick up a book or two.";
+         message = "Oh dear! You might want to pick up a book or two";
       }
       return message;
    }  
   
    const resultImage = () => {
-      let imageUrl ='';
+      let imageUrl = '';
       let relativeScore = getScore();
       if (relativeScore===100) {
          imageUrl ="https://media.giphy.com/media/zUwHGTclRb7W/giphy.gif";

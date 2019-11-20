@@ -9,6 +9,7 @@
 }
 
 body {
+  font-family: 'Anonymous Pro', monospace;
   background-color: #004e8a;
   background-image: url("https://www.transparenttextures.com/patterns/cubes.png");
 }

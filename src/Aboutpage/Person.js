@@ -3,7 +3,7 @@ import './Aboutpage.css'
 
 const Person = ({ name, photo, linkedin, github }) => {
    return ( 
-       <article className="person">
+        <article className="person">
             <figure>
                 <img src={photo} alt={name} className="photos-us" />
                 <figcaption>

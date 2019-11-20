@@ -2,9 +2,10 @@
    width: 80vw;
    text-align: center;
 }
+
 #answer-tabs {
-  background-color: #fcbf86;
-  margin: 5vh 0 0 0;
+   background-color: #f7c89c;
+   margin-top: 1vh;
 }
 
 .answers-table button {
@@ -40,6 +41,7 @@
       width: auto;
       margin: 7vh 0 0 0;
    }
+
    .see-answers-btn {
       font-size: small;
       padding: 0.7em 1em;

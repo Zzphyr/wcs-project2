@@ -44,8 +44,8 @@
 }
 
 .playAgain-btn {
-   border: 1px solid #796CEB;
-   color: rgb(81, 68, 199);
+   border: 1px solid #4bc0c8;;
+   color:#004e89;
    border-radius: 12px;
    padding: 1em 2em;
    background: white;
@@ -54,7 +54,7 @@
 }
 
 .playAgain-btn:hover {
-   background: #796CEB;
+   background: #4bc0c8;
    color: white;
 }
 

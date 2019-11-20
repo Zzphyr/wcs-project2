@@ -6,12 +6,13 @@ import Homepage from "./Homepage/Homepage";
 import Quiz from "./Quiz/Quiz";
 import Result from "./Result/Result";
 import Aboutpage from "./Aboutpage/Aboutpage";
+import {VerticleButton as ScrollUpButton} from 'react-scroll-up-button';
 
 import ErrorBoundary from './ErrorBoundary';
 import NotFoundPage from './NotFoundPage';
 
-
 import './App.css';
+import { NONAME } from 'dns';
 
 
 const difficulty = [
@@ -20,6 +21,8 @@ const difficulty = [
   {id: "medium", difficulty: "Medium"},
   {id: "hard", difficulty: "Hard"},
 ]
+
+
 
 class App extends Component {
   constructor(props) {
@@ -132,63 +135,70 @@ class App extends Component {
         isPlaying: false, 
       });
     }
-    
+
+
+
 
   render () {
     const { quizInfo, chosenCat, chosenDif, categories, seconds} = this.state;
     return (
       <>
       <Navbar />
-          <Switch>
-            <Route 
-              exact path='/' 
-              render={()=> (
-                <Homepage 
-                getQuiz={this.getQuiz}
-                selectDif={this.handleDifficulty}
-                chosenDif={chosenDif}
-                difficulties={difficulty}
-                chosenCat={chosenCat}
-                selectCat={this.handleCategory}
-                categories={categories}
-                updatedTimer={this.updateTimer}
-                />
-              )} 
+        <Switch>
+          <Route 
+            exact path='/' 
+            render={()=> (
+              <Homepage 
+              getQuiz={this.getQuiz}
+              selectDif={this.handleDifficulty}
+              chosenDif={chosenDif}
+              difficulties={difficulty}
+              chosenCat={chosenCat}
+              selectCat={this.handleCategory}
+              categories={categories}
+              updatedTimer={this.updateTimer}
               />
+            )} 
+            />
+          <Route 
+            exact path='/quiz' 
+            render = {() => (
+              <Quiz
+              quizInfo={quizInfo}
+              chosenCat={chosenCat}
+              chosenDif={chosenDif}
+              updateUserAnswer={this.updateUserAnswer} 
+              componentDidUpdate={this.componentDidUpdate}
+              seconds={seconds}
+              stopPlaying={this.handleStopPlaying}
+              
+              />
+            )}
+            />
+              <Route exact path='/about' component={Aboutpage} />
             <Route 
-              exact path='/quiz' 
+              exact path='/result' 
               render = {() => (
-                <Quiz
-                quizInfo={quizInfo}
-                chosenCat={chosenCat}
-                chosenDif={chosenDif}
-                updateUserAnswer={this.updateUserAnswer} 
-                componentDidUpdate={this.componentDidUpdate}
-                seconds={seconds}
-                stopPlaying={this.handleStopPlaying}
-                
-                />
+                <ErrorBoundary>
+                <Result 
+                  quizInfo={quizInfo}
+                  chosenCat={chosenCat}
+                  chosenDif={chosenDif}
+                  seconds={seconds}
+                  />
+                  </ErrorBoundary>      
               )}
-              />
-                <Route exact path='/about' component={Aboutpage} />
-              <Route 
-                exact path='/result' 
-                render = {() => (
-                  <ErrorBoundary>
-                  <Result 
-                    quizInfo={quizInfo}
-                    chosenCat={chosenCat}
-                    chosenDif={chosenDif}
-                    seconds={seconds}
-                    />
-                    </ErrorBoundary>      
-                )}
-              />  
-                <Route path='*' component={NotFoundPage} />
-          </Switch>
+            />  
+              <Route path='*' component={NotFoundPage} />
+        </Switch>
+        <ScrollUpButton
+          EasingType="easeInOutQuad"
+          ShowAtPosition={30}
+        />
       </>
     );
   }
+  
 }
 
 export default withRouter(App);

@@ -193,7 +193,7 @@ class App extends Component {
         </Switch>
         <ScrollUpButton
           EasingType="easeInOutQuad"
-          ShowAtPosition={30}
+          ShowAtPosition={400}
         />
       </>
     );
